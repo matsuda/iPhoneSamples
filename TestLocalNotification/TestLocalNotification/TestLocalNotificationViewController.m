@@ -10,8 +10,14 @@
 
 @implementation TestLocalNotificationViewController
 
+@synthesize notification = notification_;
+@synthesize registerButton = registerButton_, cancelButton = cancelButton_;
+
 - (void)dealloc
 {
+    [notification_ release];
+    [registerButton_ release];
+    [cancelButton_ release];
     [super dealloc];
 }
 
@@ -44,6 +50,37 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - Private methods
+
+- (IBAction)registerLocalNotification
+{
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+
+    // after 10 seconds
+    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:10];
+    [notification setFireDate:date];
+
+    [notification setTimeZone:[NSTimeZone defaultTimeZone]];
+
+    [notification setAlertBody:@"Local notification test"];
+
+    [notification setSoundName:UILocalNotificationDefaultSoundName];
+
+    [notification setAlertAction:@"Open"];
+
+    [notification setApplicationIconBadgeNumber:10];
+
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+
+    self.notification = notification;
+    [notification release];
+}
+
+- (IBAction)cancelLocalNotification
+{
+    [[UIApplication sharedApplication] cancelLocalNotification:self.notification];
 }
 
 @end
