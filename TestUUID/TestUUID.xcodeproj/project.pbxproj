@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB6482451403526700AAB413 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6482441403526700AAB413 /* UIKit.framework */; };
+		CB6482471403526700AAB413 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6482461403526700AAB413 /* Foundation.framework */; };
+		CB6482491403526700AAB413 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6482481403526700AAB413 /* CoreGraphics.framework */; };
+		CB64824F1403526700AAB413 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB64824D1403526700AAB413 /* InfoPlist.strings */; };
+		CB6482521403526700AAB413 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6482511403526700AAB413 /* main.m */; };
+		CB6482551403526700AAB413 /* TestUUIDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6482541403526700AAB413 /* TestUUIDAppDelegate.m */; };
+		CB6482581403526700AAB413 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6482561403526700AAB413 /* MainWindow.xib */; };
+		CB64825B1403526700AAB413 /* TestUUIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB64825A1403526700AAB413 /* TestUUIDViewController.m */; };
+		CB64825E1403526700AAB413 /* TestUUIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB64825C1403526700AAB413 /* TestUUIDViewController.xib */; };
+		CB64827F14037B3D00AAB413 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CB64827E14037B3D00AAB413 /* SFHFKeychainUtils.m */; };
+		CB64828A14037B9F00AAB413 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB64828914037B9F00AAB413 /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CB6482401403526700AAB413 /* TestUUID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestUUID.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB6482441403526700AAB413 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CB6482461403526700AAB413 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CB6482481403526700AAB413 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CB64824C1403526700AAB413 /* TestUUID-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestUUID-Info.plist"; sourceTree = "<group>"; };
+		CB64824E1403526700AAB413 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB6482501403526700AAB413 /* TestUUID-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestUUID-Prefix.pch"; sourceTree = "<group>"; };
+		CB6482511403526700AAB413 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB6482531403526700AAB413 /* TestUUIDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestUUIDAppDelegate.h; sourceTree = "<group>"; };
+		CB6482541403526700AAB413 /* TestUUIDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUUIDAppDelegate.m; sourceTree = "<group>"; };
+		CB6482571403526700AAB413 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		CB6482591403526700AAB413 /* TestUUIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestUUIDViewController.h; sourceTree = "<group>"; };
+		CB64825A1403526700AAB413 /* TestUUIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUUIDViewController.m; sourceTree = "<group>"; };
+		CB64825D1403526700AAB413 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TestUUIDViewController.xib; sourceTree = "<group>"; };
+		CB64827D14037B3D00AAB413 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		CB64827E14037B3D00AAB413 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		CB64828914037B9F00AAB413 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB64823D1403526700AAB413 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB64828A14037B9F00AAB413 /* Security.framework in Frameworks */,
+				CB6482451403526700AAB413 /* UIKit.framework in Frameworks */,
+				CB6482471403526700AAB413 /* Foundation.framework in Frameworks */,
+				CB6482491403526700AAB413 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB6482351403526700AAB413 = {
+			isa = PBXGroup;
+			children = (
+				CB64824A1403526700AAB413 /* TestUUID */,
+				CB6482431403526700AAB413 /* Frameworks */,
+				CB6482411403526700AAB413 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB6482411403526700AAB413 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB6482401403526700AAB413 /* TestUUID.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB6482431403526700AAB413 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB64828914037B9F00AAB413 /* Security.framework */,
+				CB6482441403526700AAB413 /* UIKit.framework */,
+				CB6482461403526700AAB413 /* Foundation.framework */,
+				CB6482481403526700AAB413 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB64824A1403526700AAB413 /* TestUUID */ = {
+			isa = PBXGroup;
+			children = (
+				CB64827C14037B3D00AAB413 /* SFHFKeychainUtils */,
+				CB6482531403526700AAB413 /* TestUUIDAppDelegate.h */,
+				CB6482541403526700AAB413 /* TestUUIDAppDelegate.m */,
+				CB6482561403526700AAB413 /* MainWindow.xib */,
+				CB6482591403526700AAB413 /* TestUUIDViewController.h */,
+				CB64825A1403526700AAB413 /* TestUUIDViewController.m */,
+				CB64825C1403526700AAB413 /* TestUUIDViewController.xib */,
+				CB64824B1403526700AAB413 /* Supporting Files */,
+			);
+			path = TestUUID;
+			sourceTree = "<group>";
+		};
+		CB64824B1403526700AAB413 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB64824C1403526700AAB413 /* TestUUID-Info.plist */,
+				CB64824D1403526700AAB413 /* InfoPlist.strings */,
+				CB6482501403526700AAB413 /* TestUUID-Prefix.pch */,
+				CB6482511403526700AAB413 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB64827C14037B3D00AAB413 /* SFHFKeychainUtils */ = {
+			isa = PBXGroup;
+			children = (
+				CB64827D14037B3D00AAB413 /* SFHFKeychainUtils.h */,
+				CB64827E14037B3D00AAB413 /* SFHFKeychainUtils.m */,
+			);
+			path = SFHFKeychainUtils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB64823F1403526700AAB413 /* TestUUID */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB6482611403526700AAB413 /* Build configuration list for PBXNativeTarget "TestUUID" */;
+			buildPhases = (
+				CB64823C1403526700AAB413 /* Sources */,
+				CB64823D1403526700AAB413 /* Frameworks */,
+				CB64823E1403526700AAB413 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestUUID;
+			productName = TestUUID;
+			productReference = CB6482401403526700AAB413 /* TestUUID.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB6482371403526700AAB413 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = CB64823A1403526700AAB413 /* Build configuration list for PBXProject "TestUUID" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CB6482351403526700AAB413;
+			productRefGroup = CB6482411403526700AAB413 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB64823F1403526700AAB413 /* TestUUID */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB64823E1403526700AAB413 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB64824F1403526700AAB413 /* InfoPlist.strings in Resources */,
+				CB6482581403526700AAB413 /* MainWindow.xib in Resources */,
+				CB64825E1403526700AAB413 /* TestUUIDViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB64823C1403526700AAB413 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB6482521403526700AAB413 /* main.m in Sources */,
+				CB6482551403526700AAB413 /* TestUUIDAppDelegate.m in Sources */,
+				CB64825B1403526700AAB413 /* TestUUIDViewController.m in Sources */,
+				CB64827F14037B3D00AAB413 /* SFHFKeychainUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CB64824D1403526700AAB413 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB64824E1403526700AAB413 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CB6482561403526700AAB413 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB6482571403526700AAB413 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		CB64825C1403526700AAB413 /* TestUUIDViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB64825D1403526700AAB413 /* en */,
+			);
+			name = TestUUIDViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB64825F1403526700AAB413 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CB6482601403526700AAB413 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		CB6482621403526700AAB413 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestUUID/TestUUID-Prefix.pch";
+				INFOPLIST_FILE = "TestUUID/TestUUID-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CB6482631403526700AAB413 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestUUID/TestUUID-Prefix.pch";
+				INFOPLIST_FILE = "TestUUID/TestUUID-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB64823A1403526700AAB413 /* Build configuration list for PBXProject "TestUUID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB64825F1403526700AAB413 /* Debug */,
+				CB6482601403526700AAB413 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB6482611403526700AAB413 /* Build configuration list for PBXNativeTarget "TestUUID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB6482621403526700AAB413 /* Debug */,
+				CB6482631403526700AAB413 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB6482371403526700AAB413 /* Project object */;
+}
