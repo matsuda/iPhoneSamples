@@ -12,3 +12,23 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+/**********
+ custom macro
+ **********/
+
+//#if defined(_DEBUG_)
+//
+//#if !defined(NSLog)
+//#define NSLog( args... ) NSLog( args, 0 )
+//#endif
+//
+//#else
+//
+//#if !defined(NSLog)
+//#define NSLog( args... )
+//#endif
+//
+//#endif
+
+#define MSLog NSLog(@"%s(%x) : %d", __PRETTY_FUNCTION__, self, __LINE__)

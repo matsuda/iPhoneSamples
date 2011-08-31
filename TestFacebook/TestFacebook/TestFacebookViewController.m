@@ -67,7 +67,9 @@ static NSString* kAppId = @"202222559841111";
 
 - (IBAction)didTapButtonToLogin:(id)sender
 {
-    [facebook_ authorize:permissions_];
+//    [facebook_ authorize:permissions_];
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithObjectsAndKeys:kAppId, @"client_id", @"touch", @"display", @"publish_stream,read_stream,offline_access", @"scope", nil];
+    [facebook_ dialog:@"oauth" andParams:params andDelegate:self];
 }
 
 - (IBAction)didTapButtonToLogout:(id)sender
@@ -84,21 +86,86 @@ static NSString* kAppId = @"202222559841111";
     facebook_ = [[Facebook alloc] initWithAppId:kAppId andDelegate:self];
 }
 
-#pragma mark - Facebook delegate methods
+#pragma mark - FBSessionDelegate methods
 
+/**
+ * Called when the user successfully logged in.
+ */
 - (void)fbDidLogin
 {
-    NSLog(@"logged in Facebook");
+    MSLog;
 }
 
+/**
+ * Called when the user dismissed the dialog without logging in.
+ */
 - (void)fbDidNotLogin:(BOOL)cancelled
 {
-    NSLog(@"error logged in Facebook");
+    MSLog;
 }
 
+/**
+ * Called when the user logged out.
+ */
 - (void)fbDidLogout
 {
-    NSLog(@"logged out Facebook");
+    MSLog;
 }
+
+#pragma mark - FBDialogDelegate methods
+
+/**
+ * Called when the dialog succeeds and is about to be dismissed.
+ */
+- (void)dialogDidComplete:(FBDialog *)dialog
+{
+    MSLog;
+}
+
+/**
+ * Called when the dialog succeeds with a returning url.
+ */
+- (void)dialogCompleteWithUrl:(NSURL *)url
+{
+    MSLog;
+}
+
+/**
+ * Called when the dialog get canceled by the user.
+ */
+- (void)dialogDidNotCompleteWithUrl:(NSURL *)url
+{
+    MSLog;
+}
+
+/**
+ * Called when the dialog is cancelled and is about to be dismissed.
+ */
+- (void)dialogDidNotComplete:(FBDialog *)dialog
+{
+    MSLog;
+}
+
+/**
+ * Called when dialog failed to load due to an error.
+ */
+- (void)dialog:(FBDialog*)dialog didFailWithError:(NSError *)error
+{
+    MSLog;
+}
+
+/**
+ * Asks if a link touched by a user should be opened in an external browser.
+ *
+ * If a user touches a link, the default behavior is to open the link in the Safari browser,
+ * which will cause your app to quit.  You may want to prevent this from happening, open the link
+ * in your own internal browser, or perhaps warn the user that they are about to leave your app.
+ * If so, implement this method on your delegate and return NO.  If you warn the user, you
+ * should hold onto the URL and once you have received their acknowledgement open the URL yourself
+ * using [[UIApplication sharedApplication] openURL:].
+ */
+//- (BOOL)dialog:(FBDialog*)dialog shouldOpenURLInExternalBrowser:(NSURL *)url
+//{
+//}
 
 @end

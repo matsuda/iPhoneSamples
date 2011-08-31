@@ -10,7 +10,7 @@
 
 #import "FBConnect.h"
 
-@interface TestFacebookViewController : UIViewController <FBSessionDelegate> {
+@interface TestFacebookViewController : UIViewController <FBSessionDelegate, FBDialogDelegate> {
     Facebook *facebook_;
     NSArray *permissions_;
 
