@@ -8,7 +8,7 @@
 
 #import "TestFacebookViewController.h"
 
-static NSString* kAppId = @"202222559841111";
+static NSString* kAppId = @"Facebook App ID";
 
 
 @interface TestFacebookViewController (PrivateMethods)
