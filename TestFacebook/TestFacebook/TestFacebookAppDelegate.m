@@ -72,4 +72,11 @@
     [super dealloc];
 }
 
+#pragma mark - Facebook methods
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    NSLog(@"handleOpenURL >>> %@", url);
+    return [[_viewController facebook] handleOpenURL:url];
+}
 @end
