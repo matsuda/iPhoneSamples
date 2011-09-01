@@ -8,10 +8,14 @@
 
 #import "TestThree20ViewController.h"
 
+#import "MenuViewController.h"
+
 @implementation TestThree20ViewController
+@synthesize button = button_;
 
 - (void)dealloc
 {
+    [button_ release];
     [super dealloc];
 }
 
@@ -44,6 +48,16 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (IBAction)didTapButton:(id)sender
+{
+//    TTOpenURL(@"tt://menu/1");
+    [[TTNavigator navigator] openURLAction:[TTURLAction actionWithURLPath:@"tt://menu"]];
+
+//    MenuViewController *controller = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
+//    [self.navigationController pushViewController:controller animated:YES];
+//    [controller release];
 }
 
 @end

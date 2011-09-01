@@ -10,19 +10,38 @@
 
 #import "TestThree20ViewController.h"
 
+#import "MenuViewController.h"
+
 @implementation TestThree20AppDelegate
 
 
 @synthesize window=_window;
 
-@synthesize viewController=_viewController;
+@synthesize navigationController = navigationController_;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
      
-    self.window.rootViewController = self.viewController;
+    NSLog(@"tttttttttttttttttttt");
+    TTNavigator* navigator = [TTNavigator navigator];
+    navigator.persistenceMode = TTNavigatorPersistenceModeTop;
+//    navigator.persistenceMode = TTNavigatorPersistenceModeAll;
+//    navigator.window = [[[UIWindow alloc] initWithFrame:TTScreenBounds()] autorelease];
+
+    self.window.rootViewController = self.navigationController;
+    [self.window addSubview:self.navigationController.view];
     [self.window makeKeyAndVisible];
+
+    TTURLMap* map = navigator.URLMap;
+    [map from:@"*" toViewController:[TTWebController class]];
+    [map from:@"tt://menu" toSharedViewController:[MenuViewController class]];
+
+    if (![navigator restoreViewControllers]) {
+        // This is the first launch, so we just start with the tab bar
+        [navigator openURLAction:[TTURLAction actionWithURLPath:@"tt://menu"]];
+    }
+
     return YES;
 }
 
@@ -68,8 +87,14 @@
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
+    [navigationController_ release];
     [super dealloc];
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    NSLog(@"sssssssssssssssssssss");
+    [[TTNavigator navigator] openURLAction:[TTURLAction actionWithURLPath:url.absoluteString]];
+    return YES;
+}
 @end

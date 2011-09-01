@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import <Three20/Three20.h>
+
 @interface TestThree20ViewController : UIViewController {
-    
+    UIButton *button_;
 }
+
+@property (nonatomic, retain) IBOutlet UIButton *button;
+
+- (IBAction)didTapButton:(id)sender;
 
 @end
