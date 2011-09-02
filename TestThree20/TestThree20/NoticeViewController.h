@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ContentBaseViewController.h"
 
-@interface NoticeViewController : UIViewController {
+@interface NoticeViewController : ContentBaseViewController {
 }
 
 @end

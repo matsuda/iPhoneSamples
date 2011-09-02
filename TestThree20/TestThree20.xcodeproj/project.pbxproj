@@ -36,6 +36,7 @@
 		CB8CD962140E2F130064900B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8CD960140E2F130064900B /* MainWindow.xib */; };
 		CB8CD965140E2F130064900B /* TestThree20ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8CD964140E2F130064900B /* TestThree20ViewController.m */; };
 		CB8CD968140E2F130064900B /* TestThree20ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8CD966140E2F130064900B /* TestThree20ViewController.xib */; };
+		CBC5B2B51410F2AB00B9C779 /* ContentBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC5B2B41410F2AB00B9C779 /* ContentBaseViewController.m */; };
 		CBE9F4A51410D27300586530 /* FeedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE9F4A41410D27300586530 /* FeedDataSource.m */; };
 		CBE9F4A81410D59600586530 /* FeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE9F4A71410D59600586530 /* FeedModel.m */; };
 		CBE9F4AB1410DC2800586530 /* FeedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE9F4AA1410DC2800586530 /* FeedObject.m */; };
@@ -257,6 +258,8 @@
 		CB8CD963140E2F130064900B /* TestThree20ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestThree20ViewController.h; sourceTree = "<group>"; };
 		CB8CD964140E2F130064900B /* TestThree20ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestThree20ViewController.m; sourceTree = "<group>"; };
 		CB8CD967140E2F130064900B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TestThree20ViewController.xib; sourceTree = "<group>"; };
+		CBC5B2B31410F2AB00B9C779 /* ContentBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentBaseViewController.h; sourceTree = "<group>"; };
+		CBC5B2B41410F2AB00B9C779 /* ContentBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentBaseViewController.m; sourceTree = "<group>"; };
 		CBE9F4A31410D27300586530 /* FeedDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedDataSource.h; sourceTree = "<group>"; };
 		CBE9F4A41410D27300586530 /* FeedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedDataSource.m; sourceTree = "<group>"; };
 		CBE9F4A61410D59600586530 /* FeedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedModel.h; sourceTree = "<group>"; };
@@ -445,6 +448,8 @@
 				CB294D3F14108AC200EEE803 /* ConfigViewController.h */,
 				CB294D4014108AC200EEE803 /* ConfigViewController.m */,
 				CB294D4114108AC200EEE803 /* ConfigViewController.xib */,
+				CBC5B2B31410F2AB00B9C779 /* ContentBaseViewController.h */,
+				CBC5B2B41410F2AB00B9C779 /* ContentBaseViewController.m */,
 				CB8CD955140E2F130064900B /* Supporting Files */,
 			);
 			path = TestThree20;
@@ -753,6 +758,7 @@
 				CBE9F4D01410DE0D00586530 /* SBJsonTokeniser.m in Sources */,
 				CBE9F4D11410DE0D00586530 /* SBJsonUTF8Stream.m in Sources */,
 				CBE9F4D21410DE0D00586530 /* SBJsonWriter.m in Sources */,
+				CBC5B2B51410F2AB00B9C779 /* ContentBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

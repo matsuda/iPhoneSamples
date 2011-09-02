@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ContentBaseViewController.h"
 
-@interface PhotoViewController : UIViewController {
+@interface PhotoViewController : ContentBaseViewController {
 }
 
 @end

@@ -10,6 +10,11 @@
 
 @interface MenuViewController : TTViewController <TTLauncherViewDelegate, TTSearchTextFieldDelegate> {
     TTLauncherView* launcherView_;
+    UIViewController* viewController_;
+
+    NSString* urlToOpen_;
 }
+
+@property (nonatomic, retain) UIViewController* viewController;
 
 @end

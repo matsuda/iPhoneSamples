@@ -1,5 +1,5 @@
 //
-//  FeedViewController.h
+//  ContentBaseViewController.h
 //  TestThree20
 //
 //  Created by Kosuke Matsuda on 11/09/02.
@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ContentBaseViewController.h"
 
-@interface FeedViewController : TTTableViewController {
+@interface ContentBaseViewController : UIViewController {
+    
 }
 
 @end
