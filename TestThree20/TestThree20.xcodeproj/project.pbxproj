@@ -34,8 +34,6 @@
 		CB8CD95C140E2F130064900B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8CD95B140E2F130064900B /* main.m */; };
 		CB8CD95F140E2F130064900B /* TestThree20AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8CD95E140E2F130064900B /* TestThree20AppDelegate.m */; };
 		CB8CD962140E2F130064900B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8CD960140E2F130064900B /* MainWindow.xib */; };
-		CB8CD965140E2F130064900B /* TestThree20ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8CD964140E2F130064900B /* TestThree20ViewController.m */; };
-		CB8CD968140E2F130064900B /* TestThree20ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8CD966140E2F130064900B /* TestThree20ViewController.xib */; };
 		CBC5B2B51410F2AB00B9C779 /* ContentBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC5B2B41410F2AB00B9C779 /* ContentBaseViewController.m */; };
 		CBE9F4A51410D27300586530 /* FeedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE9F4A41410D27300586530 /* FeedDataSource.m */; };
 		CBE9F4A81410D59600586530 /* FeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE9F4A71410D59600586530 /* FeedModel.m */; };
@@ -255,9 +253,6 @@
 		CB8CD95D140E2F130064900B /* TestThree20AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestThree20AppDelegate.h; sourceTree = "<group>"; };
 		CB8CD95E140E2F130064900B /* TestThree20AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestThree20AppDelegate.m; sourceTree = "<group>"; };
 		CB8CD961140E2F130064900B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		CB8CD963140E2F130064900B /* TestThree20ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestThree20ViewController.h; sourceTree = "<group>"; };
-		CB8CD964140E2F130064900B /* TestThree20ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestThree20ViewController.m; sourceTree = "<group>"; };
-		CB8CD967140E2F130064900B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TestThree20ViewController.xib; sourceTree = "<group>"; };
 		CBC5B2B31410F2AB00B9C779 /* ContentBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentBaseViewController.h; sourceTree = "<group>"; };
 		CBC5B2B41410F2AB00B9C779 /* ContentBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentBaseViewController.m; sourceTree = "<group>"; };
 		CBE9F4A31410D27300586530 /* FeedDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedDataSource.h; sourceTree = "<group>"; };
@@ -432,9 +427,6 @@
 				CB8CD95D140E2F130064900B /* TestThree20AppDelegate.h */,
 				CB8CD95E140E2F130064900B /* TestThree20AppDelegate.m */,
 				CB8CD960140E2F130064900B /* MainWindow.xib */,
-				CB8CD963140E2F130064900B /* TestThree20ViewController.h */,
-				CB8CD964140E2F130064900B /* TestThree20ViewController.m */,
-				CB8CD966140E2F130064900B /* TestThree20ViewController.xib */,
 				CB0CEF46140F5F94009E103E /* MenuViewController.h */,
 				CB0CEF47140F5F94009E103E /* MenuViewController.m */,
 				CB0CEF48140F5F94009E103E /* MenuViewController.xib */,
@@ -718,7 +710,6 @@
 				320B6C86F11D9990244A9731 /* Three20.bundle in Resources */,
 				CB8CD959140E2F130064900B /* InfoPlist.strings in Resources */,
 				CB8CD962140E2F130064900B /* MainWindow.xib in Resources */,
-				CB8CD968140E2F130064900B /* TestThree20ViewController.xib in Resources */,
 				CB0CEF4A140F5F94009E103E /* MenuViewController.xib in Resources */,
 				CB0CF00F140F9856009E103E /* Icon.png in Resources */,
 				CB294D2F14108A2C00EEE803 /* FeedViewController.xib in Resources */,
@@ -737,7 +728,6 @@
 			files = (
 				CB8CD95C140E2F130064900B /* main.m in Sources */,
 				CB8CD95F140E2F130064900B /* TestThree20AppDelegate.m in Sources */,
-				CB8CD965140E2F130064900B /* TestThree20ViewController.m in Sources */,
 				CB0CEF49140F5F94009E103E /* MenuViewController.m in Sources */,
 				CB294D2E14108A2C00EEE803 /* FeedViewController.m in Sources */,
 				CB294D3314108A4500EEE803 /* PhotoViewController.m in Sources */,
@@ -817,14 +807,6 @@
 				CB8CD961140E2F130064900B /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		CB8CD966140E2F130064900B /* TestThree20ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB8CD967140E2F130064900B /* en */,
-			);
-			name = TestThree20ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

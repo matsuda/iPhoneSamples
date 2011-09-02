@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class TestThree20ViewController;
-
 @interface TestThree20AppDelegate : NSObject <UIApplicationDelegate> {
     UINavigationController* navigationController_;
 }

@@ -8,8 +8,6 @@
 
 #import "TestThree20AppDelegate.h"
 
-#import "TestThree20ViewController.h"
-
 #import "MenuViewController.h"
 #import "FeedViewController.h"
 #import "PhotoViewController.h"
