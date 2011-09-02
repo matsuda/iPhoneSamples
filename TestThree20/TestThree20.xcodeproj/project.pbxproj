@@ -364,10 +364,10 @@
 				CB8CD963140E2F130064900B /* TestThree20ViewController.h */,
 				CB8CD964140E2F130064900B /* TestThree20ViewController.m */,
 				CB8CD966140E2F130064900B /* TestThree20ViewController.xib */,
-				CB8CD955140E2F130064900B /* Supporting Files */,
 				CB0CEF46140F5F94009E103E /* MenuViewController.h */,
 				CB0CEF47140F5F94009E103E /* MenuViewController.m */,
 				CB0CEF48140F5F94009E103E /* MenuViewController.xib */,
+				CB8CD955140E2F130064900B /* Supporting Files */,
 			);
 			path = TestThree20;
 			sourceTree = "<group>";

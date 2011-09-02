@@ -10,7 +10,7 @@
 
 #import <Three20/Three20.h>
 
-@interface MenuViewController : TTViewController <TTLauncherViewDelegate> {
+@interface MenuViewController : TTViewController <TTLauncherViewDelegate, TTSearchTextFieldDelegate> {
     TTLauncherView* launcherView_;
 }
 

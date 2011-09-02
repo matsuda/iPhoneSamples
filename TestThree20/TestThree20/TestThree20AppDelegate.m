@@ -22,8 +22,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-     
-    NSLog(@"tttttttttttttttttttt");
     TTNavigator* navigator = [TTNavigator navigator];
     navigator.persistenceMode = TTNavigatorPersistenceModeTop;
 //    navigator.persistenceMode = TTNavigatorPersistenceModeAll;

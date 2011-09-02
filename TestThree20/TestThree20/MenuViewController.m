@@ -68,11 +68,18 @@
 {
     [super loadView];
 
+    TTTableViewController* searchController = [[[TTTableViewController alloc] init] autorelease];
+    // searchController.dataSource = [[[MockSearchDataSource alloc] initWithDuration:1.5] autorelease];
+    self.searchViewController = searchController;
+    _searchController.searchBar.frame = CGRectMake(0, 0, 320, 44);
+    [self.view addSubview:_searchController.searchBar];
+
     launcherView_ = [[TTLauncherView alloc] initWithFrame:self.view.bounds];
     launcherView_.backgroundColor = [UIColor blackColor];
     launcherView_.delegate = self;
     launcherView_.columnCount = 4;
     launcherView_.persistenceMode = TTLauncherPersistenceModeAll;
+    launcherView_.frame = CGRectMake(0, 44, 320, self.view.frame.size.height - 44);
 
     if (![launcherView_ restoreLauncherItems]) {
         launcherView_.pages = [NSArray arrayWithObjects:
@@ -85,19 +92,19 @@
                                                                    URL:nil canDelete:YES] autorelease],
                                 [[[TTLauncherItem alloc] initWithTitle:@"Button 3"
                                                                  image:@"bundle://Icon.png"
-                                                                   URL:@"tt://item3" canDelete:YES] autorelease],
+                                                                   URL:@"fb://item3" canDelete:YES] autorelease],
                                 [[[TTLauncherItem alloc] initWithTitle:@"Button 4"
                                                                  image:@"bundle://Icon.png"
-                                                                   URL:@"tt://item4" canDelete:YES] autorelease],
+                                                                   URL:@"fb://item4" canDelete:YES] autorelease],
                                 [[[TTLauncherItem alloc] initWithTitle:@"Button 5"
                                                                  image:@"bundle://Icon.png"
-                                                                   URL:@"tt://item5" canDelete:YES] autorelease],
+                                                                   URL:@"fb://item5" canDelete:YES] autorelease],
                                 [[[TTLauncherItem alloc] initWithTitle:@"Button 6"
                                                                  image:@"bundle://Icon.png"
-                                                                   URL:@"tt://item6" canDelete:YES] autorelease],
+                                                                   URL:@"fb://item6" canDelete:YES] autorelease],
                                 [[[TTLauncherItem alloc] initWithTitle:@"Button 7"
                                                                  image:@"bundle://Icon.png"
-                                                                   URL:@"tt://item7" canDelete:YES] autorelease],
+                                                                   URL:@"fb://item7" canDelete:YES] autorelease],
                                 nil],
                                [NSArray arrayWithObjects:
                                 [[[TTLauncherItem alloc] initWithTitle:@"Button 8"
@@ -112,19 +119,20 @@
     }
     [self.view addSubview:launcherView_];
 
-    TTLauncherItem* item = [launcherView_ itemWithURL:@"tt://item3"];
+    TTLauncherItem* item = [launcherView_ itemWithURL:@"fb://item3"];
+    NSLog(@"%@", [item class]);
     item.badgeNumber = 4;
 
-    item = [launcherView_ itemWithURL:@"tt://item4"];
+    item = [launcherView_ itemWithURL:@"fb://item4"];
     item.badgeNumber = 0;
 
-    item = [launcherView_ itemWithURL:@"tt://item5"];
+    item = [launcherView_ itemWithURL:@"fb://item5"];
     item.badgeValue = @"100!";
 
-    item = [launcherView_ itemWithURL:@"tt://item6"];
+    item = [launcherView_ itemWithURL:@"fb://item6"];
     item.badgeValue = @"Off";
 
-    item = [launcherView_ itemWithURL:@"tt://item7"];
+    item = [launcherView_ itemWithURL:@"fb://item7"];
     item.badgeNumber = 300;
 }
 
