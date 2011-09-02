@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import <Three20/Three20.h>
-
 @class TestThree20ViewController;
 
 @interface TestThree20AppDelegate : NSObject <UIApplicationDelegate> {

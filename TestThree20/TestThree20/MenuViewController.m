@@ -138,9 +138,8 @@
 - (void)loadLauncherView
 {
     launcherView_ = [[TTLauncherView alloc] initWithFrame:self.view.bounds];
-    launcherView_.backgroundColor = [UIColor blackColor];
     launcherView_.delegate = self;
-    launcherView_.columnCount = 4;
+    launcherView_.columnCount = 3;
     launcherView_.persistenceMode = TTLauncherPersistenceModeAll;
     launcherView_.frame = CGRectMake(0, 44, 320, self.view.frame.size.height - 44);
 

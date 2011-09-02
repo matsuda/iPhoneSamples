@@ -8,6 +8,7 @@
 
 #import "FeedViewController.h"
 
+#import "FeedDataSource.h"
 
 @implementation FeedViewController
 
@@ -16,6 +17,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title = @"Feed title";
+        self.variableHeightRows = YES;
     }
     return self;
 }
@@ -52,6 +55,16 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)createModel
+{
+    self.dataSource = [[[FeedDataSource alloc] initWithSearchQuery:@"three20"] autorelease];
+}
+
+- (id<UITableViewDelegate>)createDelegate
+{
+    return [[[TTTableViewDragRefreshDelegate alloc] initWithController:self] autorelease];
 }
 
 @end
