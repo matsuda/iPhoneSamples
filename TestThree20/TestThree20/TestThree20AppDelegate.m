@@ -11,6 +11,10 @@
 #import "TestThree20ViewController.h"
 
 #import "MenuViewController.h"
+#import "FeedViewController.h"
+#import "PhotoViewController.h"
+#import "NoticeViewController.h"
+#import "ConfigViewController.h"
 
 @implementation TestThree20AppDelegate
 
@@ -23,7 +27,8 @@
 {
     // Override point for customization after application launch.
     TTNavigator* navigator = [TTNavigator navigator];
-    navigator.persistenceMode = TTNavigatorPersistenceModeTop;
+    navigator.persistenceMode = TTNavigatorPersistenceModeNone;
+//    navigator.persistenceMode = TTNavigatorPersistenceModeTop;
 //    navigator.persistenceMode = TTNavigatorPersistenceModeAll;
 //    navigator.window = [[[UIWindow alloc] initWithFrame:TTScreenBounds()] autorelease];
 
@@ -34,6 +39,10 @@
     TTURLMap* map = navigator.URLMap;
     [map from:@"*" toViewController:[TTWebController class]];
     [map from:@"tt://menu" toSharedViewController:[MenuViewController class]];
+    [map from:@"tt://feed" toViewController:[FeedViewController class]];
+    [map from:@"tt://photo" toViewController:[PhotoViewController class]];
+    [map from:@"tt://notice" toViewController:[NoticeViewController class]];
+    [map from:@"tt://config" toViewController:[ConfigViewController class]];
 
     if (![navigator restoreViewControllers]) {
         // This is the first launch, so we just start with the tab bar

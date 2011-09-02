@@ -19,6 +19,14 @@
 		CB0CEF49140F5F94009E103E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0CEF47140F5F94009E103E /* MenuViewController.m */; };
 		CB0CEF4A140F5F94009E103E /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0CEF48140F5F94009E103E /* MenuViewController.xib */; };
 		CB0CF00F140F9856009E103E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB0CF00E140F9856009E103E /* Icon.png */; };
+		CB294D2E14108A2C00EEE803 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB294D2C14108A2C00EEE803 /* FeedViewController.m */; };
+		CB294D2F14108A2C00EEE803 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB294D2D14108A2C00EEE803 /* FeedViewController.xib */; };
+		CB294D3314108A4500EEE803 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB294D3114108A4500EEE803 /* PhotoViewController.m */; };
+		CB294D3414108A4500EEE803 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB294D3214108A4500EEE803 /* PhotoViewController.xib */; };
+		CB294D3814108A5E00EEE803 /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB294D3614108A5E00EEE803 /* NoticeViewController.m */; };
+		CB294D3914108A5E00EEE803 /* NoticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB294D3714108A5E00EEE803 /* NoticeViewController.xib */; };
+		CB294D4214108AC200EEE803 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB294D4014108AC200EEE803 /* ConfigViewController.m */; };
+		CB294D4314108AC200EEE803 /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB294D4114108AC200EEE803 /* ConfigViewController.xib */; };
 		CB8CD94F140E2F130064900B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8CD94E140E2F130064900B /* UIKit.framework */; };
 		CB8CD951140E2F130064900B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8CD950140E2F130064900B /* Foundation.framework */; };
 		CB8CD953140E2F130064900B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8CD952140E2F130064900B /* CoreGraphics.framework */; };
@@ -208,6 +216,18 @@
 		CB0CEF47140F5F94009E103E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		CB0CEF48140F5F94009E103E /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		CB0CF00E140F9856009E103E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		CB294D2B14108A2C00EEE803 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		CB294D2C14108A2C00EEE803 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		CB294D2D14108A2C00EEE803 /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		CB294D3014108A4500EEE803 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		CB294D3114108A4500EEE803 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		CB294D3214108A4500EEE803 /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
+		CB294D3514108A5E00EEE803 /* NoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeViewController.h; sourceTree = "<group>"; };
+		CB294D3614108A5E00EEE803 /* NoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeViewController.m; sourceTree = "<group>"; };
+		CB294D3714108A5E00EEE803 /* NoticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeViewController.xib; sourceTree = "<group>"; };
+		CB294D3F14108AC200EEE803 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		CB294D4014108AC200EEE803 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		CB294D4114108AC200EEE803 /* ConfigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigViewController.xib; sourceTree = "<group>"; };
 		CB8CD94A140E2F130064900B /* TestThree20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestThree20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8CD94E140E2F130064900B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CB8CD950140E2F130064900B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -367,6 +387,18 @@
 				CB0CEF46140F5F94009E103E /* MenuViewController.h */,
 				CB0CEF47140F5F94009E103E /* MenuViewController.m */,
 				CB0CEF48140F5F94009E103E /* MenuViewController.xib */,
+				CB294D2B14108A2C00EEE803 /* FeedViewController.h */,
+				CB294D2C14108A2C00EEE803 /* FeedViewController.m */,
+				CB294D2D14108A2C00EEE803 /* FeedViewController.xib */,
+				CB294D3014108A4500EEE803 /* PhotoViewController.h */,
+				CB294D3114108A4500EEE803 /* PhotoViewController.m */,
+				CB294D3214108A4500EEE803 /* PhotoViewController.xib */,
+				CB294D3514108A5E00EEE803 /* NoticeViewController.h */,
+				CB294D3614108A5E00EEE803 /* NoticeViewController.m */,
+				CB294D3714108A5E00EEE803 /* NoticeViewController.xib */,
+				CB294D3F14108AC200EEE803 /* ConfigViewController.h */,
+				CB294D4014108AC200EEE803 /* ConfigViewController.m */,
+				CB294D4114108AC200EEE803 /* ConfigViewController.xib */,
 				CB8CD955140E2F130064900B /* Supporting Files */,
 			);
 			path = TestThree20;
@@ -589,6 +621,10 @@
 				CB8CD968140E2F130064900B /* TestThree20ViewController.xib in Resources */,
 				CB0CEF4A140F5F94009E103E /* MenuViewController.xib in Resources */,
 				CB0CF00F140F9856009E103E /* Icon.png in Resources */,
+				CB294D2F14108A2C00EEE803 /* FeedViewController.xib in Resources */,
+				CB294D3414108A4500EEE803 /* PhotoViewController.xib in Resources */,
+				CB294D3914108A5E00EEE803 /* NoticeViewController.xib in Resources */,
+				CB294D4314108AC200EEE803 /* ConfigViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +639,10 @@
 				CB8CD95F140E2F130064900B /* TestThree20AppDelegate.m in Sources */,
 				CB8CD965140E2F130064900B /* TestThree20ViewController.m in Sources */,
 				CB0CEF49140F5F94009E103E /* MenuViewController.m in Sources */,
+				CB294D2E14108A2C00EEE803 /* FeedViewController.m in Sources */,
+				CB294D3314108A4500EEE803 /* PhotoViewController.m in Sources */,
+				CB294D3814108A5E00EEE803 /* NoticeViewController.m in Sources */,
+				CB294D4214108AC200EEE803 /* ConfigViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,21 +1,27 @@
 //
-//  TestThree20ViewController.m
+//  PhotoViewController.m
 //  TestThree20
 //
-//  Created by Kosuke Matsuda on 11/08/31.
+//  Created by Kosuke Matsuda on 11/09/02.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "TestThree20ViewController.h"
+#import "PhotoViewController.h"
 
-#import "MenuViewController.h"
 
-@implementation TestThree20ViewController
-@synthesize button = button_;
+@implementation PhotoViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)dealloc
 {
-    [button_ release];
     [super dealloc];
 }
 
@@ -23,19 +29,17 @@
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
+
     // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
 }
-*/
 
 - (void)viewDidUnload
 {
@@ -48,12 +52,6 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-- (IBAction)didTapButton:(id)sender
-{
-//    TTOpenURL(@"tt://menu/1");
-    [[TTNavigator navigator] openURLAction:[TTURLAction actionWithURLPath:@"tt://menu"]];
 }
 
 @end
