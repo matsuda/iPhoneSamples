@@ -14,6 +14,8 @@
 
 @implementation ContentBaseViewController
 
+@synthesize delegate = delegate_;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -78,7 +80,11 @@
 
 - (void)didTapButtonToReturn:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:NO];
+    if ([self.delegate respondsToSelector:@selector(didTapRetunButtonAtContentBaseViewController:)]) {
+        [self.delegate didTapRetunButtonAtContentBaseViewController:self];
+    } else {
+        [self.navigationController popViewControllerAnimated:NO];
+    }
 }
 
 @end

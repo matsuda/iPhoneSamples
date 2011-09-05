@@ -54,4 +54,12 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark - ContentBaseViewController override methods
+
+
+- (void)didTapButtonToReturn:(id)sender
+{
+    [self.parentViewController dismissModalViewControllerAnimated:YES];
+}
+
 @end
