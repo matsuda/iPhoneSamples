@@ -36,15 +36,15 @@
 
     TTURLMap* map = navigator.URLMap;
     [map from:@"*" toViewController:[TTWebController class]];
-    [map from:@"tt://menu" toSharedViewController:[MenuViewController class]];
-    [map from:@"tt://feed" toViewController:[FeedViewController class]];
-    [map from:@"tt://photo" toViewController:[PhotoViewController class]];
-    [map from:@"tt://notice" toViewController:[NoticeViewController class]];
-    [map from:@"tt://config" toViewController:[ConfigViewController class]];
+    [map from:zAppMenuURLPath toSharedViewController:[MenuViewController class]];
+    [map from:zAppFeedURLPath toViewController:[FeedViewController class]];
+    [map from:zAppPhotoURLPath toViewController:[PhotoViewController class]];
+    [map from:zAppNoticeURLPath toModalViewController:[NoticeViewController class]];
+    [map from:zAppConfigURLPath toViewController:[ConfigViewController class]];
 
     if (![navigator restoreViewControllers]) {
         // This is the first launch, so we just start with the tab bar
-        [navigator openURLAction:[TTURLAction actionWithURLPath:@"tt://menu"]];
+        [navigator openURLAction:[TTURLAction actionWithURLPath:zAppMenuURLPath]];
     }
 
     return YES;

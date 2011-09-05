@@ -27,6 +27,9 @@
 		CB294D3914108A5E00EEE803 /* NoticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB294D3714108A5E00EEE803 /* NoticeViewController.xib */; };
 		CB294D4214108AC200EEE803 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB294D4014108AC200EEE803 /* ConfigViewController.m */; };
 		CB294D4314108AC200EEE803 /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB294D4114108AC200EEE803 /* ConfigViewController.xib */; };
+		CB65174E1414659700747FE2 /* btn-bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB65174C1414659700747FE2 /* btn-bg2.png */; };
+		CB65174F1414659700747FE2 /* btn-bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB65174D1414659700747FE2 /* btn-bg2@2x.png */; };
+		CB6517B5141468D700747FE2 /* Atlas.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6517B4141468D700747FE2 /* Atlas.m */; };
 		CB8CD94F140E2F130064900B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8CD94E140E2F130064900B /* UIKit.framework */; };
 		CB8CD951140E2F130064900B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8CD950140E2F130064900B /* Foundation.framework */; };
 		CB8CD953140E2F130064900B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8CD952140E2F130064900B /* CoreGraphics.framework */; };
@@ -242,6 +245,10 @@
 		CB294D3F14108AC200EEE803 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
 		CB294D4014108AC200EEE803 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
 		CB294D4114108AC200EEE803 /* ConfigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigViewController.xib; sourceTree = "<group>"; };
+		CB65174C1414659700747FE2 /* btn-bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-bg2.png"; sourceTree = "<group>"; };
+		CB65174D1414659700747FE2 /* btn-bg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-bg2@2x.png"; sourceTree = "<group>"; };
+		CB6517B3141468D700747FE2 /* Atlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atlas.h; sourceTree = "<group>"; };
+		CB6517B4141468D700747FE2 /* Atlas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Atlas.m; sourceTree = "<group>"; };
 		CB8CD94A140E2F130064900B /* TestThree20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestThree20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8CD94E140E2F130064900B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CB8CD950140E2F130064900B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -379,9 +386,20 @@
 		CB0CF00D140F9856009E103E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CB65174C1414659700747FE2 /* btn-bg2.png */,
+				CB65174D1414659700747FE2 /* btn-bg2@2x.png */,
 				CB0CF00E140F9856009E103E /* Icon.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		CB6517B2141468C800747FE2 /* Atlas */ = {
+			isa = PBXGroup;
+			children = (
+				CB6517B3141468D700747FE2 /* Atlas.h */,
+				CB6517B4141468D700747FE2 /* Atlas.m */,
+			);
+			path = Atlas;
 			sourceTree = "<group>";
 		};
 		CB8CD93F140E2F130064900B = {
@@ -424,6 +442,7 @@
 		CB8CD954140E2F130064900B /* TestThree20 */ = {
 			isa = PBXGroup;
 			children = (
+				CB6517B2141468C800747FE2 /* Atlas */,
 				CB8CD95D140E2F130064900B /* TestThree20AppDelegate.h */,
 				CB8CD95E140E2F130064900B /* TestThree20AppDelegate.m */,
 				CB8CD960140E2F130064900B /* MainWindow.xib */,
@@ -716,6 +735,8 @@
 				CB294D3414108A4500EEE803 /* PhotoViewController.xib in Resources */,
 				CB294D3914108A5E00EEE803 /* NoticeViewController.xib in Resources */,
 				CB294D4314108AC200EEE803 /* ConfigViewController.xib in Resources */,
+				CB65174E1414659700747FE2 /* btn-bg2.png in Resources */,
+				CB65174F1414659700747FE2 /* btn-bg2@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,6 +770,7 @@
 				CBE9F4D11410DE0D00586530 /* SBJsonUTF8Stream.m in Sources */,
 				CBE9F4D21410DE0D00586530 /* SBJsonWriter.m in Sources */,
 				CBC5B2B51410F2AB00B9C779 /* ContentBaseViewController.m in Sources */,
+				CB6517B5141468D700747FE2 /* Atlas.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

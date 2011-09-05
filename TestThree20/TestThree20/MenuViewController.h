@@ -11,10 +11,14 @@
 @interface MenuViewController : TTViewController <TTLauncherViewDelegate, TTSearchTextFieldDelegate> {
     TTLauncherView* launcherView_;
     UIViewController* viewController_;
+    UIButton* noticeButton_;
 
     NSString* urlToOpen_;
 }
 
 @property (nonatomic, retain) UIViewController* viewController;
+@property (nonatomic, retain) IBOutlet UIButton* noticeButton;
+
+- (IBAction)didTapButtonToShowNotice:(UIButton *)button;
 
 @end

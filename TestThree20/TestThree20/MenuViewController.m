@@ -21,6 +21,7 @@
 @implementation MenuViewController
 
 @synthesize viewController = viewController_;
+@synthesize noticeButton = noticeButton_;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +35,7 @@
 - (void)dealloc
 {
     [urlToOpen_ release];
+    [noticeButton_ release];
     [super dealloc];
 }
 
@@ -71,6 +73,22 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+#pragma mark - IBAction
+
+- (IBAction)didTapButtonToShowNotice:(UIButton *)button
+{
+    NSLog(@"didTapButtonToShowNotice");
+    [[TTNavigator navigator] openURLAction:[[TTURLAction actionWithURLPath:zAppNoticeURLPath] applyAnimated:YES]];
+}
+
+- (void)didTapButtonToConfig:(id)sender
+{
+    NSLog(@"didTapButtonToConfig");
+    [[TTNavigator navigator] openURLAction:[[TTURLAction actionWithURLPath:zAppConfigURLPath] applyAnimated:YES]];
+}
+
+#pragma mark - Private methods
 
 - (void)loadSearchBar
 {
@@ -150,20 +168,21 @@
     launcherView_.delegate = self;
     launcherView_.columnCount = 3;
     launcherView_.persistenceMode = TTLauncherPersistenceModeAll;
-    launcherView_.frame = CGRectMake(0, 44, 320, self.view.frame.size.height - 44);
+//    launcherView_.frame = CGRectMake(0, 44, 320, self.view.frame.size.height - 44);
+    launcherView_.frame = CGRectMake(0, 44, 320, self.view.frame.size.height - (44 + 37));
 
     if (![launcherView_ restoreLauncherItems]) {
         launcherView_.pages = [NSArray arrayWithObjects:
                                [NSArray arrayWithObjects:
                                 [[[TTLauncherItem alloc] initWithTitle:@"Feed"
                                                                  image:@"bundle://Icon.png"
-                                                                   URL:@"tt://feed" canDelete:NO] autorelease],
+                                                                   URL:zAppFeedURLPath canDelete:NO] autorelease],
                                 [[[TTLauncherItem alloc] initWithTitle:@"Photo"
                                                                  image:@"bundle://Icon.png"
-                                                                   URL:@"tt://photo" canDelete:NO] autorelease],
+                                                                   URL:zAppPhotoURLPath canDelete:NO] autorelease],
                                 [[[TTLauncherItem alloc] initWithTitle:@"Notice"
                                                                  image:@"bundle://Icon.png"
-                                                                   URL:@"tt://notice" canDelete:NO] autorelease],
+                                                                   URL:zAppNoticeURLPath canDelete:NO] autorelease],
                                 nil],
                                nil];
     }
@@ -174,6 +193,7 @@
 {
     [super loadView];
 
+    [[NSBundle mainBundle] loadNibNamed: NSStringFromClass([self class]) owner:self options:nil];
     [self loadSearchBar];
     [self loadLauncherView];
 }
@@ -184,10 +204,6 @@
     UIBarButtonItem* menuButton = [[UIBarButtonItem alloc] initWithTitle:@"config" style:UIBarButtonSystemItemOrganize target:self action:@selector(didTapButtonToConfig:)];
     self.navigationItem.leftBarButtonItem = menuButton;
     [menuButton release];
-}
-
-- (void)didTapButtonToConfig:(id)sender
-{
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
