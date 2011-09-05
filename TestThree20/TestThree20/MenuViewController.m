@@ -8,8 +8,8 @@
 
 #import "MenuViewController.h"
 
-#define TIME_FOR_SHRINKING 0.61f // Has to be different from SPEED_OF_EXPANDING and has to end in 'f'
-#define TIME_FOR_EXPANDING 0.60f // Has to be different from SPEED_OF_SHRINKING and has to end in 'f'
+#define TIME_FOR_SHRINKING 0.41f // Has to be different from SPEED_OF_EXPANDING and has to end in 'f'
+#define TIME_FOR_EXPANDING 0.40f // Has to be different from SPEED_OF_SHRINKING and has to end in 'f'
 #define SCALED_DOWN_AMOUNT 0.01  // For example, 0.01 is one hundredth of the normal size
 
 @interface MenuViewController (PrivateMethods)
@@ -57,7 +57,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-	[self performSelector:@selector(animateTransition:) withObject:[NSNumber numberWithFloat: TIME_FOR_SHRINKING]];	
+	[self performSelector:@selector(animateTransition:) withObject:[NSNumber numberWithFloat:TIME_FOR_SHRINKING]];	
 }
 - (void)viewDidUnload
 {
@@ -193,7 +193,8 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // TTLauncherViewDelegate
 
-- (void)launcherView:(TTLauncherView*)launcher didSelectItem:(TTLauncherItem*)item {
+- (void)launcherView:(TTLauncherView*)launcher didSelectItem:(TTLauncherItem*)item
+{
     // [[TTNavigator navigator] openURLAction:[[TTURLAction actionWithURLPath:item.URL] applyAnimated:YES]];
 
     // in case of Facebook animations
@@ -203,17 +204,20 @@
     [self performSelector:@selector(animateTransition:) withObject:[NSNumber numberWithFloat:TIME_FOR_EXPANDING]];
 }
 
-- (void)launcherViewDidBeginEditing:(TTLauncherView*)launcher {
+- (void)launcherViewDidBeginEditing:(TTLauncherView*)launcher
+{
     [self.navigationItem setRightBarButtonItem:[[[UIBarButtonItem alloc]
                                                  initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                  target:launcherView_ action:@selector(endEditing)] autorelease] animated:YES];
 }
 
-- (void)launcherViewDidEndEditing:(TTLauncherView*)launcher {
+- (void)launcherViewDidEndEditing:(TTLauncherView*)launcher
+{
     [self.navigationItem setRightBarButtonItem:nil animated:YES];
 }
 
-- (void)animateTransition:(NSNumber *)duration {
+- (void)animateTransition:(NSNumber *)duration
+{
     if (!urlToOpen_) return;
 
     self.view.userInteractionEnabled = NO;
@@ -241,7 +245,8 @@
     [UIView commitAnimations];
 }
 
-- (void)animationDidStop:(NSString *)animationID finished:(BOOL)finished context:(void *)context{
+- (void)animationDidStop:(NSString *)animationID finished:(BOOL)finished context:(void *)context
+{
     self.view.userInteractionEnabled = YES;
     self.viewController.view.hidden = true;
     [self.viewController.view removeFromSuperview];
