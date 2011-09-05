@@ -8,18 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol ContentBaseViewControllerDelegate;
+//@protocol ContentBaseViewControllerDelegate;
 
 @interface ContentBaseViewController : UIViewController {
-    id <ContentBaseViewControllerDelegate> delegate_;
+//    id <ContentBaseViewControllerDelegate> delegate_;
 }
 
-@property (nonatomic, assign) id <ContentBaseViewControllerDelegate> delegate;
+//@property (nonatomic, assign) id <ContentBaseViewControllerDelegate> delegate;
 
 @end
 
-@protocol ContentBaseViewControllerDelegate <NSObject>
-@optional
-- (void)didTapRetunButtonAtContentBaseViewController:(ContentBaseViewController *)controller;
-@end
-
+//@protocol ContentBaseViewControllerDelegate <NSObject>
+//@optional
+//- (void)didTapRetunButtonAtContentBaseViewController:(ContentBaseViewController *)controller;
+//@end

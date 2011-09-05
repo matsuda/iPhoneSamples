@@ -98,75 +98,12 @@
     _searchController.searchBar.frame = CGRectMake(0, 0, 320, 44);
     [self.view addSubview:_searchController.searchBar];
 }
-//- (void)loadLauncherView
-//{
-//    launcherView_ = [[TTLauncherView alloc] initWithFrame:self.view.bounds];
-//    launcherView_.backgroundColor = [UIColor blackColor];
-//    launcherView_.delegate = self;
-//    launcherView_.columnCount = 4;
-//    launcherView_.persistenceMode = TTLauncherPersistenceModeAll;
-//    launcherView_.frame = CGRectMake(0, 44, 320, self.view.frame.size.height - 44);
-//    
-//    if (![launcherView_ restoreLauncherItems]) {
-//        launcherView_.pages = [NSArray arrayWithObjects:
-//                               [NSArray arrayWithObjects:
-//                                [[[TTLauncherItem alloc] initWithTitle:@"Button 1"
-//                                                                 image:@"bundle://Icon.png"
-//                                                                   URL:nil canDelete:YES] autorelease],
-//                                [[[TTLauncherItem alloc] initWithTitle:@"Button 2"
-//                                                                 image:@"bundle://Icon.png"
-//                                                                   URL:nil canDelete:YES] autorelease],
-//                                [[[TTLauncherItem alloc] initWithTitle:@"Button 3"
-//                                                                 image:@"bundle://Icon.png"
-//                                                                   URL:@"fb://item3" canDelete:YES] autorelease],
-//                                [[[TTLauncherItem alloc] initWithTitle:@"Button 4"
-//                                                                 image:@"bundle://Icon.png"
-//                                                                   URL:@"fb://item4" canDelete:YES] autorelease],
-//                                [[[TTLauncherItem alloc] initWithTitle:@"Button 5"
-//                                                                 image:@"bundle://Icon.png"
-//                                                                   URL:@"fb://item5" canDelete:YES] autorelease],
-//                                [[[TTLauncherItem alloc] initWithTitle:@"Button 6"
-//                                                                 image:@"bundle://Icon.png"
-//                                                                   URL:@"fb://item6" canDelete:YES] autorelease],
-//                                [[[TTLauncherItem alloc] initWithTitle:@"Button 7"
-//                                                                 image:@"bundle://Icon.png"
-//                                                                   URL:@"fb://item7" canDelete:YES] autorelease],
-//                                nil],
-//                               [NSArray arrayWithObjects:
-//                                [[[TTLauncherItem alloc] initWithTitle:@"Button 8"
-//                                                                 image:@"bundle://Icon.png"
-//                                                                   URL:nil canDelete:YES] autorelease],
-//                                [[[TTLauncherItem alloc] initWithTitle:@"Button 9"
-//                                                                 image:@"bundle://Icon.png"
-//                                                                   URL:nil canDelete:YES] autorelease],
-//                                nil],
-//                               nil
-//                               ];
-//    }
-//    [self.view addSubview:launcherView_];
-//    
-//    TTLauncherItem* item = [launcherView_ itemWithURL:@"fb://item3"];
-//    NSLog(@"%@", [item class]);
-//    item.badgeNumber = 4;
-//    
-//    item = [launcherView_ itemWithURL:@"fb://item4"];
-//    item.badgeNumber = 0;
-//    
-//    item = [launcherView_ itemWithURL:@"fb://item5"];
-//    item.badgeValue = @"100!";
-//    
-//    item = [launcherView_ itemWithURL:@"fb://item6"];
-//    item.badgeValue = @"Off";
-//    
-//    item = [launcherView_ itemWithURL:@"fb://item7"];
-//    item.badgeNumber = 300;
-//}
 - (void)loadLauncherView
 {
     launcherView_ = [[TTLauncherView alloc] initWithFrame:self.view.bounds];
     launcherView_.backgroundColor = [UIColor blackColor];
     launcherView_.delegate = self;
-    launcherView_.columnCount = 3;
+    launcherView_.columnCount = 2;
     launcherView_.persistenceMode = TTLauncherPersistenceModeAll;
 //    launcherView_.frame = CGRectMake(0, 44, 320, self.view.frame.size.height - 44);
     launcherView_.frame = CGRectMake(0, 44, 320, self.view.frame.size.height - (44 + 37));
@@ -180,20 +117,34 @@
                                 [[[TTLauncherItem alloc] initWithTitle:@"Photo"
                                                                  image:@"bundle://Icon.png"
                                                                    URL:zAppPhotoURLPath canDelete:NO] autorelease],
-                                [[[TTLauncherItem alloc] initWithTitle:@"Notice"
+                                [[[TTLauncherItem alloc] initWithTitle:@"Group"
                                                                  image:@"bundle://Icon.png"
-                                                                   URL:zAppNoticeURLPath canDelete:NO] autorelease],
+                                                                   URL:zAppGroupURLPath canDelete:NO] autorelease],
+                                [[[TTLauncherItem alloc] initWithTitle:@"Member"
+                                                                 image:@"bundle://Icon.png"
+                                                                   URL:zAppMemberURLPath canDelete:NO] autorelease],
+                                [[[TTLauncherItem alloc] initWithTitle:@"Invite"
+                                                                 image:@"bundle://Icon.png"
+                                                                   URL:zAppInviteURLPath canDelete:NO] autorelease],
+                                [[[TTLauncherItem alloc] initWithTitle:@"Search"
+                                                                 image:@"bundle://Icon.png"
+                                                                   URL:zAppSearchURLPath canDelete:NO] autorelease],
                                 nil],
                                nil];
     }
     [self.view addSubview:launcherView_];
+
+//    TTLauncherItem* item = [launcherView_ itemWithURL:@"fb://item3"];
+//    item.badgeNumber = 4;
 }
 
 - (void)loadView
 {
     [super loadView];
 
+    // xibファイルの読み込み
     [[NSBundle mainBundle] loadNibNamed: NSStringFromClass([self class]) owner:self options:nil];
+
     [self loadSearchBar];
     [self loadLauncherView];
 }
@@ -202,7 +153,7 @@
 {
     self.title = @"Facebook";
     UIBarButtonItem* menuButton = [[UIBarButtonItem alloc] initWithTitle:@"config" style:UIBarButtonSystemItemOrganize target:self action:@selector(didTapButtonToConfig:)];
-    self.navigationItem.leftBarButtonItem = menuButton;
+    self.navigationItem.rightBarButtonItem = menuButton;
     [menuButton release];
 }
 
@@ -269,7 +220,9 @@
     [self.viewController release];
 	if ([animationID isEqualToString:@"animationExpand"]) {
         [[TTNavigator navigator] openURLAction:[[TTURLAction actionWithURLPath:urlToOpen_] applyAnimated:NO]];
-	}
+	} else {
+        [urlToOpen_ release], urlToOpen_ = nil;
+    }
 }
 
 @end

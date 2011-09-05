@@ -1,15 +1,15 @@
 //
-//  ConfigViewController.m
+//  SearchViewController.m
 //  TestThree20
 //
-//  Created by Kosuke Matsuda on 11/09/02.
+//  Created by Kosuke Matsuda on 11/09/05.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "ConfigViewController.h"
+#import "SearchViewController.h"
 
 
-@implementation ConfigViewController
+@implementation SearchViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +29,7 @@
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-
+    
     // Release any cached data, images, etc that aren't in use.
 }
 

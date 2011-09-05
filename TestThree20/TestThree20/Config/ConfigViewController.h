@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ContentBaseViewController.h"
 
-@interface ConfigViewController : UIViewController {
+@interface ConfigViewController : ContentBaseViewController {
 }
 
 @end

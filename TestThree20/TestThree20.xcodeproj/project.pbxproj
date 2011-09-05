@@ -16,20 +16,28 @@
 		320CC833B8AF0ACFD35E6225 /* libThree20Style.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320CC833B8AF0ACFD35E6224 /* libThree20Style.a */; };
 		320D7DCCE32703ACAB9A45E5 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320D7DCCE32703ACAB9A45E4 /* libThree20.a */; };
 		320F2C48872C2E2C4DF86205 /* libThree20UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320F2C48872C2E2C4DF86204 /* libThree20UI.a */; };
-		CB0CEF49140F5F94009E103E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0CEF47140F5F94009E103E /* MenuViewController.m */; };
-		CB0CEF4A140F5F94009E103E /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0CEF48140F5F94009E103E /* MenuViewController.xib */; };
 		CB0CF00F140F9856009E103E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB0CF00E140F9856009E103E /* Icon.png */; };
-		CB294D2E14108A2C00EEE803 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB294D2C14108A2C00EEE803 /* FeedViewController.m */; };
-		CB294D2F14108A2C00EEE803 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB294D2D14108A2C00EEE803 /* FeedViewController.xib */; };
-		CB294D3314108A4500EEE803 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB294D3114108A4500EEE803 /* PhotoViewController.m */; };
-		CB294D3414108A4500EEE803 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB294D3214108A4500EEE803 /* PhotoViewController.xib */; };
-		CB294D3814108A5E00EEE803 /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB294D3614108A5E00EEE803 /* NoticeViewController.m */; };
-		CB294D3914108A5E00EEE803 /* NoticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB294D3714108A5E00EEE803 /* NoticeViewController.xib */; };
-		CB294D4214108AC200EEE803 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB294D4014108AC200EEE803 /* ConfigViewController.m */; };
-		CB294D4314108AC200EEE803 /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB294D4114108AC200EEE803 /* ConfigViewController.xib */; };
 		CB65174E1414659700747FE2 /* btn-bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB65174C1414659700747FE2 /* btn-bg2.png */; };
 		CB65174F1414659700747FE2 /* btn-bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB65174D1414659700747FE2 /* btn-bg2@2x.png */; };
 		CB6517B5141468D700747FE2 /* Atlas.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6517B4141468D700747FE2 /* Atlas.m */; };
+		CB7F15DD14149BFD0097C555 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7F15DB14149BFD0097C555 /* FeedViewController.m */; };
+		CB7F15DE14149BFD0097C555 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7F15DC14149BFD0097C555 /* FeedViewController.xib */; };
+		CB7F15F31414A0300097C555 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7F15F11414A0300097C555 /* ConfigViewController.m */; };
+		CB7F15F41414A0300097C555 /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7F15F21414A0300097C555 /* ConfigViewController.xib */; };
+		CB7F15F81414A03D0097C555 /* NoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7F15F61414A03D0097C555 /* NoticeViewController.m */; };
+		CB7F15F91414A03D0097C555 /* NoticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7F15F71414A03D0097C555 /* NoticeViewController.xib */; };
+		CB7F15FD1414A0490097C555 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7F15FB1414A0490097C555 /* PhotoViewController.m */; };
+		CB7F15FE1414A0490097C555 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7F15FC1414A0490097C555 /* PhotoViewController.xib */; };
+		CB7F16021414A0860097C555 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7F16001414A0860097C555 /* GroupViewController.m */; };
+		CB7F16031414A0860097C555 /* GroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7F16011414A0860097C555 /* GroupViewController.xib */; };
+		CB7F16071414A09A0097C555 /* MemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7F16051414A09A0097C555 /* MemberViewController.m */; };
+		CB7F16081414A09A0097C555 /* MemberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7F16061414A09A0097C555 /* MemberViewController.xib */; };
+		CB7F160C1414A0AC0097C555 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7F160A1414A0AC0097C555 /* SearchViewController.m */; };
+		CB7F160D1414A0AC0097C555 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7F160B1414A0AC0097C555 /* SearchViewController.xib */; };
+		CB7F16111414A0B80097C555 /* InviteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7F160F1414A0B80097C555 /* InviteViewController.m */; };
+		CB7F16121414A0B80097C555 /* InviteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7F16101414A0B80097C555 /* InviteViewController.xib */; };
+		CB7F16171414A1670097C555 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7F16151414A1670097C555 /* MenuViewController.m */; };
+		CB7F16181414A1670097C555 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB7F16161414A1670097C555 /* MenuViewController.xib */; };
 		CB8CD94F140E2F130064900B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8CD94E140E2F130064900B /* UIKit.framework */; };
 		CB8CD951140E2F130064900B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8CD950140E2F130064900B /* Foundation.framework */; };
 		CB8CD953140E2F130064900B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8CD952140E2F130064900B /* CoreGraphics.framework */; };
@@ -229,26 +237,38 @@
 		320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = ../../Libraries/three20/src/Three20Style/Three20Style.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../../Libraries/three20/src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = ../../Libraries/three20/src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
-		CB0CEF46140F5F94009E103E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		CB0CEF47140F5F94009E103E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		CB0CEF48140F5F94009E103E /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		CB0CF00E140F9856009E103E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		CB294D2B14108A2C00EEE803 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedViewController.h; path = TestThree20/FeedViewController.h; sourceTree = SOURCE_ROOT; };
-		CB294D2C14108A2C00EEE803 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedViewController.m; path = TestThree20/FeedViewController.m; sourceTree = SOURCE_ROOT; };
-		CB294D2D14108A2C00EEE803 /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FeedViewController.xib; path = TestThree20/FeedViewController.xib; sourceTree = SOURCE_ROOT; };
-		CB294D3014108A4500EEE803 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
-		CB294D3114108A4500EEE803 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
-		CB294D3214108A4500EEE803 /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
-		CB294D3514108A5E00EEE803 /* NoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeViewController.h; sourceTree = "<group>"; };
-		CB294D3614108A5E00EEE803 /* NoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeViewController.m; sourceTree = "<group>"; };
-		CB294D3714108A5E00EEE803 /* NoticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeViewController.xib; sourceTree = "<group>"; };
-		CB294D3F14108AC200EEE803 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
-		CB294D4014108AC200EEE803 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
-		CB294D4114108AC200EEE803 /* ConfigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigViewController.xib; sourceTree = "<group>"; };
 		CB65174C1414659700747FE2 /* btn-bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-bg2.png"; sourceTree = "<group>"; };
 		CB65174D1414659700747FE2 /* btn-bg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-bg2@2x.png"; sourceTree = "<group>"; };
 		CB6517B3141468D700747FE2 /* Atlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atlas.h; sourceTree = "<group>"; };
 		CB6517B4141468D700747FE2 /* Atlas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Atlas.m; sourceTree = "<group>"; };
+		CB7F15DA14149BFD0097C555 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		CB7F15DB14149BFD0097C555 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		CB7F15DC14149BFD0097C555 /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		CB7F15F01414A0300097C555 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		CB7F15F11414A0300097C555 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		CB7F15F21414A0300097C555 /* ConfigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigViewController.xib; sourceTree = "<group>"; };
+		CB7F15F51414A03D0097C555 /* NoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeViewController.h; sourceTree = "<group>"; };
+		CB7F15F61414A03D0097C555 /* NoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeViewController.m; sourceTree = "<group>"; };
+		CB7F15F71414A03D0097C555 /* NoticeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeViewController.xib; sourceTree = "<group>"; };
+		CB7F15FA1414A0490097C555 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		CB7F15FB1414A0490097C555 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		CB7F15FC1414A0490097C555 /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
+		CB7F15FF1414A0860097C555 /* GroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
+		CB7F16001414A0860097C555 /* GroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
+		CB7F16011414A0860097C555 /* GroupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupViewController.xib; sourceTree = "<group>"; };
+		CB7F16041414A09A0097C555 /* MemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberViewController.h; sourceTree = "<group>"; };
+		CB7F16051414A09A0097C555 /* MemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberViewController.m; sourceTree = "<group>"; };
+		CB7F16061414A09A0097C555 /* MemberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberViewController.xib; sourceTree = "<group>"; };
+		CB7F16091414A0AC0097C555 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		CB7F160A1414A0AC0097C555 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		CB7F160B1414A0AC0097C555 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		CB7F160E1414A0B80097C555 /* InviteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteViewController.h; sourceTree = "<group>"; };
+		CB7F160F1414A0B80097C555 /* InviteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteViewController.m; sourceTree = "<group>"; };
+		CB7F16101414A0B80097C555 /* InviteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InviteViewController.xib; sourceTree = "<group>"; };
+		CB7F16141414A1670097C555 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		CB7F16151414A1670097C555 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		CB7F16161414A1670097C555 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		CB8CD94A140E2F130064900B /* TestThree20.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestThree20.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8CD94E140E2F130064900B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CB8CD950140E2F130064900B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -402,6 +422,86 @@
 			path = Atlas;
 			sourceTree = "<group>";
 		};
+		CB7F15E914149F990097C555 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				CB7F15F01414A0300097C555 /* ConfigViewController.h */,
+				CB7F15F11414A0300097C555 /* ConfigViewController.m */,
+				CB7F15F21414A0300097C555 /* ConfigViewController.xib */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		CB7F15EA14149F990097C555 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				CB7F15FF1414A0860097C555 /* GroupViewController.h */,
+				CB7F16001414A0860097C555 /* GroupViewController.m */,
+				CB7F16011414A0860097C555 /* GroupViewController.xib */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
+		CB7F15EB14149F990097C555 /* Member */ = {
+			isa = PBXGroup;
+			children = (
+				CB7F16041414A09A0097C555 /* MemberViewController.h */,
+				CB7F16051414A09A0097C555 /* MemberViewController.m */,
+				CB7F16061414A09A0097C555 /* MemberViewController.xib */,
+			);
+			path = Member;
+			sourceTree = "<group>";
+		};
+		CB7F15EC14149F990097C555 /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				CB7F15F51414A03D0097C555 /* NoticeViewController.h */,
+				CB7F15F61414A03D0097C555 /* NoticeViewController.m */,
+				CB7F15F71414A03D0097C555 /* NoticeViewController.xib */,
+			);
+			path = Notice;
+			sourceTree = "<group>";
+		};
+		CB7F15ED14149F990097C555 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				CB7F15FA1414A0490097C555 /* PhotoViewController.h */,
+				CB7F15FB1414A0490097C555 /* PhotoViewController.m */,
+				CB7F15FC1414A0490097C555 /* PhotoViewController.xib */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		CB7F15EE14149FED0097C555 /* Invite */ = {
+			isa = PBXGroup;
+			children = (
+				CB7F160E1414A0B80097C555 /* InviteViewController.h */,
+				CB7F160F1414A0B80097C555 /* InviteViewController.m */,
+				CB7F16101414A0B80097C555 /* InviteViewController.xib */,
+			);
+			path = Invite;
+			sourceTree = "<group>";
+		};
+		CB7F15EF14149FED0097C555 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CB7F16091414A0AC0097C555 /* SearchViewController.h */,
+				CB7F160A1414A0AC0097C555 /* SearchViewController.m */,
+				CB7F160B1414A0AC0097C555 /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		CB7F16131414A1670097C555 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CB7F16141414A1670097C555 /* MenuViewController.h */,
+				CB7F16151414A1670097C555 /* MenuViewController.m */,
+				CB7F16161414A1670097C555 /* MenuViewController.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		CB8CD93F140E2F130064900B = {
 			isa = PBXGroup;
 			children = (
@@ -443,22 +543,18 @@
 			isa = PBXGroup;
 			children = (
 				CB6517B2141468C800747FE2 /* Atlas */,
+				CB7F16131414A1670097C555 /* Menu */,
+				CBE9F4A21410D23F00586530 /* Feed */,
+				CB7F15ED14149F990097C555 /* Photo */,
+				CB7F15EA14149F990097C555 /* Group */,
+				CB7F15EB14149F990097C555 /* Member */,
+				CB7F15EE14149FED0097C555 /* Invite */,
+				CB7F15EF14149FED0097C555 /* Search */,
+				CB7F15EC14149F990097C555 /* Notice */,
+				CB7F15E914149F990097C555 /* Config */,
 				CB8CD95D140E2F130064900B /* TestThree20AppDelegate.h */,
 				CB8CD95E140E2F130064900B /* TestThree20AppDelegate.m */,
 				CB8CD960140E2F130064900B /* MainWindow.xib */,
-				CB0CEF46140F5F94009E103E /* MenuViewController.h */,
-				CB0CEF47140F5F94009E103E /* MenuViewController.m */,
-				CB0CEF48140F5F94009E103E /* MenuViewController.xib */,
-				CBE9F4A21410D23F00586530 /* Feed */,
-				CB294D3014108A4500EEE803 /* PhotoViewController.h */,
-				CB294D3114108A4500EEE803 /* PhotoViewController.m */,
-				CB294D3214108A4500EEE803 /* PhotoViewController.xib */,
-				CB294D3514108A5E00EEE803 /* NoticeViewController.h */,
-				CB294D3614108A5E00EEE803 /* NoticeViewController.m */,
-				CB294D3714108A5E00EEE803 /* NoticeViewController.xib */,
-				CB294D3F14108AC200EEE803 /* ConfigViewController.h */,
-				CB294D4014108AC200EEE803 /* ConfigViewController.m */,
-				CB294D4114108AC200EEE803 /* ConfigViewController.xib */,
 				CBC5B2B31410F2AB00B9C779 /* ContentBaseViewController.h */,
 				CBC5B2B41410F2AB00B9C779 /* ContentBaseViewController.m */,
 				CB8CD955140E2F130064900B /* Supporting Files */,
@@ -481,9 +577,9 @@
 		CBE9F4A21410D23F00586530 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				CB294D2B14108A2C00EEE803 /* FeedViewController.h */,
-				CB294D2C14108A2C00EEE803 /* FeedViewController.m */,
-				CB294D2D14108A2C00EEE803 /* FeedViewController.xib */,
+				CB7F15DA14149BFD0097C555 /* FeedViewController.h */,
+				CB7F15DB14149BFD0097C555 /* FeedViewController.m */,
+				CB7F15DC14149BFD0097C555 /* FeedViewController.xib */,
 				CBE9F4A31410D27300586530 /* FeedDataSource.h */,
 				CBE9F4A41410D27300586530 /* FeedDataSource.m */,
 				CBE9F4A61410D59600586530 /* FeedModel.h */,
@@ -729,14 +825,18 @@
 				320B6C86F11D9990244A9731 /* Three20.bundle in Resources */,
 				CB8CD959140E2F130064900B /* InfoPlist.strings in Resources */,
 				CB8CD962140E2F130064900B /* MainWindow.xib in Resources */,
-				CB0CEF4A140F5F94009E103E /* MenuViewController.xib in Resources */,
 				CB0CF00F140F9856009E103E /* Icon.png in Resources */,
-				CB294D2F14108A2C00EEE803 /* FeedViewController.xib in Resources */,
-				CB294D3414108A4500EEE803 /* PhotoViewController.xib in Resources */,
-				CB294D3914108A5E00EEE803 /* NoticeViewController.xib in Resources */,
-				CB294D4314108AC200EEE803 /* ConfigViewController.xib in Resources */,
 				CB65174E1414659700747FE2 /* btn-bg2.png in Resources */,
 				CB65174F1414659700747FE2 /* btn-bg2@2x.png in Resources */,
+				CB7F15DE14149BFD0097C555 /* FeedViewController.xib in Resources */,
+				CB7F15F41414A0300097C555 /* ConfigViewController.xib in Resources */,
+				CB7F15F91414A03D0097C555 /* NoticeViewController.xib in Resources */,
+				CB7F15FE1414A0490097C555 /* PhotoViewController.xib in Resources */,
+				CB7F16031414A0860097C555 /* GroupViewController.xib in Resources */,
+				CB7F16081414A09A0097C555 /* MemberViewController.xib in Resources */,
+				CB7F160D1414A0AC0097C555 /* SearchViewController.xib in Resources */,
+				CB7F16121414A0B80097C555 /* InviteViewController.xib in Resources */,
+				CB7F16181414A1670097C555 /* MenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -749,11 +849,6 @@
 			files = (
 				CB8CD95C140E2F130064900B /* main.m in Sources */,
 				CB8CD95F140E2F130064900B /* TestThree20AppDelegate.m in Sources */,
-				CB0CEF49140F5F94009E103E /* MenuViewController.m in Sources */,
-				CB294D2E14108A2C00EEE803 /* FeedViewController.m in Sources */,
-				CB294D3314108A4500EEE803 /* PhotoViewController.m in Sources */,
-				CB294D3814108A5E00EEE803 /* NoticeViewController.m in Sources */,
-				CB294D4214108AC200EEE803 /* ConfigViewController.m in Sources */,
 				CBE9F4A51410D27300586530 /* FeedDataSource.m in Sources */,
 				CBE9F4A81410D59600586530 /* FeedModel.m in Sources */,
 				CBE9F4AB1410DC2800586530 /* FeedObject.m in Sources */,
@@ -771,6 +866,15 @@
 				CBE9F4D21410DE0D00586530 /* SBJsonWriter.m in Sources */,
 				CBC5B2B51410F2AB00B9C779 /* ContentBaseViewController.m in Sources */,
 				CB6517B5141468D700747FE2 /* Atlas.m in Sources */,
+				CB7F15DD14149BFD0097C555 /* FeedViewController.m in Sources */,
+				CB7F15F31414A0300097C555 /* ConfigViewController.m in Sources */,
+				CB7F15F81414A03D0097C555 /* NoticeViewController.m in Sources */,
+				CB7F15FD1414A0490097C555 /* PhotoViewController.m in Sources */,
+				CB7F16021414A0860097C555 /* GroupViewController.m in Sources */,
+				CB7F16071414A09A0097C555 /* MemberViewController.m in Sources */,
+				CB7F160C1414A0AC0097C555 /* SearchViewController.m in Sources */,
+				CB7F16111414A0B80097C555 /* InviteViewController.m in Sources */,
+				CB7F16171414A1670097C555 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

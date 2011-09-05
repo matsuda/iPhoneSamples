@@ -11,6 +11,10 @@
 #import "MenuViewController.h"
 #import "FeedViewController.h"
 #import "PhotoViewController.h"
+#import "GroupViewController.h"
+#import "MemberViewController.h"
+#import "InviteViewController.h"
+#import "SearchViewController.h"
 #import "NoticeViewController.h"
 #import "ConfigViewController.h"
 
@@ -39,8 +43,12 @@
     [map from:zAppMenuURLPath toSharedViewController:[MenuViewController class]];
     [map from:zAppFeedURLPath toViewController:[FeedViewController class]];
     [map from:zAppPhotoURLPath toViewController:[PhotoViewController class]];
+    [map from:zAppGroupURLPath toViewController:[GroupViewController class]];
+    [map from:zAppMemberURLPath toViewController:[MemberViewController class]];
+    [map from:zAppInviteURLPath toViewController:[InviteViewController class]];
+    [map from:zAppSearchURLPath toViewController:[SearchViewController class]];
     [map from:zAppNoticeURLPath toModalViewController:[NoticeViewController class]];
-    [map from:zAppConfigURLPath toViewController:[ConfigViewController class]];
+    [map from:zAppConfigURLPath toModalViewController:[ConfigViewController class]];
 
     if (![navigator restoreViewControllers]) {
         // This is the first launch, so we just start with the tab bar

@@ -1,24 +1,21 @@
 //
-//  FeedViewController.m
+//  InviteViewController.m
 //  TestThree20
 //
-//  Created by Kosuke Matsuda on 11/09/02.
+//  Created by Kosuke Matsuda on 11/09/05.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "FeedViewController.h"
+#import "InviteViewController.h"
 
-#import "FeedDataSource.h"
 
-@implementation FeedViewController
+@implementation InviteViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.title = @"Feed title";
-        self.variableHeightRows = YES;
     }
     return self;
 }
@@ -32,7 +29,7 @@
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-
+    
     // Release any cached data, images, etc that aren't in use.
 }
 
@@ -55,16 +52,6 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-- (void)createModel
-{
-    self.dataSource = [[[FeedDataSource alloc] initWithSearchQuery:@"three20"] autorelease];
-}
-
-- (id<UITableViewDelegate>)createDelegate
-{
-    return [[[TTTableViewDragRefreshDelegate alloc] initWithController:self] autorelease];
 }
 
 @end

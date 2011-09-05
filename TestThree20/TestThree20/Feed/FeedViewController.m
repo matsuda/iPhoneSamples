@@ -1,21 +1,28 @@
 //
-//  NoticeViewController.m
+//  FeedViewController.m
 //  TestThree20
 //
 //  Created by Kosuke Matsuda on 11/09/02.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "NoticeViewController.h"
+#import "FeedViewController.h"
 
+#import "FeedDataSource.h"
 
-@implementation NoticeViewController
+@interface FeedViewController (PrivateMethods)
+- (void)replaceNavigationButton;
+@end
+
+@implementation FeedViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.title = @"Feed title";
+        self.variableHeightRows = YES;
     }
     return self;
 }
@@ -39,6 +46,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self replaceNavigationButton];
 }
 
 - (void)viewDidUnload
@@ -54,12 +62,31 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-#pragma mark - ContentBaseViewController override methods
-
+- (void)replaceNavigationButton
+{
+    self.title = @"Facebook";
+    UIBarButtonItem *returnButton = [[UIBarButtonItem alloc] initWithTitle:@"return" style:UIBarButtonItemStyleDone target:self action:@selector(didTapButtonToReturn:)];
+    self.navigationItem.backBarButtonItem = nil;
+    self.navigationItem.leftBarButtonItem = returnButton;
+    [returnButton release];
+}
 
 - (void)didTapButtonToReturn:(id)sender
 {
-    [self.parentViewController dismissModalViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:NO];
+}
+
+#pragma mark - TTModel
+
+
+- (void)createModel
+{
+    self.dataSource = [[[FeedDataSource alloc] initWithSearchQuery:@"three20"] autorelease];
+}
+
+- (id<UITableViewDelegate>)createDelegate
+{
+    return [[[TTTableViewDragRefreshDelegate alloc] initWithController:self] autorelease];
 }
 
 @end
