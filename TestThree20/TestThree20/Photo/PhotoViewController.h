@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ContentBaseViewController.h"
-
-@interface PhotoViewController : ContentBaseViewController {
+@interface PhotoViewController : TTThumbsViewController {
+    TTTabBar* tabBar_;
 }
 
 @end

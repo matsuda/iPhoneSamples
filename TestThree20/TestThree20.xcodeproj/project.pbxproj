@@ -16,6 +16,9 @@
 		320CC833B8AF0ACFD35E6225 /* libThree20Style.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320CC833B8AF0ACFD35E6224 /* libThree20Style.a */; };
 		320D7DCCE32703ACAB9A45E5 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320D7DCCE32703ACAB9A45E4 /* libThree20.a */; };
 		320F2C48872C2E2C4DF86205 /* libThree20UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320F2C48872C2E2C4DF86204 /* libThree20UI.a */; };
+		CB066C4514160B2F00C1C23A /* MockPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = CB066C4414160B2F00C1C23A /* MockPhoto.m */; };
+		CB066C4814160BD400C1C23A /* MockPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CB066C4714160BD300C1C23A /* MockPhotoSource.m */; };
+		CB066C4E141627DB00C1C23A /* TTThumbsViewController+PlayQme.m in Sources */ = {isa = PBXBuildFile; fileRef = CB066C4D141627DB00C1C23A /* TTThumbsViewController+PlayQme.m */; };
 		CB0CF00F140F9856009E103E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB0CF00E140F9856009E103E /* Icon.png */; };
 		CB65174E1414659700747FE2 /* btn-bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB65174C1414659700747FE2 /* btn-bg2.png */; };
 		CB65174F1414659700747FE2 /* btn-bg2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB65174D1414659700747FE2 /* btn-bg2@2x.png */; };
@@ -237,6 +240,11 @@
 		320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = ../../Libraries/three20/src/Three20Style/Three20Style.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../../Libraries/three20/src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = ../../Libraries/three20/src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
+		CB066C4314160B2F00C1C23A /* MockPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockPhoto.h; sourceTree = "<group>"; };
+		CB066C4414160B2F00C1C23A /* MockPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockPhoto.m; sourceTree = "<group>"; };
+		CB066C4614160BD300C1C23A /* MockPhotoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockPhotoSource.h; sourceTree = "<group>"; };
+		CB066C4714160BD300C1C23A /* MockPhotoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockPhotoSource.m; sourceTree = "<group>"; };
+		CB066C4D141627DB00C1C23A /* TTThumbsViewController+PlayQme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TTThumbsViewController+PlayQme.m"; sourceTree = "<group>"; };
 		CB0CF00E140F9856009E103E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		CB65174C1414659700747FE2 /* btn-bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-bg2.png"; sourceTree = "<group>"; };
 		CB65174D1414659700747FE2 /* btn-bg2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-bg2@2x.png"; sourceTree = "<group>"; };
@@ -468,6 +476,11 @@
 				CB7F15FA1414A0490097C555 /* PhotoViewController.h */,
 				CB7F15FB1414A0490097C555 /* PhotoViewController.m */,
 				CB7F15FC1414A0490097C555 /* PhotoViewController.xib */,
+				CB066C4314160B2F00C1C23A /* MockPhoto.h */,
+				CB066C4414160B2F00C1C23A /* MockPhoto.m */,
+				CB066C4614160BD300C1C23A /* MockPhotoSource.h */,
+				CB066C4714160BD300C1C23A /* MockPhotoSource.m */,
+				CB066C4D141627DB00C1C23A /* TTThumbsViewController+PlayQme.m */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -875,6 +888,9 @@
 				CB7F160C1414A0AC0097C555 /* SearchViewController.m in Sources */,
 				CB7F16111414A0B80097C555 /* InviteViewController.m in Sources */,
 				CB7F16171414A1670097C555 /* MenuViewController.m in Sources */,
+				CB066C4514160B2F00C1C23A /* MockPhoto.m in Sources */,
+				CB066C4814160BD400C1C23A /* MockPhotoSource.m in Sources */,
+				CB066C4E141627DB00C1C23A /* TTThumbsViewController+PlayQme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
