@@ -64,13 +64,33 @@ static CGFloat kThumbSize = 75.0f;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     self.thumbs = [NSMutableArray array];
     [self loadthumbs];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    if (indexPath) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+    [self.tableView reloadData];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    [self.tableView flashScrollIndicators];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+
     // Release any retained subviews of the main view.
     self.tableView = nil;
     self.thumbs = nil;
