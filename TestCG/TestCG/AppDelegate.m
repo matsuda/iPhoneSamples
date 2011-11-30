@@ -24,14 +24,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    UIViewController *viewController = [[[PhotoViewController alloc] init] autorelease];
+    // UIViewController *viewController = [[[PhotoViewController alloc] init] autorelease];
     UIViewController *viewController = [[[ThumbsViewController alloc] init] autorelease];
-    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:viewController] autorelease];
+    // self.navigationController = [[[UINavigationController alloc] initWithRootViewController:viewController] autorelease];
 
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = self.navigationController;
+    // self.window.rootViewController = self.navigationController;
+    self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
