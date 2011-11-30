@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E496DF71485D2B300272623 /* ThumbsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E496DF61485D2B300272623 /* ThumbsViewController.m */; };
 		0E8B46A514836496001D8A5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8B46A414836496001D8A5F /* UIKit.framework */; };
 		0E8B46A714836496001D8A5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8B46A614836496001D8A5F /* Foundation.framework */; };
 		0E8B46A914836496001D8A5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8B46A814836496001D8A5F /* CoreGraphics.framework */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E496DF51485D2B300272623 /* ThumbsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbsViewController.h; sourceTree = "<group>"; };
+		0E496DF61485D2B300272623 /* ThumbsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbsViewController.m; sourceTree = "<group>"; };
 		0E8B46A014836496001D8A5F /* TestCG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8B46A414836496001D8A5F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0E8B46A614836496001D8A5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -128,6 +131,8 @@
 			children = (
 				0E8B46CA14836753001D8A5F /* PhotoViewController.h */,
 				0E8B46CB14836753001D8A5F /* PhotoViewController.m */,
+				0E496DF51485D2B300272623 /* ThumbsViewController.h */,
+				0E496DF61485D2B300272623 /* ThumbsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 				0E8B46B114836496001D8A5F /* main.m in Sources */,
 				0E8B46B514836496001D8A5F /* AppDelegate.m in Sources */,
 				0E8B46CC14836753001D8A5F /* PhotoViewController.m in Sources */,
+				0E496DF71485D2B300272623 /* ThumbsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
