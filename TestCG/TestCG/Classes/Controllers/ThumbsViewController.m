@@ -9,9 +9,7 @@
 #import "ThumbsViewController.h"
 #import "ThumbsTableViewCell.h"
 
-static CGFloat kThumbnailRowHeight = 79.0f;
-static CGFloat kThumbSpacing = 4.0f;
-static CGFloat kThumbSize = 75.0f;
+static CGFloat kThumbnailRowHeight = 105.0f;
 
 
 @interface ThumbsViewController ()

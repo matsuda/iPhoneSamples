@@ -8,15 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThumbsTableViewCell : UITableViewCell {
-    CGFloat _thumbSize;
-    CGPoint _thumbOrigin;
-    NSInteger _columnCount;
-}
+static CGFloat kThumbSpacing = 5.0f;
+static CGFloat kThumbSize = 100.0f;
+
+@interface ThumbsTableViewCell : UITableViewCell
 
 @property (nonatomic, retain) NSArray *thumbs;
-@property (nonatomic) CGFloat thumbSize;
-@property (nonatomic) CGPoint thumbOrigin;
-@property (nonatomic) NSInteger columnCount;
 
 @end

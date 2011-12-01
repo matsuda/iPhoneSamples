@@ -7,15 +7,17 @@
 //
 
 #import "ThumbsTableViewCell.h"
+#import "ThumbView.h"
 
-static const CGFloat kSpacing = 4.0f;
-static const CGFloat kDefaultThumbSize = 75.0f;
+static const CGFloat kDefaultThumbSize = 100.0f;
 
 
 @interface ThumbsTableViewCell ()
 @property (nonatomic, retain) NSMutableArray *thumbViews;
+@property (nonatomic) CGFloat thumbSize;
+@property (nonatomic) CGPoint thumbOrigin;
+@property (nonatomic) NSInteger columnCount;
 - (void)layoutThumbViews;
-- (void)assignThumb:(int)thumbIndex toView:(UIImageView *)thumbView;
 @end
 
 
@@ -33,8 +35,8 @@ static const CGFloat kDefaultThumbSize = 75.0f;
     if (self) {
         // Initialization code
         self.thumbViews = [[[NSMutableArray alloc] init] autorelease];
-        _thumbSize = kDefaultThumbSize;
-        _thumbOrigin = CGPointMake(kSpacing, 0);
+        self.thumbSize = kDefaultThumbSize;
+        self.thumbOrigin = CGPointMake(kThumbSpacing, 0);
 
         self.accessoryType = UITableViewCellAccessoryNone;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -67,7 +69,7 @@ static const CGFloat kDefaultThumbSize = 75.0f;
     CGRect thumbFrame = CGRectMake(self.thumbOrigin.x, self.thumbOrigin.y, self.thumbSize, self.thumbSize);
     for (UIView *thumbView in self.thumbViews) {
         thumbView.frame = thumbFrame;
-        thumbFrame.origin.x += kSpacing + self.thumbSize;
+        thumbFrame.origin.x += kThumbSpacing + self.thumbSize;
     }
 }
 
@@ -80,29 +82,19 @@ static const CGFloat kDefaultThumbSize = 75.0f;
     _thumbs = [thumbs retain];
 
     NSInteger columnCount = [thumbs count];
-    for (UIImageView *thumbView in self.thumbViews) {
+    for (UIView *thumbView in self.thumbViews) {
         [thumbView removeFromSuperview];
     }
     [self.thumbViews removeAllObjects];
     _columnCount = columnCount;
+
     for (NSInteger i = self.thumbViews.count; i < columnCount; ++i) {
-        UIImageView *thumbView = [[[UIImageView alloc] init] autorelease];
-        thumbView.backgroundColor = [UIColor blackColor];
+        ThumbView *thumbView = [[[ThumbView alloc] init] autorelease];
+        thumbView.backgroundColor = [UIColor grayColor];
+        [thumbView loadImage:@"http://matsuda.me/images/logo.png"];
+
         [self.contentView addSubview:thumbView];
         [self.thumbViews addObject:thumbView];
-        [self assignThumb:i toView:thumbView];
-    }
-}
-
-- (void)assignThumb:(int)thumbIndex toView:(UIImageView *)thumbView
-{
-    UIImage *thumb = [self.thumbs objectAtIndex:thumbIndex];
-    if (thumb) {
-        thumbView.image = thumb;
-        thumbView.hidden = NO;
-    } else {
-        thumbView.image = nil;
-        thumbView.hidden = YES;
     }
 }
 

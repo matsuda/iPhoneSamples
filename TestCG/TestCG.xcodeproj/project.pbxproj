@@ -69,6 +69,7 @@
 		0E496E7814860E1B00272623 /* picons58.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E496E3C14860E1B00272623 /* picons58.png */; };
 		0E496E7914860E1B00272623 /* picons59.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E496E3D14860E1B00272623 /* picons59.png */; };
 		0E496E7A14860E1B00272623 /* picons60.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E496E3E14860E1B00272623 /* picons60.png */; };
+		0E496ED114864B1100272623 /* ThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E496ED014864B1100272623 /* ThumbView.m */; };
 		0E8B46A514836496001D8A5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8B46A414836496001D8A5F /* UIKit.framework */; };
 		0E8B46A714836496001D8A5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8B46A614836496001D8A5F /* Foundation.framework */; };
 		0E8B46A914836496001D8A5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8B46A814836496001D8A5F /* CoreGraphics.framework */; };
@@ -153,6 +154,8 @@
 		0E496E3C14860E1B00272623 /* picons58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picons58.png; sourceTree = "<group>"; };
 		0E496E3D14860E1B00272623 /* picons59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picons59.png; sourceTree = "<group>"; };
 		0E496E3E14860E1B00272623 /* picons60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picons60.png; sourceTree = "<group>"; };
+		0E496ECF14864B1100272623 /* ThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbView.h; sourceTree = "<group>"; };
+		0E496ED014864B1100272623 /* ThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbView.m; sourceTree = "<group>"; };
 		0E8B46A014836496001D8A5F /* TestCG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8B46A414836496001D8A5F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0E8B46A614836496001D8A5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -196,6 +199,8 @@
 			children = (
 				0E496DFF1485FCA200272623 /* ThumbsTableViewCell.h */,
 				0E496E001485FCA200272623 /* ThumbsTableViewCell.m */,
+				0E496ECF14864B1100272623 /* ThumbView.h */,
+				0E496ED014864B1100272623 /* ThumbView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -499,6 +504,7 @@
 				0E8B46CC14836753001D8A5F /* PhotoViewController.m in Sources */,
 				0E496DF71485D2B300272623 /* ThumbsViewController.m in Sources */,
 				0E496E011485FCA200272623 /* ThumbsTableViewCell.m in Sources */,
+				0E496ED114864B1100272623 /* ThumbView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +572,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestCG/TestCG-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_DEBUG_,
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "TestCG/TestCG-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
