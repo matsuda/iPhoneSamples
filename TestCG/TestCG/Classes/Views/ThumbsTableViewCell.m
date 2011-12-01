@@ -98,4 +98,27 @@ static const CGFloat kDefaultThumbSize = 100.0f;
     }
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    MSLog;
+    // マルチタッチ
+    // for (UITouch *touch in touches) {
+    //     CGPoint location = [touch locationInView:self];
+    //     NSLog(@"x座標:%f y座標:%f",location.x,location.y);
+    // }
+
+    // シングルタッチ
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInView:self];
+    NSLog(@"x座標:%f y座標:%f",location.x,location.y);
+    NSInteger thumbIndex = location.x / (kThumbSize + kThumbSpacing);
+    if (thumbIndex >= [self.thumbs count]) thumbIndex -= 1;
+    NSLog(@"thumbIndex : %d", thumbIndex);
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    MSLog;
+}
+
 @end
