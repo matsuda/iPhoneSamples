@@ -134,14 +134,12 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    MSLog;
     self.alpha = 0.5f;
     [super touchesBegan:touches withEvent:event];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    MSLog;
     self.alpha = 1.0f;
     [super touchesEnded:touches withEvent:event];
 }

@@ -100,7 +100,6 @@ static const CGFloat kDefaultThumbSize = 100.0f;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    MSLog;
     // マルチタッチ
     // for (UITouch *touch in touches) {
     //     CGPoint location = [touch locationInView:self];
@@ -118,7 +117,6 @@ static const CGFloat kDefaultThumbSize = 100.0f;
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    MSLog;
 }
 
 @end
