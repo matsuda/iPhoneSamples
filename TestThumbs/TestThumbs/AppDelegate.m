@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "PhotoViewController.h"
 #import "ThumbsViewController.h"
 
 @implementation AppDelegate
@@ -24,7 +23,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // UIViewController *viewController = [[[PhotoViewController alloc] init] autorelease];
     UIViewController *viewController = [[[ThumbsViewController alloc] init] autorelease];
     // self.navigationController = [[[UINavigationController alloc] initWithRootViewController:viewController] autorelease];
 

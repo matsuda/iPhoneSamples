@@ -11,7 +11,6 @@
 		0E8B46A714836496001D8A5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8B46A614836496001D8A5F /* Foundation.framework */; };
 		0E8B46A914836496001D8A5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8B46A814836496001D8A5F /* CoreGraphics.framework */; };
 		0EA724181488E5400026C543 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA723C31488E5400026C543 /* AppDelegate.m */; };
-		0EA724191488E5400026C543 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA723C71488E5400026C543 /* PhotoViewController.m */; };
 		0EA7241A1488E5400026C543 /* ThumbsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA723C91488E5400026C543 /* ThumbsViewController.m */; };
 		0EA7241B1488E5400026C543 /* ThumbsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA723CC1488E5400026C543 /* ThumbsTableViewCell.m */; };
 		0EA7241C1488E5400026C543 /* ThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA723CE1488E5400026C543 /* ThumbView.m */; };
@@ -96,8 +95,6 @@
 		0E8B46A814836496001D8A5F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		0EA723C21488E5400026C543 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TestThumbs/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		0EA723C31488E5400026C543 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TestThumbs/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		0EA723C61488E5400026C543 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
-		0EA723C71488E5400026C543 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		0EA723C81488E5400026C543 /* ThumbsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbsViewController.h; sourceTree = "<group>"; };
 		0EA723C91488E5400026C543 /* ThumbsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbsViewController.m; sourceTree = "<group>"; };
 		0EA723CB1488E5400026C543 /* ThumbsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbsTableViewCell.h; sourceTree = "<group>"; };
@@ -247,8 +244,6 @@
 		0EA723C51488E5400026C543 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0EA723C61488E5400026C543 /* PhotoViewController.h */,
-				0EA723C71488E5400026C543 /* PhotoViewController.m */,
 				0EA723C81488E5400026C543 /* ThumbsViewController.h */,
 				0EA723C91488E5400026C543 /* ThumbsViewController.m */,
 			);
@@ -503,7 +498,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EA724181488E5400026C543 /* AppDelegate.m in Sources */,
-				0EA724191488E5400026C543 /* PhotoViewController.m in Sources */,
 				0EA7241A1488E5400026C543 /* ThumbsViewController.m in Sources */,
 				0EA7241B1488E5400026C543 /* ThumbsTableViewCell.m in Sources */,
 				0EA7241C1488E5400026C543 /* ThumbView.m in Sources */,
