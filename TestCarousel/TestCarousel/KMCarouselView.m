@@ -8,10 +8,28 @@
 
 #import "KMCarouselView.h"
 
+static CGFloat kKMCarouselViewPadding = 5.0f;
+
+typedef enum{
+	KMCarouselViewScrollButtonPrev,
+	KMCarouselViewScrollButtonNext
+} KMCarouselViewScrollButton;
+
 @interface KMCarouselView ()
+
+@property (nonatomic, retain) UIButton *prevButton;
+@property (nonatomic, retain) UIButton *nextButton;
+
+@property (nonatomic, retain) NSTimer *timer;
+
 - (void)setupScrollView:(CGRect)frame;
+- (void)setupPrevItem;
+- (void)setupNextItem;
+- (void)toggleScrollItem;
 - (void)setupItems;
+
 @end
+
 
 @implementation KMCarouselView
 
@@ -21,11 +39,19 @@
 @synthesize scrollView = _scrollView;
 @synthesize items = _items;
 
+@synthesize prevButton = _prevButton;
+@synthesize nextButton = _nextButton;
+
+@synthesize timer = _timer;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        self.backgroundColor = [UIColor blackColor];
+        [self setupPrevItem];
+        [self setupNextItem];
         [self setupScrollView:frame];
     }
     return self;
@@ -46,6 +72,12 @@
 //    _delegate = nil;
     [_scrollView release], _scrollView = nil;
     [_items release], _items = nil;
+    [_prevButton release], _prevButton = nil;
+    [_nextButton release], _nextButton = nil;
+    if ([self.timer isValid]) {
+        [self.timer invalidate];
+    }
+    [_timer release], _timer = nil;
     [super dealloc];
 }
 
@@ -58,32 +90,88 @@
 }
 */
 
-//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
-//{
-//    if ([self pointInside:point withEvent:event]) {
-//        return self.scrollView;
-//    }
-//    return nil;
-//}
-
 - (void)setupScrollView:(CGRect)frame
 {
-//    NSLog(@"%@", NSStringFromCGRect(self.bounds));
-    self.scrollView = [[[UIScrollView alloc] initWithFrame:self.bounds] autorelease];
-    self.scrollView = [[[UIScrollView alloc] initWithFrame:self.bounds] autorelease];
-    self.scrollView.backgroundColor = [UIColor orangeColor];
+    CGRect f = self.bounds;
+    f.size = CGSizeMake(frame.size.width, frame.size.height);
+    f.origin.x = self.prevButton.frame.origin.x + self.prevButton.frame.size.width + kKMCarouselViewPadding;
+    f.origin.y += kKMCarouselViewPadding;
+    f.size.width -= (self.prevButton.frame.size.width + self.nextButton.frame.size.width + kKMCarouselViewPadding * 2);
+    f.size.height -= kKMCarouselViewPadding * 2;
+
+    self.scrollView = [[UIScrollView new] autorelease];
+    self.scrollView.frame = f;
+    self.scrollView.backgroundColor = [UIColor grayColor];
     self.scrollView.delegate = self;
-    self.scrollView.scrollEnabled = YES;
-//    self.scrollView.pagingEnabled = YES;
+    self.scrollView.bounces = NO;
     self.scrollView.showsHorizontalScrollIndicator = YES;
     self.scrollView.showsVerticalScrollIndicator = NO;
-    self.scrollView.clipsToBounds = NO;
-    self.scrollView.scrollsToTop = NO;
 
-    self.scrollView.clearsContextBeforeDrawing     = NO;
+//    self.scrollView.scrollEnabled = YES;
+//    self.scrollView.clipsToBounds = NO;
+//    self.scrollView.scrollsToTop = NO;
+//    self.scrollView.pagingEnabled = YES;
+//    self.scrollView.clearsContextBeforeDrawing     = NO;
 //    self.scrollView.delaysContentTouches           = NO;
 
     [self addSubview:self.scrollView];
+}
+
+- (void)setupPrevItem
+{
+    UIImage *image = [UIImage imageNamed:@"pre-btn"];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    CGRect f = CGRectZero;
+    f.size = CGSizeMake(image.size.width, image.size.height);
+    f.origin.y = (self.frame.size.height - image.size.height) / 2;
+    button.frame = f;
+    [button setImage:image forState:UIControlStateNormal];
+    button.tag = KMCarouselViewScrollButtonPrev;
+
+    [button addTarget:self action:@selector(didTouchDownToStartAutoScroll:) forControlEvents:UIControlEventTouchDown];
+    [button addTarget:self action:@selector(didTouchDownToStopAutoScroll:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(didTouchDownToStopAutoScroll:) forControlEvents:UIControlEventTouchUpOutside];
+
+    [self addSubview:button];
+    self.prevButton = button;
+}
+
+- (void)setupNextItem
+{
+    UIImage *image = [UIImage imageNamed:@"next-btn"];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    CGRect f = CGRectZero;
+    f.size = CGSizeMake(image.size.width, image.size.height);
+    f.origin.x = self.frame.size.width - f.size.width;
+    f.origin.y = (self.frame.size.height - image.size.height) / 2;
+    button.frame = f;
+    [button setImage:image forState:UIControlStateNormal];
+    button.tag = KMCarouselViewScrollButtonNext;
+
+    [button addTarget:self action:@selector(didTouchDownToStartAutoScroll:) forControlEvents:UIControlEventTouchDown];
+    [button addTarget:self action:@selector(didTouchDownToStopAutoScroll:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(didTouchDownToStopAutoScroll:) forControlEvents:UIControlEventTouchUpOutside];
+
+    [self addSubview:button];
+    self.nextButton = button;
+}
+
+- (void)didTouchDownToStartAutoScroll:(UIButton *)button
+{
+    if ([self.timer isValid]) {
+        [self.timer invalidate];
+    }
+    CGFloat interval = (button.tag == KMCarouselViewScrollButtonPrev) ? -3.f : 3.f;
+
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:interval], @"scrollInterval", nil];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(didFireAutoScroll:) userInfo:dict repeats:YES];
+}
+
+- (void)didTouchDownToStopAutoScroll:(UIButton *)button
+{
+    if ([self.timer isValid]) {
+        [self.timer invalidate];
+    }
 }
 
 - (void)setDataSource:(id<KMCarouselViewDataSource>)dataSource
@@ -96,7 +184,7 @@
 
 - (void)setupItems
 {
-    CGPoint p = self.scrollView.frame.origin;
+    CGPoint p = self.scrollView.bounds.origin;
     CGSize contentSize = CGSizeZero;
 
     NSInteger itemCount = [self.dataSource numberOfItemsInCarouselView:self];
@@ -106,10 +194,6 @@
         CGRect itemFrame = item.frame;
         itemFrame.origin = CGPointMake(p.x, p.y);
         item.frame = itemFrame;
-
-//        UITapGestureRecognizer *recognizer = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureItem:)] autorelease];
-//        [self.scrollView addGestureRecognizer:recognizer];
-//        recognizer.delegate = self;
 
         [self.scrollView addSubview:item];
 
@@ -122,48 +206,49 @@
     self.scrollView.contentSize = contentSize;
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)didFireAutoScroll:(NSTimer *)timer
 {
-    NSLog(@"touchesBegan");
-    // シングルタッチ
-    UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInView:self];
-    NSLog(@"x座標:%f y座標:%f", location.x, location.y);
-    [self.nextResponder touchesBegan:touches withEvent:event];
+    NSDictionary *info = [timer userInfo];
+    CGPoint scrollOffset = self.scrollView.contentOffset;
+    scrollOffset.x += [[info objectForKey:@"scrollInterval"] floatValue];
+
+    CGFloat minOffset = 0.f;
+    CGFloat maxOffset = self.scrollView.contentSize.width - self.scrollView.frame.size.width;
+
+    if (scrollOffset.x <= minOffset) {
+        scrollOffset.x = minOffset;
+    } else if (scrollOffset.x >= maxOffset) {
+        scrollOffset.x = maxOffset;
+    }
+    self.scrollView.contentOffset = scrollOffset;
 }
 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)toggleScrollItem
 {
-    NSLog(@"touchesMoved");
-    [self.nextResponder touchesMoved:touches withEvent:event];
-}
+    CGFloat offsetX = self.scrollView.contentOffset.x;
+    CGFloat minOffset = 0.f;
+    CGFloat maxOffset = self.scrollView.contentSize.width - self.scrollView.frame.size.width;
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    NSLog(@"touchesEnded");
-    [self.nextResponder touchesEnded:touches withEvent:event];
-}
-
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    NSLog(@"touchesCancelled");
-    [self.nextResponder touchesCancelled:touches withEvent:event];
-}
-
-- (void)handleTapGestureItem:(UITapGestureRecognizer *)recognizer
-{
-    NSLog(@"handleTapGestureItem");
-    NSLog(@"%@", recognizer.view);
+    if (minOffset > maxOffset) {
+        self.prevButton.hidden = YES;
+        self.nextButton.hidden = YES;
+    } else if (minOffset >= offsetX) {
+        self.prevButton.hidden = YES;
+        self.nextButton.hidden = NO;
+    } else if (minOffset < offsetX && maxOffset > offsetX) {
+        self.prevButton.hidden = NO;
+        self.nextButton.hidden = NO;
+    } else if (maxOffset <= offsetX) {
+        self.prevButton.hidden = NO;
+        self.nextButton.hidden = YES;
+    }
 }
 
 #pragma mark - UIScrollViewDelegate
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-//    NSInteger index = self.scrollView.contentOffset.x / scrollView.bounds.size.width;
-//    if ([self.delegate respondsToSelector:@selector(carouselView:didSelectItemAtIndex:)]) {
-//        [self.delegate carouselView:self didSelectItemAtIndex:index];
-//    }
+    [self toggleScrollItem];
 }
 
 @end

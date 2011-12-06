@@ -35,10 +35,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.carouselView = [[[KMCarouselView alloc] initWithFrame:CGRectMake(0, 352, self.view.bounds.size.width, 64)] autorelease];
+    self.carouselView = [[[KMCarouselView alloc] initWithFrame:CGRectMake(0, 50, self.view.bounds.size.width, 74)] autorelease];
     self.carouselView.dataSource = self;
     self.carouselView.delegate = self;
     [self.view addSubview:self.carouselView];
+
+    KMCarouselView *cv2 = [[[KMCarouselView alloc] initWithFrame:CGRectMake(20, 200, 280, 74)] autorelease];
+    cv2.dataSource = self;
+    cv2.delegate = self;
+    [self.view addSubview:cv2];
+
+    KMCarouselView *cv3 = [[[KMCarouselView alloc] initWithFrame:CGRectMake(20, 350, 280, 74)] autorelease];
+    cv3.dataSource = self;
+    cv3.delegate = self;
+    [self.view addSubview:cv3];
 }
 
 - (void)viewDidUnload
@@ -66,7 +76,6 @@
 }
 - (void)setActionToButton:(UIButton *)button atIndex:(NSInteger)index
 {
-    NSLog(@"setActionToButton");
     [button addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
 }
 
