@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TestCarouselViewController.h"
+#import "KMCarouselViewController.h"
 
 @implementation AppDelegate
 
@@ -25,8 +26,8 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    NSLog(@"class >>> %@", NSStringFromClass([TestCarouselViewController class]));
-    self.viewController = [[[TestCarouselViewController alloc] initWithNibName:NSStringFromClass([TestCarouselViewController class]) bundle:nil] autorelease];
+//    self.viewController = [[[TestCarouselViewController alloc] initWithNibName:NSStringFromClass([TestCarouselViewController class]) bundle:nil] autorelease];
+    self.viewController = [[[KMCarouselViewController alloc] initWithNibName:NSStringFromClass([KMCarouselViewController class]) bundle:nil] autorelease];
     self.window.rootViewController = self.viewController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

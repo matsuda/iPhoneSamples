@@ -25,6 +25,9 @@
 		0E605ECF148C91FE009000EB /* image0008.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E605EC5148C91FE009000EB /* image0008.png */; };
 		0E605ED0148C91FE009000EB /* image0009.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E605EC6148C91FE009000EB /* image0009.png */; };
 		0E605ED1148C91FE009000EB /* image0010.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E605EC7148C91FE009000EB /* image0010.png */; };
+		0E605EE6148C9711009000EB /* KMCarouselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E605EE4148C9711009000EB /* KMCarouselViewController.m */; };
+		0E605EE7148C9711009000EB /* KMCarouselViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E605EE5148C9711009000EB /* KMCarouselViewController.xib */; };
+		0E605EEB148C9732009000EB /* KMCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E605EEA148C9732009000EB /* KMCarouselView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,13 @@
 		0E605EC5148C91FE009000EB /* image0008.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image0008.png; sourceTree = "<group>"; };
 		0E605EC6148C91FE009000EB /* image0009.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image0009.png; sourceTree = "<group>"; };
 		0E605EC7148C91FE009000EB /* image0010.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image0010.png; sourceTree = "<group>"; };
+		0E605EE3148C9711009000EB /* KMCarouselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMCarouselViewController.h; sourceTree = "<group>"; };
+		0E605EE4148C9711009000EB /* KMCarouselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMCarouselViewController.m; sourceTree = "<group>"; };
+		0E605EE5148C9711009000EB /* KMCarouselViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KMCarouselViewController.xib; sourceTree = "<group>"; };
+		0E605EE9148C9732009000EB /* KMCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMCarouselView.h; sourceTree = "<group>"; };
+		0E605EEA148C9732009000EB /* KMCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMCarouselView.m; sourceTree = "<group>"; };
+		0E605F25148C9B66009000EB /* KMCarouselViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMCarouselViewDelegate.h; sourceTree = "<group>"; };
+		0E605F26148C9DE8009000EB /* KMCarouselViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMCarouselViewDataSource.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +114,13 @@
 				0E605EB3148C8F7F009000EB /* TestCarouselViewController.h */,
 				0E605EB4148C8F7F009000EB /* TestCarouselViewController.m */,
 				0E605EB5148C8F80009000EB /* TestCarouselViewController.xib */,
+				0E605EE3148C9711009000EB /* KMCarouselViewController.h */,
+				0E605EE4148C9711009000EB /* KMCarouselViewController.m */,
+				0E605EE5148C9711009000EB /* KMCarouselViewController.xib */,
+				0E605EE9148C9732009000EB /* KMCarouselView.h */,
+				0E605EEA148C9732009000EB /* KMCarouselView.m */,
+				0E605F25148C9B66009000EB /* KMCarouselViewDelegate.h */,
+				0E605F26148C9DE8009000EB /* KMCarouselViewDataSource.h */,
 			);
 			path = TestCarousel;
 			sourceTree = "<group>";
@@ -206,6 +223,7 @@
 				0E605ECF148C91FE009000EB /* image0008.png in Resources */,
 				0E605ED0148C91FE009000EB /* image0009.png in Resources */,
 				0E605ED1148C91FE009000EB /* image0010.png in Resources */,
+				0E605EE7148C9711009000EB /* KMCarouselViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +237,8 @@
 				0E605EA9148C8F34009000EB /* main.m in Sources */,
 				0E605EAD148C8F34009000EB /* AppDelegate.m in Sources */,
 				0E605EB6148C8F80009000EB /* TestCarouselViewController.m in Sources */,
+				0E605EE6148C9711009000EB /* KMCarouselViewController.m in Sources */,
+				0E605EEB148C9732009000EB /* KMCarouselView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
