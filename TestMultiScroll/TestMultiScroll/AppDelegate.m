@@ -7,14 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import "MultiScrollViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize navigationController = _navigationController;
 
 - (void)dealloc
 {
     [_window release];
+    [_navigationController release];
     [super dealloc];
 }
 
@@ -22,6 +25,9 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+    MultiScrollViewController *viewController = [[[MultiScrollViewController alloc] initWithNibName:NSStringFromClass([MultiScrollViewController class]) bundle:nil] autorelease];
+    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:viewController] autorelease];
+    self.window.rootViewController = self.navigationController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

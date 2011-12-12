@@ -13,6 +13,8 @@
 		0E4ECBAC14958D2500AFEE72 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E4ECBAA14958D2500AFEE72 /* InfoPlist.strings */; };
 		0E4ECBAE14958D2500AFEE72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ECBAD14958D2500AFEE72 /* main.m */; };
 		0E4ECBB214958D2500AFEE72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ECBB114958D2500AFEE72 /* AppDelegate.m */; };
+		0E4ECBBC14958D7300AFEE72 /* MultiScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4ECBBA14958D7300AFEE72 /* MultiScrollViewController.m */; };
+		0E4ECBBD14958D7300AFEE72 /* MultiScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E4ECBBB14958D7300AFEE72 /* MultiScrollViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		0E4ECBAF14958D2500AFEE72 /* TestMultiScroll-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestMultiScroll-Prefix.pch"; sourceTree = "<group>"; };
 		0E4ECBB014958D2500AFEE72 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0E4ECBB114958D2500AFEE72 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0E4ECBB914958D7300AFEE72 /* MultiScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiScrollViewController.h; sourceTree = "<group>"; };
+		0E4ECBBA14958D7300AFEE72 /* MultiScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiScrollViewController.m; sourceTree = "<group>"; };
+		0E4ECBBB14958D7300AFEE72 /* MultiScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiScrollViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +77,7 @@
 		0E4ECBA714958D2500AFEE72 /* TestMultiScroll */ = {
 			isa = PBXGroup;
 			children = (
+				0E4ECBB814958D5E00AFEE72 /* Classes */,
 				0E4ECBB014958D2500AFEE72 /* AppDelegate.h */,
 				0E4ECBB114958D2500AFEE72 /* AppDelegate.m */,
 				0E4ECBA814958D2500AFEE72 /* Supporting Files */,
@@ -88,6 +94,16 @@
 				0E4ECBAF14958D2500AFEE72 /* TestMultiScroll-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0E4ECBB814958D5E00AFEE72 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0E4ECBB914958D7300AFEE72 /* MultiScrollViewController.h */,
+				0E4ECBBA14958D7300AFEE72 /* MultiScrollViewController.m */,
+				0E4ECBBB14958D7300AFEE72 /* MultiScrollViewController.xib */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E4ECBAC14958D2500AFEE72 /* InfoPlist.strings in Resources */,
+				0E4ECBBD14958D7300AFEE72 /* MultiScrollViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +170,7 @@
 			files = (
 				0E4ECBAE14958D2500AFEE72 /* main.m in Sources */,
 				0E4ECBB214958D2500AFEE72 /* AppDelegate.m in Sources */,
+				0E4ECBBC14958D7300AFEE72 /* MultiScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
