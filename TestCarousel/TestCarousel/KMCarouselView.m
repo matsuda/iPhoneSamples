@@ -90,6 +90,20 @@ typedef enum{
 }
 */
 
+#pragma mark - Public
+
+- (void)reload
+{
+    NSArray *subs = [self.scrollView subviews];
+    for (UIView *s in subs) {
+        [s removeFromSuperview];
+        [s release], s = nil;
+    }
+    [self setupItems];
+}
+
+#pragma mark - Private
+
 - (void)setupScrollView:(CGRect)frame
 {
     CGRect f = self.bounds;

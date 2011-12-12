@@ -22,5 +22,6 @@
 @property (nonatomic, assign) id<KMCarouselViewDelegate> delegate;
 
 - (id)initWithFrame:(CGRect)frame withItems:(NSArray *)items;
+- (void)reload;
 
 @end
