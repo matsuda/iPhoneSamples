@@ -13,5 +13,5 @@
 
 @protocol KMCarouselViewDataSource <NSObject>
 - (NSInteger)numberOfItemsInCarouselView:(KMCarouselView *)carouselView;
-- (UIView *)carouselViewItemAtIndex:(NSInteger)index;
+- (UIView *)carouselView:(KMCarouselView *)carouselView viewAtIndex:(NSInteger)index;
 @end

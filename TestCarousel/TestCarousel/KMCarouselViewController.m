@@ -79,7 +79,7 @@
     [button addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (UIView *)carouselViewItemAtIndex:(NSInteger)index
+- (UIView *)carouselView:(KMCarouselView *)carouselView viewAtIndex:(NSInteger)index
 {
     UIImage *icon = [UIImage imageNamed:[NSString stringWithFormat:@"image%04d.png", index + 1]];
 

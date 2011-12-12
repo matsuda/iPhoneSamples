@@ -190,7 +190,7 @@ typedef enum{
     NSInteger itemCount = [self.dataSource numberOfItemsInCarouselView:self];
 
     for (NSInteger i = 0; i < itemCount; i++) {
-        UIView *item = [self.dataSource carouselViewItemAtIndex:i];
+        UIView *item = [self.dataSource carouselView:self viewAtIndex:i];
         CGRect itemFrame = item.frame;
         itemFrame.origin = CGPointMake(p.x, p.y);
         item.frame = itemFrame;
