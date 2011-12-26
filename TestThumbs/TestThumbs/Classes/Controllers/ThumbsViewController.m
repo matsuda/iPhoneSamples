@@ -100,6 +100,13 @@ static CGFloat kThumbnailRowHeight = 105.0f;
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)dealloc
+{
+    [_tableView release], _tableView = nil;
+    [_thumbs release], _thumbs = nil;
+    [super dealloc];
+}
+
 #pragma mark - PrivateMethods
 
 - (void)loadthumbs
