@@ -17,7 +17,6 @@ static const CGFloat kDefaultThumbSize = 100.0f;
 @property (nonatomic) CGFloat thumbSize;
 @property (nonatomic) CGPoint thumbOrigin;
 @property (nonatomic) NSInteger columnCount;
-- (void)layoutThumbViews;
 @end
 
 
@@ -58,21 +57,6 @@ static const CGFloat kDefaultThumbSize = 100.0f;
     // Configure the view for the selected state
 }
 
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    [self layoutThumbViews];
-}
-
-- (void)layoutThumbViews
-{
-    CGRect thumbFrame = CGRectMake(self.thumbOrigin.x, self.thumbOrigin.y, self.thumbSize, self.thumbSize);
-    for (UIView *thumbView in self.thumbViews) {
-        thumbView.frame = thumbFrame;
-        thumbFrame.origin.x += kThumbSpacing + self.thumbSize;
-    }
-}
-
 - (void)setThumbs:(NSArray *)thumbs
 {
     if (_thumbs == thumbs) {
@@ -88,13 +72,15 @@ static const CGFloat kDefaultThumbSize = 100.0f;
     [self.thumbViews removeAllObjects];
     _columnCount = columnCount;
 
+    CGRect thumbFrame = CGRectMake(self.thumbOrigin.x, self.thumbOrigin.y, self.thumbSize, self.thumbSize);
     for (NSInteger i = self.thumbViews.count; i < columnCount; ++i) {
-        ThumbView *thumbView = [[[ThumbView alloc] init] autorelease];
+        ThumbView *thumbView = [[[ThumbView alloc] initWithFrame:thumbFrame] autorelease];
         thumbView.backgroundColor = [UIColor grayColor];
         [thumbView loadImage:@"http://matsuda.me/images/logo.png"];
 
         [self.contentView addSubview:thumbView];
         [self.thumbViews addObject:thumbView];
+        thumbFrame.origin.x += kThumbSpacing + self.thumbSize;
     }
 }
 
