@@ -1,0 +1,261 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E90C3AE14E21CB100D4800C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E90C3AD14E21CB100D4800C /* UIKit.framework */; };
+		0E90C3B014E21CB100D4800C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E90C3AF14E21CB100D4800C /* Foundation.framework */; };
+		0E90C3B214E21CB100D4800C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E90C3B114E21CB100D4800C /* CoreGraphics.framework */; };
+		0E90C3B814E21CB100D4800C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E90C3B614E21CB100D4800C /* InfoPlist.strings */; };
+		0E90C3BA14E21CB100D4800C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E90C3B914E21CB100D4800C /* main.m */; };
+		0E90C3BE14E21CB100D4800C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E90C3BD14E21CB100D4800C /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0E90C3A914E21CB100D4800C /* TestActiveRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestActiveRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E90C3AD14E21CB100D4800C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0E90C3AF14E21CB100D4800C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0E90C3B114E21CB100D4800C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0E90C3B514E21CB100D4800C /* TestActiveRecord-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestActiveRecord-Info.plist"; sourceTree = "<group>"; };
+		0E90C3B714E21CB100D4800C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0E90C3B914E21CB100D4800C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0E90C3BB14E21CB100D4800C /* TestActiveRecord-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestActiveRecord-Prefix.pch"; sourceTree = "<group>"; };
+		0E90C3BC14E21CB100D4800C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0E90C3BD14E21CB100D4800C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E90C3A614E21CB100D4800C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E90C3AE14E21CB100D4800C /* UIKit.framework in Frameworks */,
+				0E90C3B014E21CB100D4800C /* Foundation.framework in Frameworks */,
+				0E90C3B214E21CB100D4800C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E90C39E14E21CB100D4800C = {
+			isa = PBXGroup;
+			children = (
+				0E90C3B314E21CB100D4800C /* TestActiveRecord */,
+				0E90C3AC14E21CB100D4800C /* Frameworks */,
+				0E90C3AA14E21CB100D4800C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0E90C3AA14E21CB100D4800C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E90C3A914E21CB100D4800C /* TestActiveRecord.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E90C3AC14E21CB100D4800C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E90C3AD14E21CB100D4800C /* UIKit.framework */,
+				0E90C3AF14E21CB100D4800C /* Foundation.framework */,
+				0E90C3B114E21CB100D4800C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0E90C3B314E21CB100D4800C /* TestActiveRecord */ = {
+			isa = PBXGroup;
+			children = (
+				0E90C3BC14E21CB100D4800C /* AppDelegate.h */,
+				0E90C3BD14E21CB100D4800C /* AppDelegate.m */,
+				0E90C3B414E21CB100D4800C /* Supporting Files */,
+			);
+			path = TestActiveRecord;
+			sourceTree = "<group>";
+		};
+		0E90C3B414E21CB100D4800C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0E90C3B514E21CB100D4800C /* TestActiveRecord-Info.plist */,
+				0E90C3B614E21CB100D4800C /* InfoPlist.strings */,
+				0E90C3B914E21CB100D4800C /* main.m */,
+				0E90C3BB14E21CB100D4800C /* TestActiveRecord-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E90C3A814E21CB100D4800C /* TestActiveRecord */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E90C3C114E21CB100D4800C /* Build configuration list for PBXNativeTarget "TestActiveRecord" */;
+			buildPhases = (
+				0E90C3A514E21CB100D4800C /* Sources */,
+				0E90C3A614E21CB100D4800C /* Frameworks */,
+				0E90C3A714E21CB100D4800C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestActiveRecord;
+			productName = TestActiveRecord;
+			productReference = 0E90C3A914E21CB100D4800C /* TestActiveRecord.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E90C3A014E21CB100D4800C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 0E90C3A314E21CB100D4800C /* Build configuration list for PBXProject "TestActiveRecord" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0E90C39E14E21CB100D4800C;
+			productRefGroup = 0E90C3AA14E21CB100D4800C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E90C3A814E21CB100D4800C /* TestActiveRecord */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E90C3A714E21CB100D4800C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E90C3B814E21CB100D4800C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E90C3A514E21CB100D4800C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E90C3BA14E21CB100D4800C /* main.m in Sources */,
+				0E90C3BE14E21CB100D4800C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0E90C3B614E21CB100D4800C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E90C3B714E21CB100D4800C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0E90C3BF14E21CB100D4800C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0E90C3C014E21CB100D4800C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0E90C3C214E21CB100D4800C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestActiveRecord/TestActiveRecord-Prefix.pch";
+				INFOPLIST_FILE = "TestActiveRecord/TestActiveRecord-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0E90C3C314E21CB100D4800C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestActiveRecord/TestActiveRecord-Prefix.pch";
+				INFOPLIST_FILE = "TestActiveRecord/TestActiveRecord-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E90C3A314E21CB100D4800C /* Build configuration list for PBXProject "TestActiveRecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E90C3BF14E21CB100D4800C /* Debug */,
+				0E90C3C014E21CB100D4800C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E90C3C114E21CB100D4800C /* Build configuration list for PBXNativeTarget "TestActiveRecord" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E90C3C214E21CB100D4800C /* Debug */,
+				0E90C3C314E21CB100D4800C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0E90C3A014E21CB100D4800C /* Project object */;
+}
