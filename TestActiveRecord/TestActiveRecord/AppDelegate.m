@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <ActiveRecord/ActiveRecord.h>
+#import "User.h"
 
 @implementation AppDelegate
 
@@ -20,6 +22,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSError *err = nil;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"testActiveRecord" ofType:@"db"];
+    [ARBase setDefaultConnection:[ARSQLiteConnection openConnectionWithInfo:[NSDictionary dictionaryWithObject:path forKey:@"path"] error:&err]];
+
+    NSArray *users = [User find:ARFindAll];
+    NSLog(@"users >>> %@", users);
+    User *user = [users objectAtIndex:0];
+    NSLog(@"%u %@ %@", user.databaseId, user.firstName, user.lastName);
+
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];

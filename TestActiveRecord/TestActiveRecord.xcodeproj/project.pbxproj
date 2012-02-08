@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E36950514E2205E003103CA /* inflections.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E3694FB14E2205E003103CA /* inflections.plist */; };
+		0E36950614E2205E003103CA /* irregulars.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E3694FC14E2205E003103CA /* irregulars.plist */; };
+		0E36950714E2205E003103CA /* plurals.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E3694FD14E2205E003103CA /* plurals.plist */; };
+		0E36950814E2205E003103CA /* singulars.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E3694FE14E2205E003103CA /* singulars.plist */; };
+		0E36950914E2205E003103CA /* uncountables.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E3694FF14E2205E003103CA /* uncountables.plist */; };
+		0E36950E14E220F9003103CA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E36950D14E220F9003103CA /* libsqlite3.dylib */; };
+		0E36951014E2210E003103CA /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E36950F14E2210E003103CA /* libicucore.dylib */; };
+		0E36951914E223C2003103CA /* testActiveRecord.db in Resources */ = {isa = PBXBuildFile; fileRef = 0E36951814E223C2003103CA /* testActiveRecord.db */; };
+		0E36951E14E23C96003103CA /* libactive_record.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E90C3FC14E2200A00D4800C /* libactive_record.a */; };
+		0E36952214E25260003103CA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E36952114E25260003103CA /* User.m */; };
 		0E90C3AE14E21CB100D4800C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E90C3AD14E21CB100D4800C /* UIKit.framework */; };
 		0E90C3B014E21CB100D4800C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E90C3AF14E21CB100D4800C /* Foundation.framework */; };
 		0E90C3B214E21CB100D4800C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E90C3B114E21CB100D4800C /* CoreGraphics.framework */; };
@@ -15,7 +25,48 @@
 		0E90C3BE14E21CB100D4800C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E90C3BD14E21CB100D4800C /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0E36950A14E220BF003103CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E90C3F114E2200A00D4800C /* ActiveRecord.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C7AED93C13C1440200C47919;
+			remoteInfo = "iPhone Library";
+		};
+		0E90C3F714E2200A00D4800C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E90C3F114E2200A00D4800C /* ActiveRecord.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = ActiveRecord;
+		};
+		0E90C3F914E2200A00D4800C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E90C3F114E2200A00D4800C /* ActiveRecord.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C7CAF2F213BA1A7300013E21;
+			remoteInfo = "Unit Tests";
+		};
+		0E90C3FB14E2200A00D4800C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E90C3F114E2200A00D4800C /* ActiveRecord.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C7AED93D13C1440200C47919;
+			remoteInfo = "iPhone Library";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0E36950014E2205E003103CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = inflections.plist; sourceTree = "<group>"; };
+		0E36950114E2205E003103CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = irregulars.plist; sourceTree = "<group>"; };
+		0E36950214E2205E003103CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = plurals.plist; sourceTree = "<group>"; };
+		0E36950314E2205E003103CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = singulars.plist; sourceTree = "<group>"; };
+		0E36950414E2205E003103CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = uncountables.plist; sourceTree = "<group>"; };
+		0E36950D14E220F9003103CA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0E36950F14E2210E003103CA /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		0E36951814E223C2003103CA /* testActiveRecord.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testActiveRecord.db; sourceTree = "<group>"; };
+		0E36952014E25260003103CA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		0E36952114E25260003103CA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		0E90C3A914E21CB100D4800C /* TestActiveRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestActiveRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E90C3AD14E21CB100D4800C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0E90C3AF14E21CB100D4800C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -26,6 +77,7 @@
 		0E90C3BB14E21CB100D4800C /* TestActiveRecord-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestActiveRecord-Prefix.pch"; sourceTree = "<group>"; };
 		0E90C3BC14E21CB100D4800C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0E90C3BD14E21CB100D4800C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0E90C3F114E2200A00D4800C /* ActiveRecord.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ActiveRecord.xcodeproj; path = activerecord/ActiveRecord.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E36951E14E23C96003103CA /* libactive_record.a in Frameworks */,
+				0E36951014E2210E003103CA /* libicucore.dylib in Frameworks */,
+				0E36950E14E220F9003103CA /* libsqlite3.dylib in Frameworks */,
 				0E90C3AE14E21CB100D4800C /* UIKit.framework in Frameworks */,
 				0E90C3B014E21CB100D4800C /* Foundation.framework in Frameworks */,
 				0E90C3B214E21CB100D4800C /* CoreGraphics.framework in Frameworks */,
@@ -42,9 +97,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E3694FA14E2205E003103CA /* Inflections */ = {
+			isa = PBXGroup;
+			children = (
+				0E3694FB14E2205E003103CA /* inflections.plist */,
+				0E3694FC14E2205E003103CA /* irregulars.plist */,
+				0E3694FD14E2205E003103CA /* plurals.plist */,
+				0E3694FE14E2205E003103CA /* singulars.plist */,
+				0E3694FF14E2205E003103CA /* uncountables.plist */,
+			);
+			name = Inflections;
+			path = ../activerecord/en.lproj;
+			sourceTree = "<group>";
+		};
+		0E36951F14E2524E003103CA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0E36952014E25260003103CA /* User.h */,
+				0E36952114E25260003103CA /* User.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		0E90C39E14E21CB100D4800C = {
 			isa = PBXGroup;
 			children = (
+				0E36950F14E2210E003103CA /* libicucore.dylib */,
+				0E36950D14E220F9003103CA /* libsqlite3.dylib */,
+				0E90C3F114E2200A00D4800C /* ActiveRecord.xcodeproj */,
 				0E90C3B314E21CB100D4800C /* TestActiveRecord */,
 				0E90C3AC14E21CB100D4800C /* Frameworks */,
 				0E90C3AA14E21CB100D4800C /* Products */,
@@ -72,6 +152,7 @@
 		0E90C3B314E21CB100D4800C /* TestActiveRecord */ = {
 			isa = PBXGroup;
 			children = (
+				0E36951F14E2524E003103CA /* Classes */,
 				0E90C3BC14E21CB100D4800C /* AppDelegate.h */,
 				0E90C3BD14E21CB100D4800C /* AppDelegate.m */,
 				0E90C3B414E21CB100D4800C /* Supporting Files */,
@@ -82,12 +163,24 @@
 		0E90C3B414E21CB100D4800C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0E36951814E223C2003103CA /* testActiveRecord.db */,
+				0E3694FA14E2205E003103CA /* Inflections */,
 				0E90C3B514E21CB100D4800C /* TestActiveRecord-Info.plist */,
 				0E90C3B614E21CB100D4800C /* InfoPlist.strings */,
 				0E90C3B914E21CB100D4800C /* main.m */,
 				0E90C3BB14E21CB100D4800C /* TestActiveRecord-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0E90C3F214E2200A00D4800C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E90C3F814E2200A00D4800C /* ActiveRecord.framework */,
+				0E90C3FA14E2200A00D4800C /* Unit Tests.app */,
+				0E90C3FC14E2200A00D4800C /* libactive_record.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +197,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0E36950B14E220BF003103CA /* PBXTargetDependency */,
 			);
 			name = TestActiveRecord;
 			productName = TestActiveRecord;
@@ -128,6 +222,12 @@
 			mainGroup = 0E90C39E14E21CB100D4800C;
 			productRefGroup = 0E90C3AA14E21CB100D4800C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0E90C3F214E2200A00D4800C /* Products */;
+					ProjectRef = 0E90C3F114E2200A00D4800C /* ActiveRecord.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0E90C3A814E21CB100D4800C /* TestActiveRecord */,
@@ -135,12 +235,42 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		0E90C3F814E2200A00D4800C /* ActiveRecord.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ActiveRecord.framework;
+			remoteRef = 0E90C3F714E2200A00D4800C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0E90C3FA14E2200A00D4800C /* Unit Tests.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Unit Tests.app";
+			remoteRef = 0E90C3F914E2200A00D4800C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0E90C3FC14E2200A00D4800C /* libactive_record.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libactive_record.a;
+			remoteRef = 0E90C3FB14E2200A00D4800C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		0E90C3A714E21CB100D4800C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0E90C3B814E21CB100D4800C /* InfoPlist.strings in Resources */,
+				0E36950514E2205E003103CA /* inflections.plist in Resources */,
+				0E36950614E2205E003103CA /* irregulars.plist in Resources */,
+				0E36950714E2205E003103CA /* plurals.plist in Resources */,
+				0E36950814E2205E003103CA /* singulars.plist in Resources */,
+				0E36950914E2205E003103CA /* uncountables.plist in Resources */,
+				0E36951914E223C2003103CA /* testActiveRecord.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,12 +283,61 @@
 			files = (
 				0E90C3BA14E21CB100D4800C /* main.m in Sources */,
 				0E90C3BE14E21CB100D4800C /* AppDelegate.m in Sources */,
+				0E36952214E25260003103CA /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0E36950B14E220BF003103CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "iPhone Library";
+			targetProxy = 0E36950A14E220BF003103CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		0E3694FB14E2205E003103CA /* inflections.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E36950014E2205E003103CA /* en */,
+			);
+			name = inflections.plist;
+			sourceTree = "<group>";
+		};
+		0E3694FC14E2205E003103CA /* irregulars.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E36950114E2205E003103CA /* en */,
+			);
+			name = irregulars.plist;
+			sourceTree = "<group>";
+		};
+		0E3694FD14E2205E003103CA /* plurals.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E36950214E2205E003103CA /* en */,
+			);
+			name = plurals.plist;
+			sourceTree = "<group>";
+		};
+		0E3694FE14E2205E003103CA /* singulars.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E36950314E2205E003103CA /* en */,
+			);
+			name = singulars.plist;
+			sourceTree = "<group>";
+		};
+		0E3694FF14E2205E003103CA /* uncountables.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E36950414E2205E003103CA /* en */,
+			);
+			name = uncountables.plist;
+			sourceTree = "<group>";
+		};
 		0E90C3B614E21CB100D4800C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -189,7 +368,9 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -206,8 +387,10 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -218,7 +401,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestActiveRecord/TestActiveRecord-Prefix.pch";
+				HEADER_SEARCH_PATHS = "activerecord/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/include";
 				INFOPLIST_FILE = "TestActiveRecord/TestActiveRecord-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -229,7 +414,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestActiveRecord/TestActiveRecord-Prefix.pch";
+				HEADER_SEARCH_PATHS = "activerecord/build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/include";
 				INFOPLIST_FILE = "TestActiveRecord/TestActiveRecord-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -254,6 +441,7 @@
 				0E90C3C314E21CB100D4800C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
