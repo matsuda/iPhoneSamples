@@ -12,11 +12,11 @@
 		0E36950714E2205E003103CA /* plurals.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E3694FD14E2205E003103CA /* plurals.plist */; };
 		0E36950814E2205E003103CA /* singulars.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E3694FE14E2205E003103CA /* singulars.plist */; };
 		0E36950914E2205E003103CA /* uncountables.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E3694FF14E2205E003103CA /* uncountables.plist */; };
-		0E36950E14E220F9003103CA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E36950D14E220F9003103CA /* libsqlite3.dylib */; };
-		0E36951014E2210E003103CA /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E36950F14E2210E003103CA /* libicucore.dylib */; };
 		0E36951914E223C2003103CA /* testActiveRecord.db in Resources */ = {isa = PBXBuildFile; fileRef = 0E36951814E223C2003103CA /* testActiveRecord.db */; };
 		0E36951E14E23C96003103CA /* libactive_record.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E90C3FC14E2200A00D4800C /* libactive_record.a */; };
 		0E36952214E25260003103CA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E36952114E25260003103CA /* User.m */; };
+		0E49EE54156649F200D8108A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E49EE53156649F200D8108A /* libsqlite3.dylib */; };
+		0E49EE56156649FD00D8108A /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E49EE55156649FD00D8108A /* libicucore.dylib */; };
 		0E90C3AE14E21CB100D4800C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E90C3AD14E21CB100D4800C /* UIKit.framework */; };
 		0E90C3B014E21CB100D4800C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E90C3AF14E21CB100D4800C /* Foundation.framework */; };
 		0E90C3B214E21CB100D4800C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E90C3B114E21CB100D4800C /* CoreGraphics.framework */; };
@@ -62,11 +62,11 @@
 		0E36950214E2205E003103CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = plurals.plist; sourceTree = "<group>"; };
 		0E36950314E2205E003103CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = singulars.plist; sourceTree = "<group>"; };
 		0E36950414E2205E003103CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = uncountables.plist; sourceTree = "<group>"; };
-		0E36950D14E220F9003103CA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		0E36950F14E2210E003103CA /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		0E36951814E223C2003103CA /* testActiveRecord.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testActiveRecord.db; sourceTree = "<group>"; };
 		0E36952014E25260003103CA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		0E36952114E25260003103CA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		0E49EE53156649F200D8108A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0E49EE55156649FD00D8108A /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		0E90C3A914E21CB100D4800C /* TestActiveRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestActiveRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E90C3AD14E21CB100D4800C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0E90C3AF14E21CB100D4800C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,9 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E49EE56156649FD00D8108A /* libicucore.dylib in Frameworks */,
+				0E49EE54156649F200D8108A /* libsqlite3.dylib in Frameworks */,
 				0E36951E14E23C96003103CA /* libactive_record.a in Frameworks */,
-				0E36951014E2210E003103CA /* libicucore.dylib in Frameworks */,
-				0E36950E14E220F9003103CA /* libsqlite3.dylib in Frameworks */,
 				0E90C3AE14E21CB100D4800C /* UIKit.framework in Frameworks */,
 				0E90C3B014E21CB100D4800C /* Foundation.framework in Frameworks */,
 				0E90C3B214E21CB100D4800C /* CoreGraphics.framework in Frameworks */,
@@ -122,8 +122,8 @@
 		0E90C39E14E21CB100D4800C = {
 			isa = PBXGroup;
 			children = (
-				0E36950F14E2210E003103CA /* libicucore.dylib */,
-				0E36950D14E220F9003103CA /* libsqlite3.dylib */,
+				0E49EE55156649FD00D8108A /* libicucore.dylib */,
+				0E49EE53156649F200D8108A /* libsqlite3.dylib */,
 				0E90C3F114E2200A00D4800C /* ActiveRecord.xcodeproj */,
 				0E90C3B314E21CB100D4800C /* TestActiveRecord */,
 				0E90C3AC14E21CB100D4800C /* Frameworks */,
@@ -369,7 +369,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 			};
@@ -388,7 +388,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
