@@ -10,6 +10,7 @@
 #import "SlideNavigationController.h"
 #import "MenuController.h"
 #import "FirstViewController.h"
+#import "RightViewController.h"
 
 @implementation AppDelegate
 
@@ -29,6 +30,9 @@
 
     FirstViewController *viewController = [[FirstViewController alloc] initWithNibName:nil bundle:nil];
     slideController.topViewController = viewController;
+
+    RightViewController *rightController = [[RightViewController alloc] initWithNibName:nil bundle:nil];
+    slideController.rightViewController = rightController;
 
     self.window.rootViewController = slideController;
 

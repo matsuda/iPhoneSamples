@@ -50,7 +50,7 @@
 - (void)setupNavigationBar
 {
     UINavigationBar *naviBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-    UINavigationItem *naviItem = [[UINavigationItem alloc] initWithTitle:@"First"];
+    UINavigationItem *naviItem = [[UINavigationItem alloc] init];
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStyleDone target:self action:@selector(didTapBarButtonToLeft:)];
     naviItem.leftBarButtonItem = leftButton;
     [naviBar pushNavigationItem:naviItem animated:YES];

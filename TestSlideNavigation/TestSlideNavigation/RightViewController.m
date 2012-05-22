@@ -1,19 +1,19 @@
 //
-//  SecondViewController.m
+//  RightViewController.m
 //  TestSlideNavigation
 //
 //  Created by matsuda on 12/05/22.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "RightViewController.h"
 
-@interface SecondViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface RightViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 - (void)setupTableView;
 @end
 
-@implementation SecondViewController
+@implementation RightViewController
 
 @synthesize tableView = _tableView;
 
@@ -31,14 +31,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self setupTableView];
-    UINavigationBar *naviBar = self.navigationBar;
-    naviBar.topItem.title = @"Second";
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+    self.view.backgroundColor = [UIColor orangeColor];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -48,7 +47,7 @@
 
 - (void)setupTableView
 {
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.navigationBar.frame), CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - CGRectGetHeight(self.navigationBar.frame))];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     tableView.dataSource = self;
     tableView.delegate = self;
     [self.view addSubview:tableView];
@@ -62,7 +61,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"SecondViewControllerViewCell";
+    static NSString *CellIdentifier = @"RightViewControllerViewCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];

@@ -9,6 +9,7 @@
 #import "SlideNavigationController.h"
 #import <QuartzCore/QuartzCore.h>
 
+static CGFloat const kSlideKeepWidth = 40.f;
 
 @implementation UIViewController (SlideNavigationController)
 
@@ -30,8 +31,9 @@
 
 @implementation SlideNavigationController
 
-@synthesize leftViewController = _leftViewController;
 @synthesize topViewController = _topViewController;
+@synthesize leftViewController = _leftViewController;
+@synthesize rightViewController = _rightViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -80,11 +82,23 @@
     _leftViewController = leftViewController;
     [self addChildViewController:leftViewController];
 
-    [self updateLeftView];
+    [self updateLeftViewLayout];
     [self.view insertSubview:_leftViewController.view atIndex:0];
 }
 
-- (void)updateLeftView
+- (void)setRightViewController:(UIViewController *)rightViewController
+{
+    [_rightViewController.view removeFromSuperview];
+    [_rightViewController removeFromParentViewController];
+
+    _rightViewController = rightViewController;
+    [self addChildViewController:rightViewController];
+
+    [self updateRightViewLayout];
+    [self.view insertSubview:_rightViewController.view atIndex:0];
+}
+
+- (void)updateLeftViewLayout
 {
 //    self.leftViewController.view.autoresizingMask = (
 //                                                     UIViewAutoresizingFlexibleWidth |
@@ -93,7 +107,31 @@
 //                                                     UIViewAutoresizingFlexibleBottomMargin |
 //                                                     UIViewAutoresizingFlexibleLeftMargin |
 //                                                     UIViewAutoresizingFlexibleRightMargin);
-    self.leftViewController.view.frame = self.view.bounds;
+    CGFloat width = CGRectGetWidth([UIScreen mainScreen].bounds);
+    CGRect f = self.view.bounds;
+    f.size.width = width - kSlideKeepWidth;
+    self.leftViewController.view.frame = f;
+}
+
+- (void)updateRightViewLayout
+{
+    CGFloat width = CGRectGetWidth([UIScreen mainScreen].bounds);
+    CGRect f = self.view.bounds;
+    f.origin.x = kSlideKeepWidth;
+    f.size.width = width - kSlideKeepWidth;
+    self.rightViewController.view.frame = f;
+}
+
+- (void)leftViewWillAppear
+{
+    self.rightViewController.view.hidden = YES;
+    self.leftViewController.view.hidden = NO;
+}
+
+- (void)rightViewWillAppear
+{
+    self.leftViewController.view.hidden = YES;
+    self.rightViewController.view.hidden = NO;
 }
 
 - (void)slideTo:(SlideNavigationControllerSide)side
@@ -101,10 +139,23 @@
     CGFloat distance;
     __block CGRect f = self.topViewController.view.frame;
 
-    if (f.origin.x == 0.f) {
-        distance = f.size.width - 40.f;
-    } else {
-        distance = 0.f - f.origin.x;
+    switch (side) {
+        case SlideNavigationControllerSideLeft: {
+            if (f.origin.x <= 0.f) {
+                distance = f.size.width - kSlideKeepWidth;
+            } else {
+                distance = 0.f - f.origin.x;
+            }
+            break;
+        }
+        default: {
+            if (f.origin.x >= 0.f) {
+                distance = kSlideKeepWidth - f.size.width;
+            } else {
+                distance = 0.f - f.origin.x;
+            }
+            break;
+        }
     }
 
     [self slideTo:side
@@ -120,6 +171,20 @@
      animations:(void(^)())animations
        complete:(void(^)())complete
 {
+    switch (side) {
+        case SlideNavigationControllerSideLeft: {
+            if (distance >= 0.f) {
+                [self leftViewWillAppear];
+            }
+            break;
+        }
+        default: {
+            if (distance <= 0.f) {
+                [self rightViewWillAppear];
+            }
+            break;
+        }
+    }
     [UIView animateWithDuration:0.25f
                      animations:^{
                          if (animations) {
@@ -171,6 +236,5 @@
            self.topViewController.view.frame = f;
        } complete:nil];
 }
-
 
 @end

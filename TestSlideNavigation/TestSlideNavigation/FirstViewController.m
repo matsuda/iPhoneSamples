@@ -27,9 +27,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor blueColor];
-    UINavigationBar *naviBar = self.navigationBar;
-    naviBar.topItem.title = @"First";
+    self.view.backgroundColor = [UIColor lightGrayColor];
+
+    UINavigationItem *naviItem = self.navigationBar.topItem;
+    naviItem.title = @"First";
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Right" style:UIBarButtonItemStyleDone target:self action:@selector(didTapBarButtonToRight:)];
+    naviItem.rightBarButtonItem = rightButton;
 }
 
 - (void)viewDidUnload
@@ -41,6 +44,11 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)didTapBarButtonToRight:(UIBarButtonItem *)sender
+{
+    [self.slideNavigationController slideTo:SlideNavigationControllerSideRight];
 }
 
 @end
