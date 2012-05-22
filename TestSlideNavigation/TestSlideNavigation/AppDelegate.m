@@ -7,15 +7,31 @@
 //
 
 #import "AppDelegate.h"
+#import "SlideNavigationController.h"
+#import "MenuController.h"
+#import "FirstViewController.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize slideController = _slideController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+
+    SlideNavigationController *slideController = [[SlideNavigationController alloc] initWithNibName:nil bundle:nil];
+    self.slideController = slideController;
+
+    MenuController *menuController = [[MenuController alloc] initWithNibName:nil bundle:nil];
+    slideController.leftViewController = menuController;
+
+    FirstViewController *viewController = [[FirstViewController alloc] initWithNibName:nil bundle:nil];
+    slideController.topViewController = viewController;
+
+    self.window.rootViewController = slideController;
+
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
