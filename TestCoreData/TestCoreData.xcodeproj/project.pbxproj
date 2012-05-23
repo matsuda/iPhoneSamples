@@ -15,7 +15,6 @@
 		0E995359156C795000BC2A44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E995358156C795000BC2A44 /* main.m */; };
 		0E99535D156C795000BC2A44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E99535C156C795000BC2A44 /* AppDelegate.m */; };
 		0E995360156C795000BC2A44 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E99535E156C795000BC2A44 /* MainStoryboard.storyboard */; };
-		0E995363156C795000BC2A44 /* TestCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E995361156C795000BC2A44 /* TestCoreData.xcdatamodeld */; };
 		0E995366156C795000BC2A44 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E995365156C795000BC2A44 /* MasterViewController.m */; };
 		0E995369156C795000BC2A44 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E995368156C795000BC2A44 /* DetailViewController.m */; };
 		0E995371156C795000BC2A44 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E995370156C795000BC2A44 /* SenTestingKit.framework */; };
@@ -24,6 +23,9 @@
 		0E995374156C795000BC2A44 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E995350156C795000BC2A44 /* CoreData.framework */; };
 		0E99537C156C795000BC2A44 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E99537A156C795000BC2A44 /* InfoPlist.strings */; };
 		0E99537F156C795000BC2A44 /* TestCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E99537E156C795000BC2A44 /* TestCoreDataTests.m */; };
+		0E99538E156C7B4C00BC2A44 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E99538D156C7B4C00BC2A44 /* Person.m */; };
+		0E995392156C7B9000BC2A44 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E995391156C7B9000BC2A44 /* Address.m */; };
+		0E995395156C7C6E00BC2A44 /* TestCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E995393156C7C6E00BC2A44 /* TestCoreData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,6 @@
 		0E99535B156C795000BC2A44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0E99535C156C795000BC2A44 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0E99535F156C795000BC2A44 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		0E995362156C795000BC2A44 /* TestCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestCoreData.xcdatamodel; sourceTree = "<group>"; };
 		0E995364156C795000BC2A44 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		0E995365156C795000BC2A44 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		0E995367156C795000BC2A44 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -60,6 +61,11 @@
 		0E99537B156C795000BC2A44 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E99537D156C795000BC2A44 /* TestCoreDataTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCoreDataTests.h; sourceTree = "<group>"; };
 		0E99537E156C795000BC2A44 /* TestCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCoreDataTests.m; sourceTree = "<group>"; };
+		0E99538C156C7B4C00BC2A44 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		0E99538D156C7B4C00BC2A44 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		0E995390156C7B9000BC2A44 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		0E995391156C7B9000BC2A44 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
+		0E995394156C7C6E00BC2A44 /* TestCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestCoreData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +135,12 @@
 				0E995365156C795000BC2A44 /* MasterViewController.m */,
 				0E995367156C795000BC2A44 /* DetailViewController.h */,
 				0E995368156C795000BC2A44 /* DetailViewController.m */,
-				0E995361156C795000BC2A44 /* TestCoreData.xcdatamodeld */,
+				0E995393156C7C6E00BC2A44 /* TestCoreData.xcdatamodeld */,
 				0E995353156C795000BC2A44 /* Supporting Files */,
+				0E99538C156C7B4C00BC2A44 /* Person.h */,
+				0E99538D156C7B4C00BC2A44 /* Person.m */,
+				0E995390156C7B9000BC2A44 /* Address.h */,
+				0E995391156C7B9000BC2A44 /* Address.m */,
 			);
 			path = TestCoreData;
 			sourceTree = "<group>";
@@ -273,9 +283,11 @@
 			files = (
 				0E995359156C795000BC2A44 /* main.m in Sources */,
 				0E99535D156C795000BC2A44 /* AppDelegate.m in Sources */,
-				0E995363156C795000BC2A44 /* TestCoreData.xcdatamodeld in Sources */,
 				0E995366156C795000BC2A44 /* MasterViewController.m in Sources */,
 				0E995369156C795000BC2A44 /* DetailViewController.m in Sources */,
+				0E99538E156C7B4C00BC2A44 /* Person.m in Sources */,
+				0E995392156C7B9000BC2A44 /* Address.m in Sources */,
+				0E995395156C7C6E00BC2A44 /* TestCoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +457,7 @@
 				0E995384156C795000BC2A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E995385156C795000BC2A44 /* Build configuration list for PBXNativeTarget "TestCoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -453,16 +466,17 @@
 				0E995387156C795000BC2A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0E995361156C795000BC2A44 /* TestCoreData.xcdatamodeld */ = {
+		0E995393156C7C6E00BC2A44 /* TestCoreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				0E995362156C795000BC2A44 /* TestCoreData.xcdatamodel */,
+				0E995394156C7C6E00BC2A44 /* TestCoreData.xcdatamodel */,
 			);
-			currentVersion = 0E995362156C795000BC2A44 /* TestCoreData.xcdatamodel */;
+			currentVersion = 0E995394156C7C6E00BC2A44 /* TestCoreData.xcdatamodel */;
 			path = TestCoreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
