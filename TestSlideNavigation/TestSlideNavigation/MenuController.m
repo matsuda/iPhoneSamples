@@ -25,7 +25,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.menu = [NSArray arrayWithObjects:@"First", @"Second", nil];
+        self.menu = [NSArray arrayWithObjects:@"First", @"Second", @"Third", nil];
     }
     return self;
 }
@@ -86,8 +86,6 @@
                                                 self.slideNavigationController.topViewController.view.frame = frame;
                                                 [self.slideNavigationController resetTopView:SlideNavigationControllerSideLeft];
                                             }];
-
-    // [self.slideNavigationController slideResetTo:SlideNavigationControllerSideLeft];
 }
 
 @end

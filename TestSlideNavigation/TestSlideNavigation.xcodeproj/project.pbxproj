@@ -19,6 +19,7 @@
 		0ECBB7B5156B32CC0003EEC4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECBB7B4156B32CC0003EEC4 /* SecondViewController.m */; };
 		0ECBB7B9156B33850003EEC4 /* SlideContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECBB7B8156B33850003EEC4 /* SlideContentViewController.m */; };
 		0ECBB7C8156B432F0003EEC4 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECBB7C7156B432F0003EEC4 /* RightViewController.m */; };
+		0ECBB7ED156B7FCF0003EEC4 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECBB7EC156B7FCF0003EEC4 /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		0ECBB7B8156B33850003EEC4 /* SlideContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideContentViewController.m; sourceTree = "<group>"; };
 		0ECBB7C6156B432F0003EEC4 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
 		0ECBB7C7156B432F0003EEC4 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		0ECBB7EB156B7FCF0003EEC4 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		0ECBB7EC156B7FCF0003EEC4 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				0E3D7169156A3EDA00FBCDC1 /* FirstViewController.m */,
 				0ECBB7B3156B32CC0003EEC4 /* SecondViewController.h */,
 				0ECBB7B4156B32CC0003EEC4 /* SecondViewController.m */,
+				0ECBB7EB156B7FCF0003EEC4 /* ThirdViewController.h */,
+				0ECBB7EC156B7FCF0003EEC4 /* ThirdViewController.m */,
 				0ECBB7C6156B432F0003EEC4 /* RightViewController.h */,
 				0ECBB7C7156B432F0003EEC4 /* RightViewController.m */,
 			);
@@ -189,6 +194,7 @@
 				0ECBB7B5156B32CC0003EEC4 /* SecondViewController.m in Sources */,
 				0ECBB7B9156B33850003EEC4 /* SlideContentViewController.m in Sources */,
 				0ECBB7C8156B432F0003EEC4 /* RightViewController.m in Sources */,
+				0ECBB7ED156B7FCF0003EEC4 /* ThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

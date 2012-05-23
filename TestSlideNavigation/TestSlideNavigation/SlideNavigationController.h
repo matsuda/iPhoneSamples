@@ -19,6 +19,8 @@ typedef enum {
 @property (nonatomic, strong) UIViewController *leftViewController;
 @property (nonatomic, strong) UIViewController *rightViewController;
 
+@property (nonatomic, strong, readonly) UIPanGestureRecognizer *panGesture;
+
 - (void)slideTo:(SlideNavigationControllerSide)side;
 - (void)slideOffScreenTo:(SlideNavigationControllerSide)side complete:(void(^)())complete;
 - (void)slideResetTo:(SlideNavigationControllerSide)side;

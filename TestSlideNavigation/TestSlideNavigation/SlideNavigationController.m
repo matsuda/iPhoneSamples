@@ -25,8 +25,11 @@ static CGFloat const kSlideKeepWidth = 40.f;
 @end
 
 
-@interface SlideNavigationController ()
-
+@interface SlideNavigationController () {
+    UIPanGestureRecognizer *_panGesture;
+    CGFloat _panGestureStartPosX;
+}
+- (void)setupGesture;
 @end
 
 @implementation SlideNavigationController
@@ -34,6 +37,7 @@ static CGFloat const kSlideKeepWidth = 40.f;
 @synthesize topViewController = _topViewController;
 @synthesize leftViewController = _leftViewController;
 @synthesize rightViewController = _rightViewController;
+@synthesize panGesture = _panGesture;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,6 +52,7 @@ static CGFloat const kSlideKeepWidth = 40.f;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self setupGesture];
 }
 
 - (void)viewDidUnload
@@ -59,6 +64,14 @@ static CGFloat const kSlideKeepWidth = 40.f;
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+/**********
+ setups
+ */
+- (void)setupGesture
+{
+    _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGestureToSlide:)];
 }
 
 - (void)setTopViewController:(UIViewController *)topViewController
@@ -134,25 +147,32 @@ static CGFloat const kSlideKeepWidth = 40.f;
     self.rightViewController.view.hidden = NO;
 }
 
+- (void)slideTopViewDistance:(CGFloat)distance
+{
+    CGRect f = self.topViewController.view.frame;
+    f.origin.x += distance;
+    self.topViewController.view.frame = f;
+}
+
 - (void)slideTo:(SlideNavigationControllerSide)side
 {
     CGFloat distance;
-    __block CGRect f = self.topViewController.view.frame;
+    CGRect f = self.topViewController.view.frame;
 
     switch (side) {
         case SlideNavigationControllerSideLeft: {
             if (f.origin.x <= 0.f) {
-                distance = f.size.width - kSlideKeepWidth;
+                distance = CGRectGetMaxX([UIScreen mainScreen].bounds) - CGRectGetMinX(f) - kSlideKeepWidth;
             } else {
-                distance = 0.f - f.origin.x;
+                distance = 0.f - CGRectGetMinX(f);
             }
             break;
         }
         default: {
             if (f.origin.x >= 0.f) {
-                distance = kSlideKeepWidth - f.size.width;
+                distance = kSlideKeepWidth - CGRectGetMaxX(f);
             } else {
-                distance = 0.f - f.origin.x;
+                distance = 0.f - CGRectGetMinX(f);
             }
             break;
         }
@@ -161,8 +181,7 @@ static CGFloat const kSlideKeepWidth = 40.f;
     [self slideTo:side
          distance:distance
        animations:^{
-           f.origin.x += distance;
-           self.topViewController.view.frame = f;
+           [self slideTopViewDistance:distance];
        } complete:nil];
 }
 
@@ -207,15 +226,14 @@ static CGFloat const kSlideKeepWidth = 40.f;
 
 - (void)slideOffScreenTo:(SlideNavigationControllerSide)side complete:(void(^)())complete
 {
-    __block CGRect f = self.topViewController.view.frame;
-    CGFloat toPointX = CGRectGetMaxX([UIScreen mainScreen].bounds);
-    CGFloat distance = toPointX - f.origin.x;
+    CGRect f = self.topViewController.view.frame;
+    CGFloat toPosX = CGRectGetMaxX([UIScreen mainScreen].bounds);
+    CGFloat distance = toPosX - f.origin.x;
 
     [self slideTo:side
          distance:distance
        animations:^{
-           f.origin.x += distance;
-           self.topViewController.view.frame = f;
+           [self slideTopViewDistance:distance];
        } complete:^{
            if (complete) {
                complete();
@@ -225,16 +243,50 @@ static CGFloat const kSlideKeepWidth = 40.f;
 
 - (void)resetTopView:(SlideNavigationControllerSide)side
 {
-    __block CGRect f = self.topViewController.view.frame;
-    CGFloat toPointX = [UIScreen mainScreen].bounds.origin.x;
-    CGFloat distance = toPointX - f.origin.x;
+    CGRect f = self.topViewController.view.frame;
+    CGFloat toPosX = [UIScreen mainScreen].bounds.origin.x;
+    CGFloat distance = toPosX - f.origin.x;
 
     [self slideTo:side
          distance:distance
        animations:^{
-           f.origin.x += distance;
-           self.topViewController.view.frame = f;
+           [self slideTopViewDistance:distance];
        } complete:nil];
+}
+
+- (void)handlePanGestureToSlide:(UIPanGestureRecognizer *)recognizer
+{
+    CGPoint point = [recognizer translationInView:self.view];
+
+    // 試しに右スライドだけ
+    if (point.x < 0) return;
+
+    if (recognizer.state == UIGestureRecognizerStateChanged) {
+        [self slideTopViewDistance:point.x];
+        [recognizer setTranslation:CGPointZero inView:self.view];
+    } else if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled) {
+        CGFloat distance = CGRectGetMaxX([UIScreen mainScreen].bounds) - CGRectGetMinX(self.topViewController.view.frame) - kSlideKeepWidth;
+        [self slideTo:SlideNavigationControllerSideLeft
+             distance:distance
+           animations:^{
+               [self slideTopViewDistance:distance];
+           } complete:nil];
+//        if (point.x > 0) {
+//            CGFloat distance = CGRectGetMaxX([UIScreen mainScreen].bounds) - CGRectGetMinX(self.topViewController.view.frame) - kSlideKeepWidth;
+//            [self slideTo:SlideNavigationControllerSideLeft
+//                 distance:distance
+//               animations:^{
+//                   [self slideTopViewDistance:distance];
+//               } complete:nil];
+//        } else {
+//            CGFloat distance = kSlideKeepWidth - CGRectGetMaxX(self.topViewController.view.frame);
+//            [self slideTo:SlideNavigationControllerSideRight
+//                 distance:distance
+//               animations:^{
+//                   [self slideTopViewDistance:distance];
+//               } complete:nil];
+//        }
+    }
 }
 
 @end
