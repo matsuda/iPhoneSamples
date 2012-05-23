@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E26A1C2156CDD2800288008 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E26A1C1156CDD2800288008 /* Person.m */; };
+		0E26A1CA156CDE9300288008 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E26A1C9156CDE9300288008 /* MasterViewController.m */; };
+		0E26A1D9156CE58900288008 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E26A1D7156CE58900288008 /* DetailViewController.m */; };
+		0E26A1DA156CE58900288008 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E26A1D8156CE58900288008 /* DetailViewController.xib */; };
 		0E9953B2156CBBE200BC2A44 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9953B1156CBBE200BC2A44 /* UIKit.framework */; };
 		0E9953B4156CBBE200BC2A44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9953B3156CBBE200BC2A44 /* Foundation.framework */; };
 		0E9953B6156CBBE200BC2A44 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9953B5156CBBE200BC2A44 /* CoreGraphics.framework */; };
@@ -44,6 +48,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E26A1C0156CDD2800288008 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		0E26A1C1156CDD2800288008 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		0E26A1C8156CDE9300288008 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		0E26A1C9156CDE9300288008 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		0E26A1D6156CE58900288008 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		0E26A1D7156CE58900288008 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		0E26A1D8156CE58900288008 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		0E9953AD156CBBE200BC2A44 /* TestMagicalRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMagicalRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E9953B1156CBBE200BC2A44 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0E9953B3156CBBE200BC2A44 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -163,6 +174,13 @@
 				0E9953C3156CBBE200BC2A44 /* AppDelegate.m */,
 				0E9953C5156CBBE200BC2A44 /* TestMagicalRecord.xcdatamodeld */,
 				0E9953BA156CBBE200BC2A44 /* Supporting Files */,
+				0E26A1C0156CDD2800288008 /* Person.h */,
+				0E26A1C1156CDD2800288008 /* Person.m */,
+				0E26A1C8156CDE9300288008 /* MasterViewController.h */,
+				0E26A1C9156CDE9300288008 /* MasterViewController.m */,
+				0E26A1D6156CE58900288008 /* DetailViewController.h */,
+				0E26A1D7156CE58900288008 /* DetailViewController.m */,
+				0E26A1D8156CE58900288008 /* DetailViewController.xib */,
 			);
 			path = TestMagicalRecord;
 			sourceTree = "<group>";
@@ -330,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E9953BE156CBBE200BC2A44 /* InfoPlist.strings in Resources */,
+				0E26A1DA156CE58900288008 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +388,9 @@
 				0E995429156CBF3900BC2A44 /* MagicalRecord+Setup.m in Sources */,
 				0E99542A156CBF3900BC2A44 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				0E99542B156CBF3900BC2A44 /* MagicalRecord.m in Sources */,
+				0E26A1C2156CDD2800288008 /* Person.m in Sources */,
+				0E26A1CA156CDE9300288008 /* MasterViewController.m in Sources */,
+				0E26A1D9156CE58900288008 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

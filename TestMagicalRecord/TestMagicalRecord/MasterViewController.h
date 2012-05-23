@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  MasterViewController.h
 //  TestMagicalRecord
 //
 //  Created by matsuda on 12/05/23.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface MasterViewController : UITableViewController
 
 @end
