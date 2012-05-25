@@ -14,7 +14,10 @@
 		0EC85911156F6B1A007E563C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC85910156F6B1A007E563C /* main.m */; };
 		0EC85915156F6B1A007E563C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC85914156F6B1A007E563C /* AppDelegate.m */; };
 		0EC85918156F6B1A007E563C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC85916156F6B1A007E563C /* MainStoryboard.storyboard */; };
-		0EC8591B156F6B1A007E563C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8591A156F6B1A007E563C /* ViewController.m */; };
+		0EC85923156F6B7B007E563C /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC85922156F6B7B007E563C /* UsersViewController.m */; };
+		0EC85929156F6BBE007E563C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC85928156F6BBE007E563C /* User.m */; };
+		0EC8592B156F6ED8007E563C /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC8592A156F6ED8007E563C /* avatar.png */; };
+		0EC8592E156F6F39007E563C /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8592D156F6F39007E563C /* UserCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +32,13 @@
 		0EC85913156F6B1A007E563C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0EC85914156F6B1A007E563C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0EC85917156F6B1A007E563C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		0EC85919156F6B1A007E563C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0EC8591A156F6B1A007E563C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0EC85921156F6B7B007E563C /* UsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersViewController.h; sourceTree = "<group>"; };
+		0EC85922156F6B7B007E563C /* UsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
+		0EC85927156F6BBE007E563C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		0EC85928156F6BBE007E563C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		0EC8592A156F6ED8007E563C /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		0EC8592C156F6F39007E563C /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
+		0EC8592D156F6F39007E563C /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +85,17 @@
 		0EC8590A156F6B1A007E563C /* TestCustomTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				0EC8592A156F6ED8007E563C /* avatar.png */,
 				0EC85913156F6B1A007E563C /* AppDelegate.h */,
 				0EC85914156F6B1A007E563C /* AppDelegate.m */,
 				0EC85916156F6B1A007E563C /* MainStoryboard.storyboard */,
-				0EC85919156F6B1A007E563C /* ViewController.h */,
-				0EC8591A156F6B1A007E563C /* ViewController.m */,
 				0EC8590B156F6B1A007E563C /* Supporting Files */,
+				0EC85921156F6B7B007E563C /* UsersViewController.h */,
+				0EC85922156F6B7B007E563C /* UsersViewController.m */,
+				0EC85927156F6BBE007E563C /* User.h */,
+				0EC85928156F6BBE007E563C /* User.m */,
+				0EC8592C156F6F39007E563C /* UserCell.h */,
+				0EC8592D156F6F39007E563C /* UserCell.m */,
 			);
 			path = TestCustomTableViewCell;
 			sourceTree = "<group>";
@@ -150,6 +163,7 @@
 			files = (
 				0EC8590F156F6B1A007E563C /* InfoPlist.strings in Resources */,
 				0EC85918156F6B1A007E563C /* MainStoryboard.storyboard in Resources */,
+				0EC8592B156F6ED8007E563C /* avatar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +176,9 @@
 			files = (
 				0EC85911156F6B1A007E563C /* main.m in Sources */,
 				0EC85915156F6B1A007E563C /* AppDelegate.m in Sources */,
-				0EC8591B156F6B1A007E563C /* ViewController.m in Sources */,
+				0EC85923156F6B7B007E563C /* UsersViewController.m in Sources */,
+				0EC85929156F6BBE007E563C /* User.m in Sources */,
+				0EC8592E156F6F39007E563C /* UserCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
