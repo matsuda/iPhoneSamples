@@ -6,7 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
-        <!--Users View Controller - Root View Controller-->
+        <!--Users View Controller - Users-->
         <scene sceneID="sgm-tq-nWb">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJE-IS-t5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -52,7 +52,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="8oi-ai-N54"/>
+                    <navigationItem key="navigationItem" title="Users" id="8oi-ai-N54"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="949" y="-31"/>
@@ -62,7 +62,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXU-3q-tSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController definesPresentationContext="YES" id="3zX-V1-tAV" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="1cy-fs-O9i">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -76,38 +76,38 @@
             </objects>
             <point key="canvasLocation" x="-161" y="347"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Members View Controller - Members-->
         <scene sceneID="F59-k8-8wK">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9PK-IM-jYQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="sXY-Wn-Cp4" sceneMemberID="viewController">
+                <tableViewController id="sXY-Wn-Cp4" customClass="MembersViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SyX-7L-UMX">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="IH3-cI-bfI">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MemberCell" id="IH3-cI-bfI" customClass="MemberCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="vd3-Z3-ZfW"/>
+                    <navigationItem key="navigationItem" title="Members" id="vd3-Z3-ZfW"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="949" y="749"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Members-->
         <scene sceneID="f0s-ha-dxp">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddU-NV-Fwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="jtd-vO-TcM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Bwx-7B-fCm"/>
+                    <tabBarItem key="tabBarItem" title="Members" id="Bwx-7B-fCm"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="mxp-mj-nS2">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -118,12 +118,12 @@
             </objects>
             <point key="canvasLocation" x="415" y="749"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - Users-->
         <scene sceneID="ViB-MU-sY5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEi-2x-Odd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="9px-E1-8hR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2d1-cS-7bD"/>
+                    <tabBarItem key="tabBarItem" title="Users" id="2d1-cS-7bD"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="1cJ-Ku-3DY">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -136,6 +136,12 @@
         </scene>
     </scenes>
     <classes>
+        <class className="MemberCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MemberCell.h"/>
+        </class>
+        <class className="MembersViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MembersViewController.h"/>
+        </class>
         <class className="UserCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UserCell.h"/>
             <relationships>

@@ -18,6 +18,8 @@
 		0EC85929156F6BBE007E563C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC85928156F6BBE007E563C /* User.m */; };
 		0EC8592B156F6ED8007E563C /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC8592A156F6ED8007E563C /* avatar.png */; };
 		0EC8592E156F6F39007E563C /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8592D156F6F39007E563C /* UserCell.m */; };
+		0EC8593D156F7BF0007E563C /* MembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC8593C156F7BF0007E563C /* MembersViewController.m */; };
+		0EC85941156F7C9C007E563C /* MemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC85940156F7C9C007E563C /* MemberCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,10 @@
 		0EC8592A156F6ED8007E563C /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		0EC8592C156F6F39007E563C /* UserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCell.h; sourceTree = "<group>"; };
 		0EC8592D156F6F39007E563C /* UserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCell.m; sourceTree = "<group>"; };
+		0EC8593B156F7BF0007E563C /* MembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MembersViewController.h; sourceTree = "<group>"; };
+		0EC8593C156F7BF0007E563C /* MembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MembersViewController.m; sourceTree = "<group>"; };
+		0EC8593F156F7C9C007E563C /* MemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberCell.h; sourceTree = "<group>"; };
+		0EC85940156F7C9C007E563C /* MemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +98,14 @@
 				0EC8590B156F6B1A007E563C /* Supporting Files */,
 				0EC85921156F6B7B007E563C /* UsersViewController.h */,
 				0EC85922156F6B7B007E563C /* UsersViewController.m */,
-				0EC85927156F6BBE007E563C /* User.h */,
-				0EC85928156F6BBE007E563C /* User.m */,
+				0EC8593B156F7BF0007E563C /* MembersViewController.h */,
+				0EC8593C156F7BF0007E563C /* MembersViewController.m */,
 				0EC8592C156F6F39007E563C /* UserCell.h */,
 				0EC8592D156F6F39007E563C /* UserCell.m */,
+				0EC8593F156F7C9C007E563C /* MemberCell.h */,
+				0EC85940156F7C9C007E563C /* MemberCell.m */,
+				0EC85927156F6BBE007E563C /* User.h */,
+				0EC85928156F6BBE007E563C /* User.m */,
 			);
 			path = TestCustomTableViewCell;
 			sourceTree = "<group>";
@@ -179,6 +189,8 @@
 				0EC85923156F6B7B007E563C /* UsersViewController.m in Sources */,
 				0EC85929156F6BBE007E563C /* User.m in Sources */,
 				0EC8592E156F6F39007E563C /* UserCell.m in Sources */,
+				0EC8593D156F7BF0007E563C /* MembersViewController.m in Sources */,
+				0EC85941156F7C9C007E563C /* MemberCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +302,7 @@
 				0EC85920156F6B1A007E563C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
