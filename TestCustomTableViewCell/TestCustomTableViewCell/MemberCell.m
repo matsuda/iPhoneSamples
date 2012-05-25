@@ -9,7 +9,9 @@
 #import "MemberCell.h"
 #import "User.h"
 
-@implementation MemberCell
+@implementation MemberCell {
+    CGImageRef _aImgRef;
+}
 
 @synthesize user = _user;
 
@@ -27,6 +29,35 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)drawRect:(CGRect)rect
+{
+    [_user.name drawInRect:CGRectMake(80, 5, 200, 21) withFont:[UIFont boldSystemFontOfSize:16] lineBreakMode:UILineBreakModeCharacterWrap];
+
+    CGSize size = [[self class] sizeOfMemo:_user];
+    [_user.memo drawInRect:CGRectMake(80, 30, size.width, size.height) withFont:[UIFont systemFontOfSize:14] lineBreakMode:UILineBreakModeCharacterWrap];
+
+    UIImage *image = [UIImage imageNamed:@"avatar"];
+    _aImgRef = CGImageRetain(image.CGImage);
+
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGRect r = CGRectMake(10, -5, 60, 60);
+    CGContextTranslateCTM(context, 0, r.size.height);
+    CGContextScaleCTM(context, 1, -1);
+    CGContextDrawImage(context, r, _aImgRef);
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self setNeedsDisplay];
+}
+- (void)setUser:(User *)user
+{
+    _user = user;
+//    UIImage *image = [UIImage imageNamed:@"avatar"];
+//    _aImgRef = CGImageRetain(image.CGImage);
 }
 
 + (CGFloat)tableView:(UITableView *)tableView heightForObject:(id)object
