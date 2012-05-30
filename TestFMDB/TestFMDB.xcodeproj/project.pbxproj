@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E4902561575BE6F009DBA5C /* Migrator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4902551575BE6F009DBA5C /* Migrator.m */; };
+		0E9EC56C1574A9C5008F8F79 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E9EC56B1574A9C5008F8F79 /* MainStoryboard.storyboard */; };
+		0E9EC5741574BB3B008F8F79 /* FMDatabaseMigration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9EC5731574BB3B008F8F79 /* FMDatabaseMigration.m */; };
 		0EDBCA0315736F5900DC22D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDBCA0215736F5900DC22D8 /* UIKit.framework */; };
 		0EDBCA0515736F5900DC22D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDBCA0415736F5900DC22D8 /* Foundation.framework */; };
 		0EDBCA0715736F5900DC22D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDBCA0615736F5900DC22D8 /* CoreGraphics.framework */; };
@@ -22,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E4902541575BE6F009DBA5C /* Migrator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Migrator.h; sourceTree = "<group>"; };
+		0E4902551575BE6F009DBA5C /* Migrator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Migrator.m; sourceTree = "<group>"; };
+		0E9EC56B1574A9C5008F8F79 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		0E9EC5721574BB3B008F8F79 /* FMDatabaseMigration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseMigration.h; sourceTree = "<group>"; };
+		0E9EC5731574BB3B008F8F79 /* FMDatabaseMigration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseMigration.m; sourceTree = "<group>"; };
 		0EDBC9FE15736F5900DC22D8 /* TestFMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EDBCA0215736F5900DC22D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0EDBCA0415736F5900DC22D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,6 +103,9 @@
 				0EDBCA1115736F5900DC22D8 /* AppDelegate.h */,
 				0EDBCA1215736F5900DC22D8 /* AppDelegate.m */,
 				0EDBCA0915736F5900DC22D8 /* Supporting Files */,
+				0E9EC56B1574A9C5008F8F79 /* MainStoryboard.storyboard */,
+				0E4902541575BE6F009DBA5C /* Migrator.h */,
+				0E4902551575BE6F009DBA5C /* Migrator.m */,
 			);
 			path = TestFMDB;
 			sourceTree = "<group>";
@@ -123,6 +134,8 @@
 				0EDBCA251573794400DC22D8 /* FMDatabaseQueue.m */,
 				0EDBCA261573794400DC22D8 /* FMResultSet.h */,
 				0EDBCA271573794400DC22D8 /* FMResultSet.m */,
+				0E9EC5721574BB3B008F8F79 /* FMDatabaseMigration.h */,
+				0E9EC5731574BB3B008F8F79 /* FMDatabaseMigration.m */,
 			);
 			path = FMDB;
 			sourceTree = "<group>";
@@ -178,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EDBCA0D15736F5900DC22D8 /* InfoPlist.strings in Resources */,
+				0E9EC56C1574A9C5008F8F79 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +209,8 @@
 				0EDBCA2A1573794400DC22D8 /* FMDatabasePool.m in Sources */,
 				0EDBCA2B1573794400DC22D8 /* FMDatabaseQueue.m in Sources */,
 				0EDBCA2C1573794400DC22D8 /* FMResultSet.m in Sources */,
+				0E9EC5741574BB3B008F8F79 /* FMDatabaseMigration.m in Sources */,
+				0E4902561575BE6F009DBA5C /* Migrator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +314,7 @@
 				0EDBCA1815736F5900DC22D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

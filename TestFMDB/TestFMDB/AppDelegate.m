@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "FMDatabase.h"
+#import "FMDatabaseMigration.h"
+#import "Migrator.h"
 
 @implementation AppDelegate
 
@@ -18,33 +19,10 @@ static NSString * const databaseName = @"test.sqlite";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // FMDB
-    // NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *dir = [paths objectAtIndex:0];
-    NSLog(@"dir >>> %@", dir);
+    FMDatabase *database = [FMDatabase databaseWithFileName:databaseName];
+    [database setTraceExecution:YES];
+    [database migrateWithMigrator:[[Migrator alloc] init]];
 
-    NSString *applicationName = [[[NSBundle mainBundle] infoDictionary] valueForKey:(NSString *)kCFBundleNameKey];
-    NSLog(@"app >>> %@", applicationName);
-    NSString *path = [dir stringByAppendingPathComponent:applicationName];
-    NSLog(@"path >>> %@", path);
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-
-    if (![fileManager fileExistsAtPath:path]) {
-        NSError *error = nil;
-        if ( ![fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error] ) {
-            NSLog(@"error > %@", error);
-        }
-    }
-    NSString *dbPath = [path stringByAppendingPathComponent:databaseName];
-    NSLog(@"dbPath >>> %@", dbPath);
-    FMDatabase *db = [FMDatabase databaseWithPath:dbPath];
-    [db open];
-    [db close];
-
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
     return YES;
 }
 
