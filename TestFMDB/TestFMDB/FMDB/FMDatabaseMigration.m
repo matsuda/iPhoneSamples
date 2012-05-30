@@ -72,8 +72,12 @@ static NSString * const __VERSION_COLUMN_NAME = @"DBVersion";
     NSInteger ver = 0;
     if ([rs next]) {
         ver = [rs intForColumn:@"value"];
-        NSLog(@"version >>> %d", ver);
+    } else {
+        abort();
+        NSAssert1(false, @"The FMDatabase %@ doesn't have property table.", self);
     }
+
+    NSLog(@"version before migrate >>> %d", ver);
 
     if (block) {
         BOOL didMigrate = NO;
@@ -84,6 +88,8 @@ static NSString * const __VERSION_COLUMN_NAME = @"DBVersion";
         }
         if (!didMigrate) ver--;
     }
+
+    NSLog(@"version after migrate >>> %d", ver);
 
     query = [NSString stringWithFormat:@"UPDATE %@ SET value = ? WHERE name = ?", __FMDB_PROPERY_TABLE_NAME];
     [self executeUpdate:query, [NSNumber numberWithInt:ver], __VERSION_COLUMN_NAME];
