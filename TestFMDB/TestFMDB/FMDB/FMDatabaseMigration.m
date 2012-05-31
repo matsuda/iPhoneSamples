@@ -29,7 +29,7 @@ static NSString * const __VERSION_COLUMN_NAME = @"DBVersion";
     return self;
 }
 
-- (NSString *)databaseFilePathWithFileName:(NSString *)fileName
+- (NSString *)databaseFileDir
 {
     // NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -39,27 +39,34 @@ static NSString * const __VERSION_COLUMN_NAME = @"DBVersion";
     NSString *path = [dir stringByAppendingPathComponent:applicationName];
 
     NSFileManager *fileManager = [NSFileManager defaultManager];
-
     if (![fileManager fileExistsAtPath:path]) {
         NSError *error = nil;
         if ( ![fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error] ) {
             NSLog(@"error > %@", error);
         }
     }
-    return [path stringByAppendingPathComponent:fileName];
+    return path;
+}
+
+- (NSString *)databaseFilePathWithFileName:(NSString *)fileName
+{
+    return [[self databaseFileDir] stringByAppendingPathComponent:fileName];
 }
 
 - (void)initializePropertyTable
 {
-    [self open];
-    if ( ![self tableExists:__FMDB_PROPERY_TABLE_NAME] ) {
-        [self executeQuery:@"PRAGMA foreign_keys = ON"];
-        NSString *query = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS %@ (primaryKey INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, value INTEGER)", __FMDB_PROPERY_TABLE_NAME];
-        [self executeUpdate:query];
-        query = [NSString stringWithFormat:@"INSERT INTO %@ (name, value) VALUES('%@', ?)", __FMDB_PROPERY_TABLE_NAME, __VERSION_COLUMN_NAME];
-        [self executeUpdate:query, [NSNumber numberWithInt:0]];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:_databasePath]) {
+        [self open];
+        if ( ![self tableExists:__FMDB_PROPERY_TABLE_NAME] ) {
+            [self executeQuery:@"PRAGMA foreign_keys = ON"];
+            NSString *query = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS %@ (primaryKey INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, value INTEGER)", __FMDB_PROPERY_TABLE_NAME];
+            [self executeUpdate:query];
+            query = [NSString stringWithFormat:@"INSERT INTO %@ (name, value) VALUES('%@', ?)", __FMDB_PROPERY_TABLE_NAME, __VERSION_COLUMN_NAME];
+            [self executeUpdate:query, [NSNumber numberWithInt:0]];
+        }
+        [self close];
     }
-    [self close];
 }
 
 - (BOOL)migrateWithBlock:(FMDBMigrationBlock)block
@@ -102,13 +109,16 @@ static NSString * const __VERSION_COLUMN_NAME = @"DBVersion";
 - (BOOL)migrateWithMigrator:(id<NSObject>)migrator
 {
     return [self migrateWithBlock:^(FMDatabase *db, NSInteger version) {
-        NSString *methodName = [NSString stringWithFormat:@"migrateVersion%d:", version];
+        NSString *methodName = [NSString stringWithFormat:@"upVer%d:", version];
         SEL method = NSSelectorFromString(methodName);
+
         if ([migrator respondsToSelector:method]) {
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
             [migrator performSelector:method withObject:self];
 #pragma clang diagnostic pop
+
             method = nil;
             return YES;
         } else {

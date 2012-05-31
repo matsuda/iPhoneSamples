@@ -25,11 +25,11 @@
 
  -- Migrator.h
 
- * describe "migrateVersion<version number>" method with an argument of FMDatabase object
+ * describe "upVer<version number>" method with an argument of FMDatabase object
 
     #import "FMDatabaseMigration.h"
     @interface Migrator : NSObject
-    - (void)migrateVersion1:(FMDatabase *)db;
+    - (void)upVer1:(FMDatabase *)db;
     @end
 
  ////////////////////////////////////////////////////////////////

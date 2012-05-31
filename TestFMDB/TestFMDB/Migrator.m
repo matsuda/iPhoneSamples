@@ -10,13 +10,13 @@
 
 @implementation Migrator
 
-- (void)migrateVersion1:(FMDatabase *)db
+- (void)upVer1:(FMDatabase *)db
 {
     NSString *sql = @"CREATE TABLE IF NOT EXISTS users (primaryKey INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER)";
     [db executeUpdate:sql];
 }
 
-- (void)migrateVersion2:(FMDatabase *)db
+- (void)upVer2:(FMDatabase *)db
 {
     NSString *sql = @"CREATE TABLE IF NOT EXISTS address (primaryKey INTEGER PRIMARY KEY AUTOINCREMENT, prefecture TEXT, city TEXT)";
     [db executeUpdate:sql];

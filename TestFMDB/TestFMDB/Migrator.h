@@ -11,7 +11,7 @@
 
 @interface Migrator : NSObject
 
-- (void)migrateVersion1:(FMDatabase *)db;
-- (void)migrateVersion2:(FMDatabase *)db;
+- (void)upVer1:(FMDatabase *)db;
+- (void)upVer2:(FMDatabase *)db;
 
 @end
