@@ -36,12 +36,14 @@
     self = [super init];
     
     if (self) {
-        _databasePath       = [aPath copy];
+        // _databasePath       = [aPath copy];
+        _databasePath       = [[self databaseFilePathWithFileName:aPath] copy];
         _openResultSets     = [[NSMutableSet alloc] init];
         _db                 = 0x00;
         _logsErrors         = 0x00;
         _crashOnErrors      = 0x00;
         _busyRetryTimeout   = 0x00;
+        [self initializePropertyTable];
     }
     
     return self;

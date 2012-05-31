@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FMDatabaseMigration.h"
+#import "FMDatabase.h"
 
 @interface Migrator : NSObject
 

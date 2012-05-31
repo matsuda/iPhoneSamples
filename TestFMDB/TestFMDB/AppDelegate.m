@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "FMDatabaseMigration.h"
 #import "Migrator.h"
 
 @implementation AppDelegate
@@ -19,7 +18,7 @@ static NSString * const databaseName = @"test.sqlite";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // FMDB
-    FMDatabase *database = [FMDatabase databaseWithFileName:databaseName];
+    FMDatabase *database = [FMDatabase databaseWithPath:databaseName];
     [database setTraceExecution:YES];
     [database migrateWithMigrator:[[Migrator alloc] init]];
 

@@ -14,21 +14,6 @@ static NSString * const __VERSION_COLUMN_NAME = @"DBVersion";
 
 @implementation FMDatabase (FMDatabaseMigration)
 
-+ (id)databaseWithFileName:(NSString *)fileName
-{
-    return FMDBReturnAutoreleased([[self alloc] initWithFileName:fileName]);
-}
-
-- (id)initWithFileName:(NSString *)fileName
-{
-    self = [self initWithPath:nil];
-    if (self) {
-        _databasePath = [[self databaseFilePathWithFileName:fileName] copy];
-        [self initializePropertyTable];
-    }
-    return self;
-}
-
 - (NSString *)databaseFileDir
 {
     // NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);

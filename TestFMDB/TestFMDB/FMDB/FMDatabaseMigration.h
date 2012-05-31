@@ -18,7 +18,7 @@
 
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     {
-        FMDatabase *database = [FMDatabase databaseWithFileName:@"test.sql"];
+        FMDatabase *database = [FMDatabase databaseWithPath:@"test.sql"];
         [database migrateWithMigrator:[[Migrator alloc] init]];
         return YES;
     }
@@ -39,8 +39,9 @@ typedef BOOL (^FMDBMigrationBlock)(FMDatabase *db, NSInteger version);
 
 @interface FMDatabase (FMDatabaseMigration)
 
-+ (id)databaseWithFileName:(NSString *)fileName;
-- (id)initWithFileName:(NSString *)fileName;
+- (NSString *)databaseFilePathWithFileName:(NSString *)fileName;
+- (void)initializePropertyTable;
+
 - (void)migrateWithBlock:(FMDBMigrationBlock)block;
 - (void)migrateWithMigrator:(id<NSObject>)migrator;
 
