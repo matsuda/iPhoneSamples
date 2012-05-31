@@ -69,7 +69,7 @@ static NSString * const __VERSION_COLUMN_NAME = @"DBVersion";
     }
 }
 
-- (BOOL)migrateWithBlock:(FMDBMigrationBlock)block
+- (void)migrateWithBlock:(FMDBMigrationBlock)block
 {
     [self open];
 
@@ -102,13 +102,11 @@ static NSString * const __VERSION_COLUMN_NAME = @"DBVersion";
     [self executeUpdate:query, [NSNumber numberWithInt:ver], __VERSION_COLUMN_NAME];
 
     [self close];
-
-    return YES;
 }
 
-- (BOOL)migrateWithMigrator:(id<NSObject>)migrator
+- (void)migrateWithMigrator:(id<NSObject>)migrator
 {
-    return [self migrateWithBlock:^(FMDatabase *db, NSInteger version) {
+    [self migrateWithBlock:^(FMDatabase *db, NSInteger version) {
         NSString *methodName = [NSString stringWithFormat:@"upVer%d:", version];
         SEL method = NSSelectorFromString(methodName);
 

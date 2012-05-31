@@ -41,7 +41,7 @@ typedef BOOL (^FMDBMigrationBlock)(FMDatabase *db, NSInteger version);
 
 + (id)databaseWithFileName:(NSString *)fileName;
 - (id)initWithFileName:(NSString *)fileName;
-- (BOOL)migrateWithBlock:(FMDBMigrationBlock)block;
-- (BOOL)migrateWithMigrator:(id<NSObject>)migrator;
+- (void)migrateWithBlock:(FMDBMigrationBlock)block;
+- (void)migrateWithMigrator:(id<NSObject>)migrator;
 
 @end
