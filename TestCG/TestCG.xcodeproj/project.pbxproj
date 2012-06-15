@@ -13,8 +13,11 @@
 		0E0D2DD71589D6910000D6AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E0D2DD51589D6910000D6AC /* InfoPlist.strings */; };
 		0E0D2DD91589D6910000D6AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0D2DD81589D6910000D6AC /* main.m */; };
 		0E0D2DDD1589D6910000D6AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0D2DDC1589D6910000D6AC /* AppDelegate.m */; };
-		0EABDB611589D8BB00DF73F0 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EABDB601589D8BB00DF73F0 /* TopViewController.m */; };
+		0EABDB611589D8BB00DF73F0 /* TestCGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EABDB601589D8BB00DF73F0 /* TestCGViewController.m */; };
 		0EABDB651589D90400DF73F0 /* TestCGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EABDB641589D90400DF73F0 /* TestCGView.m */; };
+		0EF7B75B158B1C0D0025FFAD /* TestDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF7B75A158B1C0D0025FFAD /* TestDrawViewController.m */; };
+		0EF7B75E158B213A0025FFAD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF7B75D158B213A0025FFAD /* MainStoryboard.storyboard */; };
+		0EF7B765158B223A0025FFAD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF7B764158B223A0025FFAD /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +31,15 @@
 		0E0D2DDA1589D6910000D6AC /* TestCG-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestCG-Prefix.pch"; sourceTree = "<group>"; };
 		0E0D2DDB1589D6910000D6AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0E0D2DDC1589D6910000D6AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0EABDB5F1589D8BB00DF73F0 /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
-		0EABDB601589D8BB00DF73F0 /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
+		0EABDB5F1589D8BB00DF73F0 /* TestCGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCGViewController.h; sourceTree = "<group>"; };
+		0EABDB601589D8BB00DF73F0 /* TestCGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCGViewController.m; sourceTree = "<group>"; };
 		0EABDB631589D90400DF73F0 /* TestCGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCGView.h; sourceTree = "<group>"; };
 		0EABDB641589D90400DF73F0 /* TestCGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCGView.m; sourceTree = "<group>"; };
+		0EF7B759158B1C0D0025FFAD /* TestDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDrawViewController.h; sourceTree = "<group>"; };
+		0EF7B75A158B1C0D0025FFAD /* TestDrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDrawViewController.m; sourceTree = "<group>"; };
+		0EF7B75D158B213A0025FFAD /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		0EF7B763158B223A0025FFAD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		0EF7B764158B223A0025FFAD /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +88,16 @@
 			children = (
 				0E0D2DDB1589D6910000D6AC /* AppDelegate.h */,
 				0E0D2DDC1589D6910000D6AC /* AppDelegate.m */,
+				0EF7B75D158B213A0025FFAD /* MainStoryboard.storyboard */,
 				0E0D2DD31589D6910000D6AC /* Supporting Files */,
-				0EABDB5F1589D8BB00DF73F0 /* TopViewController.h */,
-				0EABDB601589D8BB00DF73F0 /* TopViewController.m */,
+				0EF7B763158B223A0025FFAD /* RootViewController.h */,
+				0EF7B764158B223A0025FFAD /* RootViewController.m */,
+				0EABDB5F1589D8BB00DF73F0 /* TestCGViewController.h */,
+				0EABDB601589D8BB00DF73F0 /* TestCGViewController.m */,
 				0EABDB631589D90400DF73F0 /* TestCGView.h */,
 				0EABDB641589D90400DF73F0 /* TestCGView.m */,
+				0EF7B759158B1C0D0025FFAD /* TestDrawViewController.h */,
+				0EF7B75A158B1C0D0025FFAD /* TestDrawViewController.m */,
 			);
 			path = TestCG;
 			sourceTree = "<group>";
@@ -151,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E0D2DD71589D6910000D6AC /* InfoPlist.strings in Resources */,
+				0EF7B75E158B213A0025FFAD /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,8 +177,10 @@
 			files = (
 				0E0D2DD91589D6910000D6AC /* main.m in Sources */,
 				0E0D2DDD1589D6910000D6AC /* AppDelegate.m in Sources */,
-				0EABDB611589D8BB00DF73F0 /* TopViewController.m in Sources */,
+				0EABDB611589D8BB00DF73F0 /* TestCGViewController.m in Sources */,
 				0EABDB651589D90400DF73F0 /* TestCGView.m in Sources */,
+				0EF7B75B158B1C0D0025FFAD /* TestDrawViewController.m in Sources */,
+				0EF7B765158B223A0025FFAD /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

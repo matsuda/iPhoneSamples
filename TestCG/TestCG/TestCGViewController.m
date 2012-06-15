@@ -1,20 +1,20 @@
 //
-//  TopViewController.m
+//  TestCGViewController.m
 //  TestCG
 //
 //  Created by matsuda on 12/06/14.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "TopViewController.h"
+#import "TestCGViewController.h"
 #import "TestCGView.h"
 
-@interface TopViewController ()
+@interface TestCGViewController ()
 
 @property (strong, nonatomic) TestCGView *testView;
 @end
 
-@implementation TopViewController
+@implementation TestCGViewController
 
 @synthesize testView = _testView;
 
