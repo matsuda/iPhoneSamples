@@ -37,6 +37,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     _menu = [NSArray arrayWithObjects:
              @"default tweet",
+             @"custom tweet",
              @"timeline",
              nil];
 }
@@ -129,6 +130,10 @@
             break;
         }
         case 1: {
+            [self performSegueWithIdentifier:@"customTweet" sender:self];
+            break;
+        }
+        case 2: {
             [self performSegueWithIdentifier:@"timeline" sender:self];
             break;
         }

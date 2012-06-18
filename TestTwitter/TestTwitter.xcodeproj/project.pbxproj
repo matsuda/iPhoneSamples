@@ -18,6 +18,9 @@
 		0E8E3EC3158EBF9A002DA94D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8E3EC2158EBF9A002DA94D /* Twitter.framework */; };
 		0E8E3ED2158ED387002DA94D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E3ED1158ED387002DA94D /* RootViewController.m */; };
 		0E8E3ED9158EDAD4002DA94D /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E3ED8158EDAD4002DA94D /* TimelineViewController.m */; };
+		0E8E3EE0158F0065002DA94D /* CustomTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E3EDF158F0065002DA94D /* CustomTweetViewController.m */; };
+		0E8E3EE3158F02FF002DA94D /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8E3EE2158F02FF002DA94D /* Accounts.framework */; };
+		0E8E3EE5158F0668002DA94D /* Octocat.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E8E3EE4158F0668002DA94D /* Octocat.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,10 @@
 		0E8E3ED1158ED387002DA94D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		0E8E3ED7158EDAD4002DA94D /* TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
 		0E8E3ED8158EDAD4002DA94D /* TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
+		0E8E3EDE158F0065002DA94D /* CustomTweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTweetViewController.h; sourceTree = "<group>"; };
+		0E8E3EDF158F0065002DA94D /* CustomTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTweetViewController.m; sourceTree = "<group>"; };
+		0E8E3EE2158F02FF002DA94D /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		0E8E3EE4158F0668002DA94D /* Octocat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Octocat.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8E3EE3158F02FF002DA94D /* Accounts.framework in Frameworks */,
 				0E8E3EC3158EBF9A002DA94D /* Twitter.framework in Frameworks */,
 				0E442A9D158EBF1E00F0885B /* UIKit.framework in Frameworks */,
 				0E442A9F158EBF1E00F0885B /* Foundation.framework in Frameworks */,
@@ -59,6 +67,7 @@
 		0E442A8D158EBF1E00F0885B = {
 			isa = PBXGroup;
 			children = (
+				0E8E3EE2158F02FF002DA94D /* Accounts.framework */,
 				0E8E3EC2158EBF9A002DA94D /* Twitter.framework */,
 				0E442AA2158EBF1E00F0885B /* TestTwitter */,
 				0E442A9B158EBF1E00F0885B /* Frameworks */,
@@ -87,6 +96,7 @@
 		0E442AA2158EBF1E00F0885B /* TestTwitter */ = {
 			isa = PBXGroup;
 			children = (
+				0E8E3EE4158F0668002DA94D /* Octocat.png */,
 				0E442AAB158EBF1E00F0885B /* AppDelegate.h */,
 				0E442AAC158EBF1E00F0885B /* AppDelegate.m */,
 				0E442AAE158EBF1E00F0885B /* MainStoryboard.storyboard */,
@@ -95,6 +105,8 @@
 				0E442AB1158EBF1E00F0885B /* TweetViewController.h */,
 				0E442AB2158EBF1E00F0885B /* TweetViewController.m */,
 				0E442AA3158EBF1E00F0885B /* Supporting Files */,
+				0E8E3EDE158F0065002DA94D /* CustomTweetViewController.h */,
+				0E8E3EDF158F0065002DA94D /* CustomTweetViewController.m */,
 				0E8E3ED7158EDAD4002DA94D /* TimelineViewController.h */,
 				0E8E3ED8158EDAD4002DA94D /* TimelineViewController.m */,
 			);
@@ -164,6 +176,7 @@
 			files = (
 				0E442AA7158EBF1E00F0885B /* InfoPlist.strings in Resources */,
 				0E442AB0158EBF1E00F0885B /* MainStoryboard.storyboard in Resources */,
+				0E8E3EE5158F0668002DA94D /* Octocat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +192,7 @@
 				0E442AB3158EBF1E00F0885B /* TweetViewController.m in Sources */,
 				0E8E3ED2158ED387002DA94D /* RootViewController.m in Sources */,
 				0E8E3ED9158EDAD4002DA94D /* TimelineViewController.m in Sources */,
+				0E8E3EE0158F0065002DA94D /* CustomTweetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

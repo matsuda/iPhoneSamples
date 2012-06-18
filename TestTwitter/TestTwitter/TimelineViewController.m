@@ -24,7 +24,6 @@ static NSString * kTimelineURL = @"http://api.twitter.com/1/statuses/user_timeli
 {
     self = [super initWithStyle:style];
     if (self) {
-        self.timelines = [NSMutableArray array];
     }
     return self;
 }
@@ -38,6 +37,7 @@ static NSString * kTimelineURL = @"http://api.twitter.com/1/statuses/user_timeli
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.timelines = [NSMutableArray array];
     [self getPublicTimelines];
 }
 
@@ -160,6 +160,7 @@ static NSString * kTimelineURL = @"http://api.twitter.com/1/statuses/user_timeli
     for (NSDictionary *tweet in timeline) {
         [_timelines addObject:[tweet objectForKey:@"text"]];
     }
+    NSLog(@"timelines >>> %@", _timelines);
     [self.tableView reloadData];
 }
 
