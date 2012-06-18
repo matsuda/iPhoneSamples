@@ -35,6 +35,8 @@
 - (IBAction)tweet:(id)sender
 {
     TWTweetComposeViewController *tweetTweetViewController = [[TWTweetComposeViewController alloc] init];
+    UIImage *image = [UIImage imageNamed:@"Octocat"];
+    [tweetTweetViewController addImage:image];
     [self presentModalViewController:tweetTweetViewController animated:YES];
 }
 
