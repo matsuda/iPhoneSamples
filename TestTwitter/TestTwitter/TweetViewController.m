@@ -1,18 +1,19 @@
 //
-//  ViewController.m
+//  TweetViewController.m
 //  TestTwitter
 //
 //  Created by matsuda on 12/06/18.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TweetViewController.h"
+#import <Twitter/Twitter.h>
 
-@interface ViewController ()
+@interface TweetViewController ()
 
 @end
 
-@implementation ViewController
+@implementation TweetViewController
 
 - (void)viewDidLoad
 {
@@ -29,6 +30,12 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (IBAction)tweet:(id)sender
+{
+    TWTweetComposeViewController *tweetTweetViewController = [[TWTweetComposeViewController alloc] init];
+    [self presentModalViewController:tweetTweetViewController animated:YES];
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TweetViewController.h
 //  TestTwitter
 //
 //  Created by matsuda on 12/06/18.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface TweetViewController : UIViewController
+
+- (IBAction)tweet:(id)sender;
 
 @end
