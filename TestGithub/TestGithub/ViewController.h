@@ -10,4 +10,6 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)submit:(id)sender;
+
 @end
