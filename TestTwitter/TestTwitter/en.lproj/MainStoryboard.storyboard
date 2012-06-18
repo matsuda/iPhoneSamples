@@ -6,7 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
-        <!--Tweet View Controller-->
+        <!--Tweet View Controller - Tweet-->
         <scene sceneID="5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -33,9 +33,49 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="n61-tP-OxC"/>
+                    <navigationItem key="navigationItem" title="Tweet" id="n61-tP-OxC"/>
                 </viewController>
             </objects>
+            <point key="canvasLocation" x="114" y="195"/>
+        </scene>
+        <!--Timeline View Controller - Timeline-->
+        <scene sceneID="yBX-tv-8uE">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FKA-zp-Dzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="Occ-mg-iww" customClass="TimelineViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3My-83-0gJ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimelineCell" textLabel="0U8-eW-nqo" style="IBUITableViewCellStyleDefault" id="UqU-ex-emM">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0U8-eW-nqo">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Occ-mg-iww" id="0vZ-Ix-Jij"/>
+                            <outlet property="delegate" destination="Occ-mg-iww" id="rr0-nF-nub"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Timeline" id="utE-ci-iLl"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="673" y="195"/>
         </scene>
         <!--Root View Controller - Menu-->
         <scene sceneID="SDt-b0-Ttj">
@@ -47,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Ewv-f0-XuE" style="IBUITableViewCellStyleDefault" id="4Qw-c9-iex">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" textLabel="Ewv-f0-XuE" style="IBUITableViewCellStyleDefault" id="4Qw-c9-iex">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -64,16 +104,17 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <connections>
-                                    <segue destination="2" kind="push" id="tOV-53-4l0"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Menu" id="A1J-Y5-DE2"/>
+                    <connections>
+                        <segue destination="2" kind="push" identifier="defaultTweet" id="jdd-97-L1q"/>
+                        <segue destination="Occ-mg-iww" kind="push" identifier="timeline" id="5W9-Ug-WLA"/>
+                    </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="672" y="720"/>
+            <point key="canvasLocation" x="673" y="774"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jPr-L5-E3E">
@@ -94,6 +135,9 @@
     <classes>
         <class className="RootViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RootViewController.h"/>
+        </class>
+        <class className="TimelineViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimelineViewController.h"/>
         </class>
         <class className="TweetViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TweetViewController.h"/>

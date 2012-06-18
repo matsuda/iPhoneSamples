@@ -17,6 +17,7 @@
 		0E442AB3158EBF1E00F0885B /* TweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E442AB2158EBF1E00F0885B /* TweetViewController.m */; };
 		0E8E3EC3158EBF9A002DA94D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8E3EC2158EBF9A002DA94D /* Twitter.framework */; };
 		0E8E3ED2158ED387002DA94D /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E3ED1158ED387002DA94D /* RootViewController.m */; };
+		0E8E3ED9158EDAD4002DA94D /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E3ED8158EDAD4002DA94D /* TimelineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		0E8E3EC2158EBF9A002DA94D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		0E8E3ED0158ED387002DA94D /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		0E8E3ED1158ED387002DA94D /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		0E8E3ED7158EDAD4002DA94D /* TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
+		0E8E3ED8158EDAD4002DA94D /* TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				0E442AB1158EBF1E00F0885B /* TweetViewController.h */,
 				0E442AB2158EBF1E00F0885B /* TweetViewController.m */,
 				0E442AA3158EBF1E00F0885B /* Supporting Files */,
+				0E8E3ED7158EDAD4002DA94D /* TimelineViewController.h */,
+				0E8E3ED8158EDAD4002DA94D /* TimelineViewController.m */,
 			);
 			path = TestTwitter;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				0E442AAD158EBF1E00F0885B /* AppDelegate.m in Sources */,
 				0E442AB3158EBF1E00F0885B /* TweetViewController.m in Sources */,
 				0E8E3ED2158ED387002DA94D /* RootViewController.m in Sources */,
+				0E8E3ED9158EDAD4002DA94D /* TimelineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,27 +1,26 @@
 //
-//  RootViewController.m
+//  TimelineViewController.m
 //  TestTwitter
 //
 //  Created by matsuda on 12/06/18.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "RootViewController.h"
-#import "TweetViewController.h"
+#import "TimelineViewController.h"
 
-@interface RootViewController ()
-
+@interface TimelineViewController ()
+@property (strong, nonatomic) NSMutableArray *timelines;
 @end
 
-@implementation RootViewController {
-    NSArray *_menu;
-}
+@implementation TimelineViewController
+
+@synthesize timelines = _timelines;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        self.timelines = [NSMutableArray array];
     }
     return self;
 }
@@ -35,10 +34,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    _menu = [NSArray arrayWithObjects:
-             @"default tweet",
-             @"timeline",
-             nil];
 }
 
 - (void)viewDidUnload
@@ -64,16 +59,15 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [_menu count];
+    return [_timelines count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"MenuCell";
+    static NSString *CellIdentifier = @"TimelineCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
-    // Configure the cell...
-    cell.textLabel.text = [_menu objectAtIndex:indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%d", indexPath.row];
 
     return cell;
 }
@@ -122,17 +116,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-
-    switch (indexPath.row) {
-        case 0: {
-            [self performSegueWithIdentifier:@"defaultTweet" sender:self];
-            break;
-        }
-        case 1: {
-            [self performSegueWithIdentifier:@"timeline" sender:self];
-            break;
-        }
-    }
+    /*
+     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
 }
 
 @end
