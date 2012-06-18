@@ -7,6 +7,10 @@
 //
 
 #import "TimelineViewController.h"
+#import <Twitter/Twitter.h>
+
+//static NSString * kTimelineURL = @"http://api.twitter.com/1/statuses/public_timeline.json";
+static NSString * kTimelineURL = @"http://api.twitter.com/1/statuses/user_timeline.json";
 
 @interface TimelineViewController ()
 @property (strong, nonatomic) NSMutableArray *timelines;
@@ -34,6 +38,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self getPublicTimelines];
 }
 
 - (void)viewDidUnload
@@ -67,7 +72,7 @@
     static NSString *CellIdentifier = @"TimelineCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
-    cell.textLabel.text = [NSString stringWithFormat:@"%d", indexPath.row];
+    cell.textLabel.text = [_timelines objectAtIndex:indexPath.row];
 
     return cell;
 }
@@ -122,6 +127,40 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (void)getPublicTimelines
+{
+    NSLog(@"aaaaaaaaaaaaaaaaaa");
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:@"mtd" forKey:@"screen_name"];
+    [params setObject:@"5" forKey:@"count"];
+    [params setObject:@"1" forKey:@"include_entities"];
+    [params setObject:@"1" forKey:@"include_rts"];
+
+    TWRequest *postRequest = [[TWRequest alloc] initWithURL:[NSURL URLWithString:kTimelineURL] parameters:params requestMethod:TWRequestMethodGET];
+
+    [postRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+        NSArray *timeline = nil;
+        if ([urlResponse statusCode] == 200) {
+            NSError *jsonParsingError = nil;
+            timeline = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:&jsonParsingError];
+            NSLog(@"%@", timeline);
+            NSLog(@"%d", [timeline count]);
+        } else {
+            NSLog(@"status code >>> %i", [urlResponse statusCode]);
+        }
+        [self performSelectorOnMainThread:@selector(displayTimeline:) withObject:timeline waitUntilDone:NO];
+    }];
+}
+
+- (void)displayTimeline:(NSArray *)timeline
+{
+    NSLog(@"bbbbbbbbbbbbbbbbbbbb");
+    for (NSDictionary *tweet in timeline) {
+        [_timelines addObject:[tweet objectForKey:@"text"]];
+    }
+    [self.tableView reloadData];
 }
 
 @end
