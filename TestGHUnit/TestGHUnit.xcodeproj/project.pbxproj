@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0E047D6015B6C4B30077C4B0 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E047D5F15B6C4B30077C4B0 /* GHUnitIOS.framework */; };
 		0E047D6215B6C7DD0077C4B0 /* MyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E047D6115B6C7DD0077C4B0 /* MyTest.m */; };
+		0E047D6715B6C99F0077C4B0 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E047D6615B6C99F0077C4B0 /* Person.m */; };
+		0E047D6A15B6CC1B0077C4B0 /* PersonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E047D6915B6CC1B0077C4B0 /* PersonTest.m */; };
+		0E047D6B15B6CE500077C4B0 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E047D6615B6C99F0077C4B0 /* Person.m */; };
 		0ED2731915B6B8C800BBDB5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED2731815B6B8C800BBDB5E /* UIKit.framework */; };
 		0ED2731B15B6B8C800BBDB5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED2731A15B6B8C800BBDB5E /* Foundation.framework */; };
 		0ED2731D15B6B8C800BBDB5E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED2731C15B6B8C800BBDB5E /* CoreGraphics.framework */; };
@@ -27,6 +30,9 @@
 /* Begin PBXFileReference section */
 		0E047D5F15B6C4B30077C4B0 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
 		0E047D6115B6C7DD0077C4B0 /* MyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTest.m; sourceTree = "<group>"; };
+		0E047D6515B6C99F0077C4B0 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		0E047D6615B6C99F0077C4B0 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		0E047D6915B6CC1B0077C4B0 /* PersonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTest.m; sourceTree = "<group>"; };
 		0ED2731415B6B8C800BBDB5E /* TestGHUnit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGHUnit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED2731815B6B8C800BBDB5E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0ED2731A15B6B8C800BBDB5E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E047D6315B6C96C0077C4B0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0E047D6415B6C96C0077C4B0 /* Models */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0E047D6415B6C96C0077C4B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0E047D6515B6C99F0077C4B0 /* Person.h */,
+				0E047D6615B6C99F0077C4B0 /* Person.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0ED2730915B6B8C800BBDB5E = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +128,7 @@
 		0ED2731E15B6B8C800BBDB5E /* TestGHUnit */ = {
 			isa = PBXGroup;
 			children = (
+				0E047D6315B6C96C0077C4B0 /* Classes */,
 				0ED2732715B6B8C800BBDB5E /* AppDelegate.h */,
 				0ED2732815B6B8C800BBDB5E /* AppDelegate.m */,
 				0ED2732A15B6B8C800BBDB5E /* MainStoryboard.storyboard */,
@@ -129,8 +153,9 @@
 		0ED2733E15B6B8E000BBDB5E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				0E047D6115B6C7DD0077C4B0 /* MyTest.m */,
 				0ED2733F15B6B8E000BBDB5E /* Supporting Files */,
+				0E047D6115B6C7DD0077C4B0 /* MyTest.m */,
+				0E047D6915B6CC1B0077C4B0 /* PersonTest.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -238,6 +263,7 @@
 				0ED2732515B6B8C800BBDB5E /* main.m in Sources */,
 				0ED2732915B6B8C800BBDB5E /* AppDelegate.m in Sources */,
 				0ED2732F15B6B8C800BBDB5E /* ViewController.m in Sources */,
+				0E047D6715B6C99F0077C4B0 /* Person.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,8 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E047D6B15B6CE500077C4B0 /* Person.m in Sources */,
 				0ED2734515B6B8E000BBDB5E /* main.m in Sources */,
 				0E047D6215B6C7DD0077C4B0 /* MyTest.m in Sources */,
+				0E047D6A15B6CC1B0077C4B0 /* PersonTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
