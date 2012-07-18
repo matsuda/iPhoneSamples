@@ -20,6 +20,8 @@
 		0ED2723415B6A81900BBDB5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED2721515B6A81900BBDB5E /* Foundation.framework */; };
 		0ED2723C15B6A81900BBDB5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ED2723A15B6A81900BBDB5E /* InfoPlist.strings */; };
 		0ED2723F15B6A81A00BBDB5E /* TestOCUnitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2723E15B6A81A00BBDB5E /* TestOCUnitTests.m */; };
+		0ED2724C15B6AB2D00BBDB5E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2724B15B6AB2D00BBDB5E /* Person.m */; };
+		0ED2724F15B6AC0700BBDB5E /* PersonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2724E15B6AC0700BBDB5E /* PersonTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,10 @@
 		0ED2723B15B6A81900BBDB5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0ED2723D15B6A81A00BBDB5E /* TestOCUnitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestOCUnitTests.h; sourceTree = "<group>"; };
 		0ED2723E15B6A81A00BBDB5E /* TestOCUnitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestOCUnitTests.m; sourceTree = "<group>"; };
+		0ED2724A15B6AB2D00BBDB5E /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		0ED2724B15B6AB2D00BBDB5E /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		0ED2724D15B6AC0700BBDB5E /* PersonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonTest.h; sourceTree = "<group>"; };
+		0ED2724E15B6AC0700BBDB5E /* PersonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 		0ED2721915B6A81900BBDB5E /* TestOCUnit */ = {
 			isa = PBXGroup;
 			children = (
+				0ED2724815B6AB1E00BBDB5E /* Classes */,
 				0ED2722215B6A81900BBDB5E /* AppDelegate.h */,
 				0ED2722315B6A81900BBDB5E /* AppDelegate.m */,
 				0ED2722515B6A81900BBDB5E /* MainStoryboard.storyboard */,
@@ -138,6 +145,8 @@
 				0ED2723D15B6A81A00BBDB5E /* TestOCUnitTests.h */,
 				0ED2723E15B6A81A00BBDB5E /* TestOCUnitTests.m */,
 				0ED2723815B6A81900BBDB5E /* Supporting Files */,
+				0ED2724D15B6AC0700BBDB5E /* PersonTest.h */,
+				0ED2724E15B6AC0700BBDB5E /* PersonTest.m */,
 			);
 			path = TestOCUnitTests;
 			sourceTree = "<group>";
@@ -149,6 +158,23 @@
 				0ED2723A15B6A81900BBDB5E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0ED2724815B6AB1E00BBDB5E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0ED2724915B6AB1E00BBDB5E /* Models */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0ED2724915B6AB1E00BBDB5E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0ED2724A15B6AB2D00BBDB5E /* Person.h */,
+				0ED2724B15B6AB2D00BBDB5E /* Person.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +287,7 @@
 				0ED2722015B6A81900BBDB5E /* main.m in Sources */,
 				0ED2722415B6A81900BBDB5E /* AppDelegate.m in Sources */,
 				0ED2722A15B6A81900BBDB5E /* ViewController.m in Sources */,
+				0ED2724C15B6AB2D00BBDB5E /* Person.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ED2723F15B6A81A00BBDB5E /* TestOCUnitTests.m in Sources */,
+				0ED2724F15B6AC0700BBDB5E /* PersonTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
