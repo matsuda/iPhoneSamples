@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E047D6015B6C4B30077C4B0 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E047D5F15B6C4B30077C4B0 /* GHUnitIOS.framework */; };
+		0E047D6215B6C7DD0077C4B0 /* MyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E047D6115B6C7DD0077C4B0 /* MyTest.m */; };
 		0ED2731915B6B8C800BBDB5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED2731815B6B8C800BBDB5E /* UIKit.framework */; };
 		0ED2731B15B6B8C800BBDB5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED2731A15B6B8C800BBDB5E /* Foundation.framework */; };
 		0ED2731D15B6B8C800BBDB5E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED2731C15B6B8C800BBDB5E /* CoreGraphics.framework */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		0E047D5F15B6C4B30077C4B0 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
+		0E047D6115B6C7DD0077C4B0 /* MyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTest.m; sourceTree = "<group>"; };
 		0ED2731415B6B8C800BBDB5E /* TestGHUnit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGHUnit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED2731815B6B8C800BBDB5E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0ED2731A15B6B8C800BBDB5E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,6 +129,7 @@
 		0ED2733E15B6B8E000BBDB5E /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				0E047D6115B6C7DD0077C4B0 /* MyTest.m */,
 				0ED2733F15B6B8E000BBDB5E /* Supporting Files */,
 			);
 			path = Tests;
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ED2734515B6B8E000BBDB5E /* main.m in Sources */,
+				0E047D6215B6C7DD0077C4B0 /* MyTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
