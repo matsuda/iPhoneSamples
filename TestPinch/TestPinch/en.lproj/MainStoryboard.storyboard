@@ -65,11 +65,36 @@
                     <connections>
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="a1j-4R-LEa"/>
                         <segue destination="Xqx-Ww-UBi" kind="relationship" relationship="viewControllers" id="q9H-1f-Ech"/>
+                        <segue destination="TY0-iA-oNg" kind="relationship" relationship="viewControllers" id="Veh-sp-uYh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E7Z-rb-EBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="416" y="270"/>
+        </scene>
+        <!--Scale View Controller - Scale-->
+        <scene sceneID="J1N-tq-9j8">
+            <objects>
+                <viewController id="TY0-iA-oNg" customClass="ScaleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lha-aI-a2j">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="sample.png" id="xqB-bV-T3f">
+                                <rect key="frame" x="110" y="156" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scale" id="Yjc-yu-WNP"/>
+                    <connections>
+                        <outlet property="imageView" destination="xqB-bV-T3f" id="f89-qp-e93"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nP5-hb-UkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="867"/>
         </scene>
     </scenes>
     <resources>
@@ -79,6 +104,12 @@
     <classes>
         <class className="RotateViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RotateViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="ScaleViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ScaleViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
             </relationships>
