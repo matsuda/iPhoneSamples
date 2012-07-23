@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E3A444D15BD02D500320B5D /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E3A444C15BD02D500320B5D /* sample.png */; };
+		0E3A445115BD032700320B5D /* RotateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3A445015BD032700320B5D /* RotateViewController.m */; };
 		0EF52DC015B8F3E2000A4771 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF52DBF15B8F3E2000A4771 /* UIKit.framework */; };
 		0EF52DC215B8F3E2000A4771 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF52DC115B8F3E2000A4771 /* Foundation.framework */; };
 		0EF52DC415B8F3E2000A4771 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF52DC315B8F3E2000A4771 /* CoreGraphics.framework */; };
@@ -16,9 +18,14 @@
 		0EF52DD315B8F3E2000A4771 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF52DD115B8F3E2000A4771 /* MainStoryboard.storyboard */; };
 		0EF52DD615B8F3E2000A4771 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF52DD515B8F3E2000A4771 /* ViewController.m */; };
 		0EF52DDD15B8F493000A4771 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EF52DDC15B8F493000A4771 /* test.png */; };
+		0EF52DE815B942E5000A4771 /* PinchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF52DE715B942E5000A4771 /* PinchView.m */; };
+		0EF52DF515B945A8000A4771 /* CGPointUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF52DF415B945A8000A4771 /* CGPointUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E3A444C15BD02D500320B5D /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = "<group>"; };
+		0E3A444F15BD032700320B5D /* RotateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateViewController.h; sourceTree = "<group>"; };
+		0E3A445015BD032700320B5D /* RotateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateViewController.m; sourceTree = "<group>"; };
 		0EF52DBB15B8F3E2000A4771 /* TestPinch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPinch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF52DBF15B8F3E2000A4771 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0EF52DC115B8F3E2000A4771 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -33,6 +40,10 @@
 		0EF52DD415B8F3E2000A4771 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0EF52DD515B8F3E2000A4771 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0EF52DDC15B8F493000A4771 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		0EF52DE615B942E5000A4771 /* PinchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinchView.h; sourceTree = "<group>"; };
+		0EF52DE715B942E5000A4771 /* PinchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinchView.m; sourceTree = "<group>"; };
+		0EF52DF315B945A8000A4771 /* CGPointUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointUtil.h; sourceTree = "<group>"; };
+		0EF52DF415B945A8000A4771 /* CGPointUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPointUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +90,7 @@
 		0EF52DC515B8F3E2000A4771 /* TestPinch */ = {
 			isa = PBXGroup;
 			children = (
+				0E3A444C15BD02D500320B5D /* sample.png */,
 				0EF52DDC15B8F493000A4771 /* test.png */,
 				0EF52DCE15B8F3E2000A4771 /* AppDelegate.h */,
 				0EF52DCF15B8F3E2000A4771 /* AppDelegate.m */,
@@ -86,6 +98,12 @@
 				0EF52DD415B8F3E2000A4771 /* ViewController.h */,
 				0EF52DD515B8F3E2000A4771 /* ViewController.m */,
 				0EF52DC615B8F3E2000A4771 /* Supporting Files */,
+				0EF52DE615B942E5000A4771 /* PinchView.h */,
+				0EF52DE715B942E5000A4771 /* PinchView.m */,
+				0EF52DF315B945A8000A4771 /* CGPointUtil.h */,
+				0EF52DF415B945A8000A4771 /* CGPointUtil.m */,
+				0E3A444F15BD032700320B5D /* RotateViewController.h */,
+				0E3A445015BD032700320B5D /* RotateViewController.m */,
 			);
 			path = TestPinch;
 			sourceTree = "<group>";
@@ -155,6 +173,7 @@
 				0EF52DCA15B8F3E2000A4771 /* InfoPlist.strings in Resources */,
 				0EF52DD315B8F3E2000A4771 /* MainStoryboard.storyboard in Resources */,
 				0EF52DDD15B8F493000A4771 /* test.png in Resources */,
+				0E3A444D15BD02D500320B5D /* sample.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +187,9 @@
 				0EF52DCC15B8F3E2000A4771 /* main.m in Sources */,
 				0EF52DD015B8F3E2000A4771 /* AppDelegate.m in Sources */,
 				0EF52DD615B8F3E2000A4771 /* ViewController.m in Sources */,
+				0EF52DE815B942E5000A4771 /* PinchView.m in Sources */,
+				0EF52DF515B945A8000A4771 /* CGPointUtil.m in Sources */,
+				0E3A445115BD032700320B5D /* RotateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +303,7 @@
 				0EF52DDB15B8F3E2000A4771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

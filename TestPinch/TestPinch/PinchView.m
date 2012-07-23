@@ -1,43 +1,54 @@
 //
-//  ViewController.m
+//  PinchView.m
 //  TestPinch
 //
 //  Created by matsuda on 12/07/20.
 //  Copyright (c) 2012年 matsuda. All rights reserved.
 //
 
-#import "ViewController.h"
-
 #import "PinchView.h"
 
-@interface ViewController () {
+@interface PinchView () {
     CGFloat initialDistance;
 }
-@property (nonatomic, strong) IBOutlet UIImageView *imageView;
 @property (nonatomic, strong) NSMutableArray *touchArray;
-//@property (nonatomic, strong) IBOutlet PinchView *pinchView;
 @end
 
-@implementation ViewController
+@implementation PinchView
 
-@synthesize imageView = _imageView;
-@synthesize touchArray = _touchArray;
-//@synthesize pinchView = _pinchView;
-
-- (void)viewDidLoad
+- (id)initWithFrame:(CGRect)frame
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.view.multipleTouchEnabled = YES;
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self initCommon];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self initCommon];
+    }
+    return self;
+}
+
+- (void)initCommon
+{
+    self.userInteractionEnabled = YES;
+    self.multipleTouchEnabled = YES;
     _touchArray = [NSMutableArray array];
 }
 
-- (void)didReceiveMemoryWarning
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // Drawing code
 }
-
+*/
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -49,8 +60,9 @@
     if (count > 1) {
         UITouch *first = [_touchArray objectAtIndex:0];
         UITouch *second = [_touchArray objectAtIndex:1];
-        initialDistance = distanceBetweenPoints([first locationInView:self.view], [second locationInView:self.view]);
+        initialDistance = distanceBetweenPoints([first locationInView:self], [second locationInView:self]);
     }
+    [[self superview] bringSubviewToFront:self];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -60,32 +72,32 @@
     if (count > 1) {
         UITouch *first = [_touchArray objectAtIndex:0];
         UITouch *second = [_touchArray objectAtIndex:1];
-        CGFloat currentDistance = distanceBetweenPoints([first locationInView:self.view], [second locationInView:self.view]);
+        CGFloat currentDistance = distanceBetweenPoints([first locationInView:self], [second locationInView:self]);
 
         if (initialDistance > 0) {
             double scale = currentDistance / initialDistance;
-            CGRect f = _imageView.frame;
-            float deltaX = _imageView.frame.size.width * (scale - 1);
-            float deltaY = _imageView.frame.size.height * (scale - 1);
+            CGRect f = self.frame;
+            float deltaX = self.frame.size.width * (scale - 1);
+            float deltaY = self.frame.size.height * (scale - 1);
             // f.size.width = _imageView.frame.size.width * scale;
             // f.size.height = _imageView.frame.size.height * scale;
             f.size.width += deltaX;
             f.size.height += deltaY;
             f.origin.x -= deltaX / 2;
             f.origin.y -= deltaY / 2;
-            _imageView.frame = f;
+            self.frame = f;
         }
         initialDistance = currentDistance;
     } else if (count == 1) {
         UITouch *touch = [_touchArray objectAtIndex:0];
-        CGPoint loc = [touch locationInView:self.view];
-        CGPoint prevloc = [touch previousLocationInView:self.view];
+        CGPoint loc = [touch locationInView:self];
+        CGPoint prevloc = [touch previousLocationInView:self];
+        CGRect f = self.frame;
         float deltaX = loc.x - prevloc.x;
         float deltaY = loc.y - prevloc.y;
-        CGRect f = _imageView.frame;
         f.origin.x += deltaX;
         f.origin.y += deltaY;
-        _imageView.frame = f;
+        self.frame = f;
     }
 }
 
