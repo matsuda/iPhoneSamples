@@ -10,6 +10,7 @@
 		0E3A444D15BD02D500320B5D /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E3A444C15BD02D500320B5D /* sample.png */; };
 		0E3A445115BD032700320B5D /* RotateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3A445015BD032700320B5D /* RotateViewController.m */; };
 		0EBBE29C15BD2BC300A56E15 /* ScaleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBBE29B15BD2BC300A56E15 /* ScaleViewController.m */; };
+		0EBBE2A815BD368B00A56E15 /* MultiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EBBE2A715BD368B00A56E15 /* MultiViewController.m */; };
 		0EF52DC015B8F3E2000A4771 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF52DBF15B8F3E2000A4771 /* UIKit.framework */; };
 		0EF52DC215B8F3E2000A4771 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF52DC115B8F3E2000A4771 /* Foundation.framework */; };
 		0EF52DC415B8F3E2000A4771 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF52DC315B8F3E2000A4771 /* CoreGraphics.framework */; };
@@ -29,6 +30,8 @@
 		0E3A445015BD032700320B5D /* RotateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotateViewController.m; sourceTree = "<group>"; };
 		0EBBE29A15BD2BC300A56E15 /* ScaleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaleViewController.h; sourceTree = "<group>"; };
 		0EBBE29B15BD2BC300A56E15 /* ScaleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaleViewController.m; sourceTree = "<group>"; };
+		0EBBE2A615BD368B00A56E15 /* MultiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiViewController.h; sourceTree = "<group>"; };
+		0EBBE2A715BD368B00A56E15 /* MultiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiViewController.m; sourceTree = "<group>"; };
 		0EF52DBB15B8F3E2000A4771 /* TestPinch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestPinch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF52DBF15B8F3E2000A4771 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0EF52DC115B8F3E2000A4771 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,6 +112,8 @@
 				0E3A445015BD032700320B5D /* RotateViewController.m */,
 				0EBBE29A15BD2BC300A56E15 /* ScaleViewController.h */,
 				0EBBE29B15BD2BC300A56E15 /* ScaleViewController.m */,
+				0EBBE2A615BD368B00A56E15 /* MultiViewController.h */,
+				0EBBE2A715BD368B00A56E15 /* MultiViewController.m */,
 			);
 			path = TestPinch;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				0EF52DF515B945A8000A4771 /* CGPointUtil.m in Sources */,
 				0E3A445115BD032700320B5D /* RotateViewController.m in Sources */,
 				0EBBE29C15BD2BC300A56E15 /* ScaleViewController.m in Sources */,
+				0EBBE2A815BD368B00A56E15 /* MultiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
