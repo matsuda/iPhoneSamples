@@ -36,8 +36,9 @@
 - (void)setupImageView
 {
     UIImage *image = [UIImage imageNamed:@"test"];
-    image = [self sepia:image];
+//    image = [self sepia:image];
 //    image = [self monochrome:image];
+    image = [self blur:image];
     _imageView.image = image;
 }
 
@@ -159,7 +160,7 @@
     CIFilter *filter = [CIFilter filterWithName:@"CIGaussianBlur"];
     [filter setDefaults];
     [filter setValue:ciImage forKey:kCIInputImageKey];
-    [filter setValue:[NSNumber numberWithFloat:1.8] forKey:@"inputRadius"];
+    [filter setValue:[NSNumber numberWithFloat:1.1] forKey:@"inputRadius"];
     CIImage *outputImage = [filter outputImage];
     
     CGImageRef cgimg = [ciContext createCGImage:outputImage fromRect:[outputImage extent]];

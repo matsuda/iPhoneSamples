@@ -14,23 +14,23 @@
                         <subviews>
                             <imageView translatesAutoresizingMaskIntoConstraints="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="test.png" id="qfZ-M4-pAw">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="192" id="UCD-PL-7Ia"/>
+                                    <constraint firstAttribute="height" constant="180" id="bUD-Tq-ryX"/>
+                                    <constraint firstAttribute="width" constant="240" id="vGM-Db-XDM"/>
                                 </constraints>
                             </imageView>
                             <imageView translatesAutoresizingMaskIntoConstraints="NO" userInteractionEnabled="NO" contentMode="scaleToFill" id="8NA-Pt-rxn">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="192" id="Ff2-nm-VKl"/>
-                                    <constraint firstAttribute="width" constant="134" id="Zno-u7-qxk"/>
+                                    <constraint firstAttribute="height" constant="180" id="Ozs-vU-9fx"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qfZ-M4-pAw" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="DnH-qP-dam"/>
-                            <constraint firstItem="8NA-Pt-rxn" firstAttribute="leading" secondItem="qfZ-M4-pAw" secondAttribute="leading" type="default" id="ERQ-O2-rc6"/>
-                            <constraint firstAttribute="bottom" secondItem="8NA-Pt-rxn" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="aTI-3j-ZgW"/>
-                            <constraint firstItem="8NA-Pt-rxn" firstAttribute="trailing" secondItem="qfZ-M4-pAw" secondAttribute="trailing" type="default" id="bVb-Nb-Z43"/>
-                            <constraint firstItem="8NA-Pt-rxn" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="jwO-lB-yMg"/>
+                            <constraint firstAttribute="bottom" secondItem="8NA-Pt-rxn" secondAttribute="bottom" constant="31" id="7q6-NY-JPS"/>
+                            <constraint firstItem="qfZ-M4-pAw" firstAttribute="top" secondItem="3" secondAttribute="top" constant="29" id="MCO-nP-gpO"/>
+                            <constraint firstItem="8NA-Pt-rxn" firstAttribute="trailing" secondItem="qfZ-M4-pAw" secondAttribute="trailing" type="default" id="OXt-Jy-4bt"/>
+                            <constraint firstItem="qfZ-M4-pAw" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="hNV-AC-09Q"/>
+                            <constraint firstItem="8NA-Pt-rxn" firstAttribute="leading" secondItem="qfZ-M4-pAw" secondAttribute="leading" type="default" id="qb4-nc-enR"/>
                         </constraints>
                     </view>
                     <connections>
@@ -43,7 +43,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="test.png" width="500" height="667"/>
+        <image name="test.png" width="320" height="240"/>
     </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">

@@ -16,7 +16,7 @@
 		0EA6DFF715B7B86D00AB7989 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6DFF515B7B86D00AB7989 /* MainStoryboard.storyboard */; };
 		0EA6DFFA15B7B86D00AB7989 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6DFF915B7B86D00AB7989 /* ViewController.m */; };
 		0EA6E00115B7B88100AB7989 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA6E00015B7B88100AB7989 /* CoreImage.framework */; };
-		0EA6E00515B7B98E00AB7989 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6E00415B7B98E00AB7989 /* test.png */; };
+		0ECA763D15BE968C00AE1AD3 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ECA763C15BE968C00AE1AD3 /* test.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		0EA6DFF815B7B86D00AB7989 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0EA6DFF915B7B86D00AB7989 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0EA6E00015B7B88100AB7989 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		0EA6E00415B7B98E00AB7989 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		0ECA763C15BE968C00AE1AD3 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 		0EA6DFE915B7B86D00AB7989 /* TestCoreImage */ = {
 			isa = PBXGroup;
 			children = (
-				0EA6E00415B7B98E00AB7989 /* test.png */,
+				0ECA763C15BE968C00AE1AD3 /* test.png */,
 				0EA6DFF215B7B86D00AB7989 /* AppDelegate.h */,
 				0EA6DFF315B7B86D00AB7989 /* AppDelegate.m */,
 				0EA6DFF515B7B86D00AB7989 /* MainStoryboard.storyboard */,
@@ -158,7 +158,7 @@
 			files = (
 				0EA6DFEE15B7B86D00AB7989 /* InfoPlist.strings in Resources */,
 				0EA6DFF715B7B86D00AB7989 /* MainStoryboard.storyboard in Resources */,
-				0EA6E00515B7B98E00AB7989 /* test.png in Resources */,
+				0ECA763D15BE968C00AE1AD3 /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +285,7 @@
 				0EA6DFFF15B7B86D00AB7989 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
