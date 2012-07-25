@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E06059115BF91F4008271FC /* GraphicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E06059015BF91F4008271FC /* GraphicViewController.m */; };
 		0E0D2DCD1589D6910000D6AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0D2DCC1589D6910000D6AC /* UIKit.framework */; };
 		0E0D2DCF1589D6910000D6AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0D2DCE1589D6910000D6AC /* Foundation.framework */; };
 		0E0D2DD11589D6910000D6AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0D2DD01589D6910000D6AC /* CoreGraphics.framework */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E06058F15BF91F4008271FC /* GraphicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicViewController.h; sourceTree = "<group>"; };
+		0E06059015BF91F4008271FC /* GraphicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicViewController.m; sourceTree = "<group>"; };
 		0E0D2DC81589D6910000D6AC /* TestCG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0D2DCC1589D6910000D6AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0E0D2DCE1589D6910000D6AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -93,6 +96,8 @@
 				0EABDB641589D90400DF73F0 /* CGView.m */,
 				0EF7B759158B1C0D0025FFAD /* DrawViewController.h */,
 				0EF7B75A158B1C0D0025FFAD /* DrawViewController.m */,
+				0E06058F15BF91F4008271FC /* GraphicViewController.h */,
+				0E06059015BF91F4008271FC /* GraphicViewController.m */,
 			);
 			path = TestCG;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				0EABDB611589D8BB00DF73F0 /* CGViewController.m in Sources */,
 				0EABDB651589D90400DF73F0 /* CGView.m in Sources */,
 				0EF7B75B158B1C0D0025FFAD /* DrawViewController.m in Sources */,
+				0E06059115BF91F4008271FC /* GraphicViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
