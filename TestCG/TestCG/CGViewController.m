@@ -6,15 +6,15 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "TestCGViewController.h"
+#import "CGViewController.h"
 #import "TestCGView.h"
 
-@interface TestCGViewController ()
+@interface CGViewController ()
 
 @property (strong, nonatomic) TestCGView *testView;
 @end
 
-@implementation TestCGViewController
+@implementation CGViewController
 
 @synthesize testView = _testView;
 

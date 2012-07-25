@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestDrawViewController : UIViewController
+@interface DrawViewController : UIViewController
 
 @end

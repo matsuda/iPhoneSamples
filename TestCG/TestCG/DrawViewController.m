@@ -9,16 +9,16 @@
 /*
  http://www.atmarkit.co.jp/fsmart/articles/iphonesdk05/01.html
  */
-#import "TestDrawViewController.h"
+#import "DrawViewController.h"
 
-@interface TestDrawViewController () {
+@interface DrawViewController () {
     UIImageView *_canvas;
     CGPoint _touchPoint;
 }
 
 @end
 
-@implementation TestDrawViewController
+@implementation DrawViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

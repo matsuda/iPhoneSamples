@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestCGViewController : UIViewController
+@interface CGViewController : UIViewController
 
 @end

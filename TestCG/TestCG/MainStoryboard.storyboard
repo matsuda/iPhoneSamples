@@ -1,121 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="U6H-EH-ce7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2818" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="OKD-LI-iXx">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1900"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="YeV-13-hgg">
+        <!--Draw View Controller - Draw-->
+        <scene sceneID="PiM-EA-Pn8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FaS-WF-bWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" id="U6H-EH-ce7" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="wak-Sp-YR5">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
+                <viewController id="BGC-mT-UL0" customClass="DrawViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9cv-sA-DpA">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Draw" id="hM3-78-Pyt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pko-tN-OGv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-285" y="539"/>
+        </scene>
+        <!--View Controller - CG-->
+        <scene sceneID="nwo-iP-BHU">
+            <objects>
+                <viewController id="Kfi-Qw-gCo" customClass="CGViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3hU-M3-jHt">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="CG" id="Tf3-3i-fRl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kid-7H-Cv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-285" y="-26"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="oJR-B0-WOE">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="OKD-LI-iXx" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="9Pv-I9-hfk">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
                     <connections>
-                        <segue destination="R09-09-8en" kind="relationship" relationship="rootViewController" id="q30-v4-ZQk"/>
+                        <segue destination="Kfi-Qw-gCo" kind="relationship" relationship="viewControllers" id="vvX-Wb-Aoe"/>
+                        <segue destination="BGC-mT-UL0" kind="relationship" relationship="viewControllers" id="3ZH-cl-snZ"/>
                     </connections>
-                </navigationController>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="og5-mW-pmE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-96" y="144"/>
-        </scene>
-        <!--TestCG View Controller-->
-        <scene sceneID="swB-nI-l2d">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3wg-U7-VhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="yWI-1U-iVw" customClass="TestCGViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JfU-Va-zB1">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="IDA-pm-csb"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="35" y="775"/>
-        </scene>
-        <!--Test Draw View Controller-->
-        <scene sceneID="Q7q-zd-e1o">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vy2-tf-rUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="9G8-xN-1s0" customClass="TestDrawViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="197-c5-x1u">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Dlu-fE-Xeg"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="520" y="783"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="Cau-Xy-3yl">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jDf-IW-QKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="R09-09-8en" customClass="RootViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vbL-DK-ppo">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Llb-CU-pbG">
-                                <rect key="frame" x="121" y="113" width="78" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="TestCG">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="yWI-1U-iVw" kind="push" id="y9F-0N-hAw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zgG-l8-tU8">
-                                <rect key="frame" x="114" y="236" width="93" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="TestDraw">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="9G8-xN-1s0" kind="push" id="aCj-eE-PJK"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="G94-Js-nQd"/>
-                    <connections>
-                        <outlet property="_cgButton" destination="Llb-CU-pbG" id="PQz-tD-pJU"/>
-                        <outlet property="_drawButton" destination="zgG-l8-tU8" id="luY-8j-N4k"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="468" y="147"/>
+            <point key="canvasLocation" x="-819" y="257"/>
         </scene>
     </scenes>
     <classes>
-        <class className="RootViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RootViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="_cgButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="_drawButton" candidateClass="UIButton"/>
-            </relationships>
+        <class className="CGViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CGViewController.h"/>
         </class>
-        <class className="TestCGViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TestCGViewController.h"/>
-        </class>
-        <class className="TestDrawViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TestDrawViewController.h"/>
+        <class className="DrawViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DrawViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
