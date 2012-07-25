@@ -14,10 +14,9 @@
 		0E0D2DD91589D6910000D6AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0D2DD81589D6910000D6AC /* main.m */; };
 		0E0D2DDD1589D6910000D6AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0D2DDC1589D6910000D6AC /* AppDelegate.m */; };
 		0EABDB611589D8BB00DF73F0 /* CGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EABDB601589D8BB00DF73F0 /* CGViewController.m */; };
-		0EABDB651589D90400DF73F0 /* TestCGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EABDB641589D90400DF73F0 /* TestCGView.m */; };
+		0EABDB651589D90400DF73F0 /* CGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EABDB641589D90400DF73F0 /* CGView.m */; };
 		0EF7B75B158B1C0D0025FFAD /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF7B75A158B1C0D0025FFAD /* DrawViewController.m */; };
 		0EF7B75E158B213A0025FFAD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF7B75D158B213A0025FFAD /* MainStoryboard.storyboard */; };
-		0EF7B765158B223A0025FFAD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF7B764158B223A0025FFAD /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +32,11 @@
 		0E0D2DDC1589D6910000D6AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0EABDB5F1589D8BB00DF73F0 /* CGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGViewController.h; sourceTree = "<group>"; };
 		0EABDB601589D8BB00DF73F0 /* CGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGViewController.m; sourceTree = "<group>"; };
-		0EABDB631589D90400DF73F0 /* TestCGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCGView.h; sourceTree = "<group>"; };
-		0EABDB641589D90400DF73F0 /* TestCGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCGView.m; sourceTree = "<group>"; };
+		0EABDB631589D90400DF73F0 /* CGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGView.h; sourceTree = "<group>"; };
+		0EABDB641589D90400DF73F0 /* CGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGView.m; sourceTree = "<group>"; };
 		0EF7B759158B1C0D0025FFAD /* DrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
 		0EF7B75A158B1C0D0025FFAD /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
 		0EF7B75D158B213A0025FFAD /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
-		0EF7B763158B223A0025FFAD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		0EF7B764158B223A0025FFAD /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +87,10 @@
 				0E0D2DDC1589D6910000D6AC /* AppDelegate.m */,
 				0EF7B75D158B213A0025FFAD /* MainStoryboard.storyboard */,
 				0E0D2DD31589D6910000D6AC /* Supporting Files */,
-				0EF7B763158B223A0025FFAD /* RootViewController.h */,
-				0EF7B764158B223A0025FFAD /* RootViewController.m */,
 				0EABDB5F1589D8BB00DF73F0 /* CGViewController.h */,
 				0EABDB601589D8BB00DF73F0 /* CGViewController.m */,
-				0EABDB631589D90400DF73F0 /* TestCGView.h */,
-				0EABDB641589D90400DF73F0 /* TestCGView.m */,
+				0EABDB631589D90400DF73F0 /* CGView.h */,
+				0EABDB641589D90400DF73F0 /* CGView.m */,
 				0EF7B759158B1C0D0025FFAD /* DrawViewController.h */,
 				0EF7B75A158B1C0D0025FFAD /* DrawViewController.m */,
 			);
@@ -178,9 +173,8 @@
 				0E0D2DD91589D6910000D6AC /* main.m in Sources */,
 				0E0D2DDD1589D6910000D6AC /* AppDelegate.m in Sources */,
 				0EABDB611589D8BB00DF73F0 /* CGViewController.m in Sources */,
-				0EABDB651589D90400DF73F0 /* TestCGView.m in Sources */,
+				0EABDB651589D90400DF73F0 /* CGView.m in Sources */,
 				0EF7B75B158B1C0D0025FFAD /* DrawViewController.m in Sources */,
-				0EF7B765158B223A0025FFAD /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

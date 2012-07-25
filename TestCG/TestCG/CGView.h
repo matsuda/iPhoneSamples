@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestCGView : UIView
+@interface CGView : UIView
 
 @end

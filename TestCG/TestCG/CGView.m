@@ -9,9 +9,9 @@
 /*
  https://github.com/chrismiles/CMPopTipView
  */
-#import "TestCGView.h"
+#import "CGView.h"
 
-@implementation TestCGView
+@implementation CGView
 
 - (id)initWithFrame:(CGRect)frame
 {

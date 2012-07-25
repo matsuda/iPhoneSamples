@@ -7,11 +7,11 @@
 //
 
 #import "CGViewController.h"
-#import "TestCGView.h"
+#import "CGView.h"
 
 @interface CGViewController ()
 
-@property (strong, nonatomic) TestCGView *testView;
+@property (strong, nonatomic) CGView *testView;
 @end
 
 @implementation CGViewController
@@ -31,7 +31,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    TestCGView *testView = [[TestCGView alloc] initWithFrame:CGRectMake(60, 60, 200, 120)];
+    CGView *testView = [[CGView alloc] initWithFrame:CGRectMake(60, 60, 200, 120)];
     self.testView = testView;
     [self.view addSubview:testView];
 }
