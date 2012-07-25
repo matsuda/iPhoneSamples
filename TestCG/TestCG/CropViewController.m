@@ -1,24 +1,20 @@
 //
-//  GraphicViewController.m
+//  RectViewController.m
 //  TestCG
 //
 //  Created by matsuda on 12/07/25.
 //
 //
 
-#import "GraphicViewController.h"
+#import "CropViewController.h"
 
-#import "MaskView.h"
+#import "UIImage+Crop.h"
 
-@interface GraphicViewController ()
-@property (nonatomic, weak) IBOutlet UIButton *button;
-@property (nonatomic, weak) IBOutlet UIImageView *imageView;
+@interface CropViewController ()
+
 @end
 
-@implementation GraphicViewController
-
-@synthesize button = _button;
-@synthesize imageView = _imageView;
+@implementation CropViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,19 +29,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    MaskView *m = [[MaskView alloc] initWithFrame:CGRectMake(20, 20, 200, 200)];
-    [self.view addSubview:m];
+    UIImage *image = [UIImage imageNamed:@"sample"];
+    UIImage *croppedImage = [image crop:CGRectMake(30, 80, 200, 100)];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:croppedImage];
+//    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    [self.view addSubview:imageView];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)convert:(id)sender
-{
-    NSLog(@"convert");
 }
 
 @end

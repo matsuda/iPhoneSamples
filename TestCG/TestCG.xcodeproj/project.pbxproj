@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0E06059115BF91F4008271FC /* GraphicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E06059015BF91F4008271FC /* GraphicViewController.m */; };
+		0E06059915BF9477008271FC /* MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E06059815BF9477008271FC /* MaskView.m */; };
+		0E0605B615BFC28F008271FC /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0605B515BFC28F008271FC /* CoreImage.framework */; };
+		0E0605B815BFC53E008271FC /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E0605B715BFC53E008271FC /* sample.png */; };
+		0E0605CB15BFDCB9008271FC /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E0605CA15BFDCB9008271FC /* mask.png */; };
 		0E0D2DCD1589D6910000D6AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0D2DCC1589D6910000D6AC /* UIKit.framework */; };
 		0E0D2DCF1589D6910000D6AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0D2DCE1589D6910000D6AC /* Foundation.framework */; };
 		0E0D2DD11589D6910000D6AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0D2DD01589D6910000D6AC /* CoreGraphics.framework */; };
@@ -16,6 +20,9 @@
 		0E0D2DDD1589D6910000D6AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0D2DDC1589D6910000D6AC /* AppDelegate.m */; };
 		0EABDB611589D8BB00DF73F0 /* CGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EABDB601589D8BB00DF73F0 /* CGViewController.m */; };
 		0EABDB651589D90400DF73F0 /* CGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EABDB641589D90400DF73F0 /* CGView.m */; };
+		0EB8408915BFE50400B871DC /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8408815BFE50400B871DC /* test.png */; };
+		0EB8408C15BFE94100B871DC /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8408B15BFE94100B871DC /* UIImage+Crop.m */; };
+		0EB8408F15BFE9CC00B871DC /* CropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8408E15BFE9CC00B871DC /* CropViewController.m */; };
 		0EF7B75B158B1C0D0025FFAD /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF7B75A158B1C0D0025FFAD /* DrawViewController.m */; };
 		0EF7B75E158B213A0025FFAD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF7B75D158B213A0025FFAD /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
@@ -23,6 +30,11 @@
 /* Begin PBXFileReference section */
 		0E06058F15BF91F4008271FC /* GraphicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicViewController.h; sourceTree = "<group>"; };
 		0E06059015BF91F4008271FC /* GraphicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicViewController.m; sourceTree = "<group>"; };
+		0E06059715BF9477008271FC /* MaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskView.h; sourceTree = "<group>"; };
+		0E06059815BF9477008271FC /* MaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskView.m; sourceTree = "<group>"; };
+		0E0605B515BFC28F008271FC /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		0E0605B715BFC53E008271FC /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = "<group>"; };
+		0E0605CA15BFDCB9008271FC /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask.png; sourceTree = "<group>"; };
 		0E0D2DC81589D6910000D6AC /* TestCG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0D2DCC1589D6910000D6AC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0E0D2DCE1589D6910000D6AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +49,11 @@
 		0EABDB601589D8BB00DF73F0 /* CGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGViewController.m; sourceTree = "<group>"; };
 		0EABDB631589D90400DF73F0 /* CGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGView.h; sourceTree = "<group>"; };
 		0EABDB641589D90400DF73F0 /* CGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGView.m; sourceTree = "<group>"; };
+		0EB8408815BFE50400B871DC /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		0EB8408A15BFE94100B871DC /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
+		0EB8408B15BFE94100B871DC /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
+		0EB8408D15BFE9CC00B871DC /* CropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CropViewController.h; sourceTree = "<group>"; };
+		0EB8408E15BFE9CC00B871DC /* CropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CropViewController.m; sourceTree = "<group>"; };
 		0EF7B759158B1C0D0025FFAD /* DrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
 		0EF7B75A158B1C0D0025FFAD /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
 		0EF7B75D158B213A0025FFAD /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -47,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0605B615BFC28F008271FC /* CoreImage.framework in Frameworks */,
 				0E0D2DCD1589D6910000D6AC /* UIKit.framework in Frameworks */,
 				0E0D2DCF1589D6910000D6AC /* Foundation.framework in Frameworks */,
 				0E0D2DD11589D6910000D6AC /* CoreGraphics.framework in Frameworks */,
@@ -76,6 +94,7 @@
 		0E0D2DCB1589D6910000D6AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E0605B515BFC28F008271FC /* CoreImage.framework */,
 				0E0D2DCC1589D6910000D6AC /* UIKit.framework */,
 				0E0D2DCE1589D6910000D6AC /* Foundation.framework */,
 				0E0D2DD01589D6910000D6AC /* CoreGraphics.framework */,
@@ -86,6 +105,9 @@
 		0E0D2DD21589D6910000D6AC /* TestCG */ = {
 			isa = PBXGroup;
 			children = (
+				0EB8408815BFE50400B871DC /* test.png */,
+				0E0605CA15BFDCB9008271FC /* mask.png */,
+				0E0605B715BFC53E008271FC /* sample.png */,
 				0E0D2DDB1589D6910000D6AC /* AppDelegate.h */,
 				0E0D2DDC1589D6910000D6AC /* AppDelegate.m */,
 				0EF7B75D158B213A0025FFAD /* MainStoryboard.storyboard */,
@@ -98,6 +120,12 @@
 				0EF7B75A158B1C0D0025FFAD /* DrawViewController.m */,
 				0E06058F15BF91F4008271FC /* GraphicViewController.h */,
 				0E06059015BF91F4008271FC /* GraphicViewController.m */,
+				0E06059715BF9477008271FC /* MaskView.h */,
+				0E06059815BF9477008271FC /* MaskView.m */,
+				0EB8408A15BFE94100B871DC /* UIImage+Crop.h */,
+				0EB8408B15BFE94100B871DC /* UIImage+Crop.m */,
+				0EB8408D15BFE9CC00B871DC /* CropViewController.h */,
+				0EB8408E15BFE9CC00B871DC /* CropViewController.m */,
 			);
 			path = TestCG;
 			sourceTree = "<group>";
@@ -165,6 +193,9 @@
 			files = (
 				0E0D2DD71589D6910000D6AC /* InfoPlist.strings in Resources */,
 				0EF7B75E158B213A0025FFAD /* MainStoryboard.storyboard in Resources */,
+				0E0605B815BFC53E008271FC /* sample.png in Resources */,
+				0E0605CB15BFDCB9008271FC /* mask.png in Resources */,
+				0EB8408915BFE50400B871DC /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +212,9 @@
 				0EABDB651589D90400DF73F0 /* CGView.m in Sources */,
 				0EF7B75B158B1C0D0025FFAD /* DrawViewController.m in Sources */,
 				0E06059115BF91F4008271FC /* GraphicViewController.m in Sources */,
+				0E06059915BF9477008271FC /* MaskView.m in Sources */,
+				0EB8408C15BFE94100B871DC /* UIImage+Crop.m in Sources */,
+				0EB8408F15BFE9CC00B871DC /* CropViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
