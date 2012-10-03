@@ -18,6 +18,8 @@
 		0E14CB43161BD7EA0032EA08 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E14CB42161BD7EA0032EA08 /* Default-568h@2x.png */; };
 		0E14CB46161BD7EA0032EA08 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E14CB45161BD7EA0032EA08 /* ViewController.m */; };
 		0E14CB49161BD7EA0032EA08 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E14CB47161BD7EA0032EA08 /* ViewController.xib */; };
+		0E14CB55161BDADC0032EA08 /* sample_movie_1024k.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0E14CB54161BDADC0032EA08 /* sample_movie_1024k.mp4 */; };
+		0E14CB57161BDC640032EA08 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E14CB56161BDC640032EA08 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		0E14CB44161BD7EA0032EA08 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0E14CB45161BD7EA0032EA08 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0E14CB48161BD7EA0032EA08 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		0E14CB54161BDADC0032EA08 /* sample_movie_1024k.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_movie_1024k.mp4; sourceTree = "<group>"; };
+		0E14CB56161BDC640032EA08 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E14CB57161BDC640032EA08 /* MediaPlayer.framework in Frameworks */,
 				0E14CB2D161BD7EA0032EA08 /* UIKit.framework in Frameworks */,
 				0E14CB2F161BD7EA0032EA08 /* Foundation.framework in Frameworks */,
 				0E14CB31161BD7EA0032EA08 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +78,7 @@
 		0E14CB2B161BD7EA0032EA08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E14CB56161BDC640032EA08 /* MediaPlayer.framework */,
 				0E14CB2C161BD7EA0032EA08 /* UIKit.framework */,
 				0E14CB2E161BD7EA0032EA08 /* Foundation.framework */,
 				0E14CB30161BD7EA0032EA08 /* CoreGraphics.framework */,
@@ -89,6 +95,7 @@
 				0E14CB45161BD7EA0032EA08 /* ViewController.m */,
 				0E14CB47161BD7EA0032EA08 /* ViewController.xib */,
 				0E14CB33161BD7EA0032EA08 /* Supporting Files */,
+				0E14CB53161BDADC0032EA08 /* Resources */,
 			);
 			path = TestAirplay;
 			sourceTree = "<group>";
@@ -105,6 +112,14 @@
 				0E14CB42161BD7EA0032EA08 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0E14CB53161BDADC0032EA08 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0E14CB54161BDADC0032EA08 /* sample_movie_1024k.mp4 */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +178,7 @@
 				0E14CB41161BD7EA0032EA08 /* Default@2x.png in Resources */,
 				0E14CB43161BD7EA0032EA08 /* Default-568h@2x.png in Resources */,
 				0E14CB49161BD7EA0032EA08 /* ViewController.xib in Resources */,
+				0E14CB55161BDADC0032EA08 /* sample_movie_1024k.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

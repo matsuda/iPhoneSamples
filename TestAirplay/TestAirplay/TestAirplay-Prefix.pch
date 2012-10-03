@@ -12,3 +12,18 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define APP_RELEASE_SAFELY(__POINTER) { [__POINTER release]; __POINTER = nil; }
+#define APP_INVALIDATE_TIMER(__TIMER) { [__TIMER invalidate]; __TIMER = nil; }
+
+#ifdef DEBUG
+    #if !defined(NSLog)
+        #define NSLog( ... ) NSLog( __VA_ARGS__ )
+    #endif
+#else
+    #if !defined(NSLog)
+        #define NSLog( ... )
+    #endif
+#endif
+
+#define APPLog NSLog(@"%s(%p) : %d", __PRETTY_FUNCTION__, self, __LINE__)
