@@ -47,12 +47,14 @@
 - (void)setupMoviePlayer
 {
     APPLog;
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"sample_movie_1024k" ofType:@"mp4"];
-    NSLog(@"path >>>>>>>>>>>>>>>>> %@", filePath);
-    NSURL *url = [NSURL fileURLWithPath:filePath];
+    /* アプリ内の動画 */
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"sample_movie" ofType:@"mp4"];
+//    NSLog(@"path >>>>>>>>>>>>>>>>> %@", filePath);
+//    NSURL *url = [NSURL fileURLWithPath:filePath];
 
-//    NSString *filePath = @"";
-//    NSURL *url = [NSURL URLWithString:filePath];
+    /* web上の動画 */
+    NSString *filePath = @"http://xxx.xxx.xxx.xxx/sample_movie.mp4";
+    NSURL *url = [NSURL URLWithString:filePath];
 
     MPMoviePlayerController *player = [[[MPMoviePlayerController alloc] initWithContentURL:url] autorelease];
     player.view.frame = CGRectMake((320 - 300) / 2, (480 - 200) / 2, 300, 200);
