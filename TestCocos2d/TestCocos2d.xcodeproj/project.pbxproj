@@ -133,6 +133,11 @@
 		0E45A9E7161D413200BC75A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A9E6161D413200BC75A5 /* AppDelegate.m */; };
 		0E45A9EA161D413200BC75A5 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A9E9161D413200BC75A5 /* HelloWorldLayer.m */; };
 		0E45A9ED161D413200BC75A5 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A9EC161D413200BC75A5 /* IntroLayer.m */; };
+		0E45A9FD161D63D100BC75A5 /* TextLayer1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A9FC161D63D100BC75A5 /* TextLayer1.m */; };
+		0E45AA00161D63DC00BC75A5 /* TextLayer2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A9FF161D63DC00BC75A5 /* TextLayer2.m */; };
+		0E45AA04161D657900BC75A5 /* layer1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E45AA02161D657900BC75A5 /* layer1.jpg */; };
+		0E45AA05161D657900BC75A5 /* layer2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E45AA03161D657900BC75A5 /* layer2.jpg */; };
+		0E45AA07161D6DBB00BC75A5 /* item_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E45AA06161D6DBB00BC75A5 /* item_button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -398,6 +403,13 @@
 		0E45A9E9161D413200BC75A5 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		0E45A9EB161D413200BC75A5 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		0E45A9EC161D413200BC75A5 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		0E45A9FB161D63D100BC75A5 /* TextLayer1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextLayer1.h; sourceTree = "<group>"; };
+		0E45A9FC161D63D100BC75A5 /* TextLayer1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextLayer1.m; sourceTree = "<group>"; };
+		0E45A9FE161D63DC00BC75A5 /* TextLayer2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextLayer2.h; sourceTree = "<group>"; };
+		0E45A9FF161D63DC00BC75A5 /* TextLayer2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextLayer2.m; sourceTree = "<group>"; };
+		0E45AA02161D657900BC75A5 /* layer1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = layer1.jpg; sourceTree = "<group>"; };
+		0E45AA03161D657900BC75A5 /* layer2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = layer2.jpg; sourceTree = "<group>"; };
+		0E45AA06161D6DBB00BC75A5 /* item_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item_button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +468,7 @@
 		0E45A86D161D413000BC75A5 /* TestCocos2d */ = {
 			isa = PBXGroup;
 			children = (
+				0E45A9F7161D634700BC75A5 /* Classes */,
 				0E45A9E5161D413200BC75A5 /* AppDelegate.h */,
 				0E45A9E6161D413200BC75A5 /* AppDelegate.m */,
 				0E45A9E8161D413200BC75A5 /* HelloWorldLayer.h */,
@@ -472,6 +485,7 @@
 		0E45A86E161D413000BC75A5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0E45AA01161D657000BC75A5 /* Layers */,
 				0E45A86F161D413000BC75A5 /* Default.png */,
 				0E45A871161D413000BC75A5 /* Default-Landscape~ipad.png */,
 				0E45A873161D413000BC75A5 /* fps_images.png */,
@@ -832,6 +846,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0E45A9F7161D634700BC75A5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0E45A9FB161D63D100BC75A5 /* TextLayer1.h */,
+				0E45A9FC161D63D100BC75A5 /* TextLayer1.m */,
+				0E45A9FE161D63DC00BC75A5 /* TextLayer2.h */,
+				0E45A9FF161D63DC00BC75A5 /* TextLayer2.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0E45AA01161D657000BC75A5 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				0E45AA06161D6DBB00BC75A5 /* item_button.png */,
+				0E45AA02161D657900BC75A5 /* layer1.jpg */,
+				0E45AA03161D657900BC75A5 /* layer2.jpg */,
+			);
+			name = Layers;
+			path = Resources/Layers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -895,6 +931,9 @@
 				0E45A884161D413000BC75A5 /* Icon@2x.png in Resources */,
 				0E45A887161D413000BC75A5 /* iTunesArtwork in Resources */,
 				0E45A9C5161D413200BC75A5 /* ChangeLog in Resources */,
+				0E45AA04161D657900BC75A5 /* layer1.jpg in Resources */,
+				0E45AA05161D657900BC75A5 /* layer2.jpg in Resources */,
+				0E45AA07161D6DBB00BC75A5 /* item_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1048,8 @@
 				0E45A9E7161D413200BC75A5 /* AppDelegate.m in Sources */,
 				0E45A9EA161D413200BC75A5 /* HelloWorldLayer.m in Sources */,
 				0E45A9ED161D413200BC75A5 /* IntroLayer.m in Sources */,
+				0E45A9FD161D63D100BC75A5 /* TextLayer1.m in Sources */,
+				0E45AA00161D63DC00BC75A5 /* TextLayer2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
