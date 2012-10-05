@@ -34,10 +34,19 @@
         sprite.position = ccp(x/2, y/2);
         [self addChild:sprite];
 
-        CCLayerColor *bg = [CCLayerColor layerWithColor:ccc4(255, 255, 255, 255)];
-        [self addChild:bg z:-1];
+//        CCLayerColor *bg = [CCLayerColor layerWithColor:ccc4(255, 255, 255, 255)];
+//        [self addChild:bg z:-1];
     }
     return self;
+}
+
+- (void)effectSnow
+{
+    // http://craft-notes.com/iphone/cocos2d/cocos2dでパーティクルを表示する方法/
+    CCParticleSnow *particle = [CCParticleSnow node];
+    particle.texture = [[CCTextureCache sharedTextureCache] addImage:@"snow_image.png"];
+    particle.position = ccp(160, 500);
+    [self addChild:particle];
 }
 
 - (void)registerWithTouchDispatcher
@@ -60,10 +69,11 @@
     CGPoint position = [[CCDirector sharedDirector] convertToGL:location];
     NSLog(@"position >>>> %@", NSStringFromCGPoint(position));
 
-    CCParticleSystem *ps = [CCParticleFireworks node];
-    ps.sourcePosition = position;
-    ps.autoRemoveOnFinish = YES;
-    [self addChild:ps];
+//    CCParticleSystem *particle = [CCParticleFireworks node];
+//    particle.sourcePosition = position;
+//    particle.autoRemoveOnFinish = YES;
+
+    [self effectSnow];
 }
 
 @end
