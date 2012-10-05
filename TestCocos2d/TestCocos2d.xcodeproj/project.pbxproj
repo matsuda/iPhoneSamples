@@ -133,11 +133,15 @@
 		0E45A9E7161D413200BC75A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A9E6161D413200BC75A5 /* AppDelegate.m */; };
 		0E45A9EA161D413200BC75A5 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A9E9161D413200BC75A5 /* HelloWorldLayer.m */; };
 		0E45A9ED161D413200BC75A5 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A9EC161D413200BC75A5 /* IntroLayer.m */; };
-		0E45A9FD161D63D100BC75A5 /* TextLayer1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A9FC161D63D100BC75A5 /* TextLayer1.m */; };
-		0E45AA00161D63DC00BC75A5 /* TextLayer2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A9FF161D63DC00BC75A5 /* TextLayer2.m */; };
-		0E45AA04161D657900BC75A5 /* layer1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E45AA02161D657900BC75A5 /* layer1.jpg */; };
-		0E45AA05161D657900BC75A5 /* layer2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E45AA03161D657900BC75A5 /* layer2.jpg */; };
+		0E45A9FD161D63D100BC75A5 /* TransitionLayer1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A9FC161D63D100BC75A5 /* TransitionLayer1.m */; };
+		0E45AA00161D63DC00BC75A5 /* TransitionLayer2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45A9FF161D63DC00BC75A5 /* TransitionLayer2.m */; };
 		0E45AA07161D6DBB00BC75A5 /* item_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E45AA06161D6DBB00BC75A5 /* item_button.png */; };
+		0E45AA0F161D738000BC75A5 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45AA0D161D738000BC75A5 /* MenuViewController.m */; };
+		0E45AA10161D738000BC75A5 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E45AA0E161D738000BC75A5 /* MenuViewController.xib */; };
+		0E45AA1D161D843900BC75A5 /* CCTransitionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E45AA1C161D843900BC75A5 /* CCTransitionHelper.m */; };
+		0E45AA28161DACB000BC75A5 /* layer1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E45AA26161DACB000BC75A5 /* layer1.jpg */; };
+		0E45AA29161DACB000BC75A5 /* layer2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E45AA27161DACB000BC75A5 /* layer2.jpg */; };
+		0EFC6354161E8AF900B1D23E /* BaseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFC6353161E8AF900B1D23E /* BaseLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -403,13 +407,20 @@
 		0E45A9E9161D413200BC75A5 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		0E45A9EB161D413200BC75A5 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		0E45A9EC161D413200BC75A5 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
-		0E45A9FB161D63D100BC75A5 /* TextLayer1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextLayer1.h; sourceTree = "<group>"; };
-		0E45A9FC161D63D100BC75A5 /* TextLayer1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextLayer1.m; sourceTree = "<group>"; };
-		0E45A9FE161D63DC00BC75A5 /* TextLayer2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextLayer2.h; sourceTree = "<group>"; };
-		0E45A9FF161D63DC00BC75A5 /* TextLayer2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextLayer2.m; sourceTree = "<group>"; };
-		0E45AA02161D657900BC75A5 /* layer1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = layer1.jpg; sourceTree = "<group>"; };
-		0E45AA03161D657900BC75A5 /* layer2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = layer2.jpg; sourceTree = "<group>"; };
+		0E45A9FB161D63D100BC75A5 /* TransitionLayer1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionLayer1.h; sourceTree = "<group>"; };
+		0E45A9FC161D63D100BC75A5 /* TransitionLayer1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionLayer1.m; sourceTree = "<group>"; };
+		0E45A9FE161D63DC00BC75A5 /* TransitionLayer2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionLayer2.h; sourceTree = "<group>"; };
+		0E45A9FF161D63DC00BC75A5 /* TransitionLayer2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionLayer2.m; sourceTree = "<group>"; };
 		0E45AA06161D6DBB00BC75A5 /* item_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item_button.png; sourceTree = "<group>"; };
+		0E45AA0C161D738000BC75A5 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		0E45AA0D161D738000BC75A5 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		0E45AA0E161D738000BC75A5 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		0E45AA1B161D843900BC75A5 /* CCTransitionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTransitionHelper.h; sourceTree = "<group>"; };
+		0E45AA1C161D843900BC75A5 /* CCTransitionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTransitionHelper.m; sourceTree = "<group>"; };
+		0E45AA26161DACB000BC75A5 /* layer1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = layer1.jpg; sourceTree = "<group>"; };
+		0E45AA27161DACB000BC75A5 /* layer2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = layer2.jpg; sourceTree = "<group>"; };
+		0EFC6352161E8AF900B1D23E /* BaseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLayer.h; sourceTree = "<group>"; };
+		0EFC6353161E8AF900B1D23E /* BaseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,6 +517,7 @@
 		0E45A888161D413000BC75A5 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				0E45AA1A161D843900BC75A5 /* CCTransitionHelper */,
 				0E45A99F161D413200BC75A5 /* LICENSE_cocos2d.txt */,
 				0E45A9AE161D413200BC75A5 /* LICENSE_CocosDenshion.txt */,
 				0E45A9E0161D413200BC75A5 /* LICENSE_Kazmath.txt */,
@@ -849,10 +861,15 @@
 		0E45A9F7161D634700BC75A5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0E45A9FB161D63D100BC75A5 /* TextLayer1.h */,
-				0E45A9FC161D63D100BC75A5 /* TextLayer1.m */,
-				0E45A9FE161D63DC00BC75A5 /* TextLayer2.h */,
-				0E45A9FF161D63DC00BC75A5 /* TextLayer2.m */,
+				0EFC6352161E8AF900B1D23E /* BaseLayer.h */,
+				0EFC6353161E8AF900B1D23E /* BaseLayer.m */,
+				0E45A9FB161D63D100BC75A5 /* TransitionLayer1.h */,
+				0E45A9FC161D63D100BC75A5 /* TransitionLayer1.m */,
+				0E45A9FE161D63DC00BC75A5 /* TransitionLayer2.h */,
+				0E45A9FF161D63DC00BC75A5 /* TransitionLayer2.m */,
+				0E45AA0C161D738000BC75A5 /* MenuViewController.h */,
+				0E45AA0D161D738000BC75A5 /* MenuViewController.m */,
+				0E45AA0E161D738000BC75A5 /* MenuViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -860,12 +877,22 @@
 		0E45AA01161D657000BC75A5 /* Layers */ = {
 			isa = PBXGroup;
 			children = (
+				0E45AA26161DACB000BC75A5 /* layer1.jpg */,
+				0E45AA27161DACB000BC75A5 /* layer2.jpg */,
 				0E45AA06161D6DBB00BC75A5 /* item_button.png */,
-				0E45AA02161D657900BC75A5 /* layer1.jpg */,
-				0E45AA03161D657900BC75A5 /* layer2.jpg */,
 			);
 			name = Layers;
 			path = Resources/Layers;
+			sourceTree = "<group>";
+		};
+		0E45AA1A161D843900BC75A5 /* CCTransitionHelper */ = {
+			isa = PBXGroup;
+			children = (
+				0E45AA1B161D843900BC75A5 /* CCTransitionHelper.h */,
+				0E45AA1C161D843900BC75A5 /* CCTransitionHelper.m */,
+			);
+			name = CCTransitionHelper;
+			path = libs/CCTransitionHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -931,9 +958,10 @@
 				0E45A884161D413000BC75A5 /* Icon@2x.png in Resources */,
 				0E45A887161D413000BC75A5 /* iTunesArtwork in Resources */,
 				0E45A9C5161D413200BC75A5 /* ChangeLog in Resources */,
-				0E45AA04161D657900BC75A5 /* layer1.jpg in Resources */,
-				0E45AA05161D657900BC75A5 /* layer2.jpg in Resources */,
 				0E45AA07161D6DBB00BC75A5 /* item_button.png in Resources */,
+				0E45AA10161D738000BC75A5 /* MenuViewController.xib in Resources */,
+				0E45AA28161DACB000BC75A5 /* layer1.jpg in Resources */,
+				0E45AA29161DACB000BC75A5 /* layer2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1048,8 +1076,11 @@
 				0E45A9E7161D413200BC75A5 /* AppDelegate.m in Sources */,
 				0E45A9EA161D413200BC75A5 /* HelloWorldLayer.m in Sources */,
 				0E45A9ED161D413200BC75A5 /* IntroLayer.m in Sources */,
-				0E45A9FD161D63D100BC75A5 /* TextLayer1.m in Sources */,
-				0E45AA00161D63DC00BC75A5 /* TextLayer2.m in Sources */,
+				0E45A9FD161D63D100BC75A5 /* TransitionLayer1.m in Sources */,
+				0E45AA00161D63DC00BC75A5 /* TransitionLayer2.m in Sources */,
+				0E45AA0F161D738000BC75A5 /* MenuViewController.m in Sources */,
+				0E45AA1D161D843900BC75A5 /* CCTransitionHelper.m in Sources */,
+				0EFC6354161E8AF900B1D23E /* BaseLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1106,11 +1137,13 @@
 				GCC_PREFIX_HEADER = TestCocos2d/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"TestCocos2d/libs/kazmath/include\"";
 				INFOPLIST_FILE = TestCocos2d/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1124,11 +1157,13 @@
 				GCC_PREFIX_HEADER = TestCocos2d/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"TestCocos2d/libs/kazmath/include\"";
 				INFOPLIST_FILE = TestCocos2d/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1153,6 +1188,7 @@
 				0E45A9F2161D413200BC75A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

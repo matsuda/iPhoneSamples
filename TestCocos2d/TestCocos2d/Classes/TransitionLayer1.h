@@ -1,17 +1,14 @@
 //
-//  TextLayer1.h
+//  TransitionLayer1.h
 //  TestCocos2d
 //
 //  Created by matsuda on 2012/10/04.
 //  Copyright 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "cocos2d.h"
+#import "BaseLayer.h"
 
-@interface TextLayer1 : CCLayer {
+@interface TransitionLayer1 : BaseLayer {
 }
-
-+(CCScene *) scene;
 
 @end
