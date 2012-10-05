@@ -10,6 +10,7 @@
 
 #import "cocos2d.h"
 #import "TransitionLayer1.h"
+#import "EffectLayer.h"
 
 static NSString *transitions[] =
 {
@@ -70,6 +71,15 @@ static NSString *transitions[] =
 
 static const int transitions_size = sizeof(transitions) / sizeof(transitions[0]);
 
+#pragma mark - Effects
+
+static NSString *effects[] = {
+    @"Particle"
+};
+
+static const int effects_size = sizeof(effects) / sizeof(effects[0]);
+
+
 @interface MenuViewController () <UINavigationControllerDelegate> {
     NSInteger _selectedTransitionIndex;
 }
@@ -110,13 +120,26 @@ static const int transitions_size = sizeof(transitions) / sizeof(transitions[0])
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return transitions_size;
+    if (section == 0) {
+        return transitions_size;
+    } else {
+        return effects_size;
+    }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return @"Transitions";
+    } else {
+        return @"Effets";
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -126,9 +149,15 @@ static const int transitions_size = sizeof(transitions) / sizeof(transitions[0])
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
+
     NSInteger idx = indexPath.row;
-    NSString *tr = transitions[idx];
-    cell.textLabel.text = [NSString stringWithFormat:@"%d. %@", idx+1, tr];
+    if (indexPath.section == 0) {
+        NSString *tr = transitions[idx];
+        cell.textLabel.text = [NSString stringWithFormat:@"%d. %@", idx+1, tr];
+    } else {
+        NSString *tr = effects[idx];
+        cell.textLabel.text = [NSString stringWithFormat:@"%d. %@", idx+1, tr];
+    }
 
     // Configure the cell...
     
@@ -186,15 +215,21 @@ static const int transitions_size = sizeof(transitions) / sizeof(transitions[0])
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
      */
-    _selectedTransitionIndex = indexPath.row;
-    NSString *tr = transitions[_selectedTransitionIndex];
-    CCScene *s1 = [TransitionLayer1 scene];
+    CCDirector *director = [CCDirector sharedDirector];
+    CCScene *scene;
 
-    TransitionLayer1 *layer = [s1.children objectAtIndex:0];
-    layer.transitionName = tr;
+    if (indexPath.section == 0) {
+        _selectedTransitionIndex = indexPath.row;
+        NSString *tr = transitions[_selectedTransitionIndex];
+        scene = [TransitionLayer1 scene];
 
-    [[CCDirector sharedDirector] pushScene:s1];
-    [self.navigationController pushViewController:[CCDirector sharedDirector] animated:YES];
+        TransitionLayer1 *layer = [scene.children objectAtIndex:0];
+        layer.transitionName = tr;
+    } else {
+        scene = [EffectLayer scene];
+    }
+    [director pushScene:scene];
+    [self.navigationController pushViewController:director animated:YES];
 }
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated

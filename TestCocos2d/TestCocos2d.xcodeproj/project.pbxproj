@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E3B6A8B161EB276002CE8E0 /* EffectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3B6A8A161EB276002CE8E0 /* EffectLayer.m */; };
 		0E45A85C161D413000BC75A5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E45A85B161D413000BC75A5 /* QuartzCore.framework */; };
 		0E45A85E161D413000BC75A5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E45A85D161D413000BC75A5 /* OpenGLES.framework */; };
 		0E45A860161D413000BC75A5 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E45A85F161D413000BC75A5 /* OpenAL.framework */; };
@@ -145,6 +146,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E3B6A89161EB276002CE8E0 /* EffectLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectLayer.h; sourceTree = "<group>"; };
+		0E3B6A8A161EB276002CE8E0 /* EffectLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffectLayer.m; sourceTree = "<group>"; };
 		0E45A857161D413000BC75A5 /* TestCocos2d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCocos2d.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E45A85B161D413000BC75A5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0E45A85D161D413000BC75A5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -867,6 +870,8 @@
 				0E45A9FC161D63D100BC75A5 /* TransitionLayer1.m */,
 				0E45A9FE161D63DC00BC75A5 /* TransitionLayer2.h */,
 				0E45A9FF161D63DC00BC75A5 /* TransitionLayer2.m */,
+				0E3B6A89161EB276002CE8E0 /* EffectLayer.h */,
+				0E3B6A8A161EB276002CE8E0 /* EffectLayer.m */,
 				0E45AA0C161D738000BC75A5 /* MenuViewController.h */,
 				0E45AA0D161D738000BC75A5 /* MenuViewController.m */,
 				0E45AA0E161D738000BC75A5 /* MenuViewController.xib */,
@@ -1081,6 +1086,7 @@
 				0E45AA0F161D738000BC75A5 /* MenuViewController.m in Sources */,
 				0E45AA1D161D843900BC75A5 /* CCTransitionHelper.m in Sources */,
 				0EFC6354161E8AF900B1D23E /* BaseLayer.m in Sources */,
+				0E3B6A8B161EB276002CE8E0 /* EffectLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
