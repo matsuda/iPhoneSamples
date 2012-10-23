@@ -16,6 +16,18 @@
 		0E7B35BD1636772700926343 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E7B35BC1636772700926343 /* Default.png */; };
 		0E7B35BF1636772800926343 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E7B35BE1636772700926343 /* Default@2x.png */; };
 		0E7B35C11636772800926343 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E7B35C01636772800926343 /* Default-568h@2x.png */; };
+		0E7B35C91636794100926343 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E7B35C81636794100926343 /* MainStoryboard.storyboard */; };
+		0E7B35CC1636799900926343 /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7B35CB1636799900926343 /* EditorViewController.m */; };
+		0E7B35D81636816C00926343 /* autolink.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E7B35CF1636816C00926343 /* autolink.c */; };
+		0E7B35D91636816C00926343 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E7B35D11636816C00926343 /* buffer.c */; };
+		0E7B35DA1636816C00926343 /* markdown.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E7B35D41636816C00926343 /* markdown.c */; };
+		0E7B35DB1636816C00926343 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E7B35D61636816C00926343 /* stack.c */; };
+		0E7B35DE1636823500926343 /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7B35DD1636823500926343 /* PreviewViewController.m */; };
+		0E7B35E616368B4500926343 /* houdini_href_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E7B35E116368B4500926343 /* houdini_href_e.c */; };
+		0E7B35E716368B4500926343 /* houdini_html_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E7B35E216368B4500926343 /* houdini_html_e.c */; };
+		0E7B35E816368B4500926343 /* html.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E7B35E316368B4500926343 /* html.c */; };
+		0E7B35E916368B4500926343 /* html_smartypants.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E7B35E516368B4500926343 /* html_smartypants.c */; };
+		0E7B362E1636978500926343 /* sample.md in Resources */ = {isa = PBXBuildFile; fileRef = 0E7B362D1636978500926343 /* sample.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +44,27 @@
 		0E7B35BC1636772700926343 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0E7B35BE1636772700926343 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0E7B35C01636772800926343 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0E7B35C81636794100926343 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		0E7B35CA1636799900926343 /* EditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorViewController.h; sourceTree = "<group>"; };
+		0E7B35CB1636799900926343 /* EditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorViewController.m; sourceTree = "<group>"; };
+		0E7B35CF1636816C00926343 /* autolink.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = autolink.c; sourceTree = "<group>"; };
+		0E7B35D01636816C00926343 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
+		0E7B35D11636816C00926343 /* buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = buffer.c; sourceTree = "<group>"; };
+		0E7B35D21636816C00926343 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		0E7B35D31636816C00926343 /* html_blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = html_blocks.h; sourceTree = "<group>"; };
+		0E7B35D41636816C00926343 /* markdown.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = markdown.c; sourceTree = "<group>"; };
+		0E7B35D51636816C00926343 /* markdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = markdown.h; sourceTree = "<group>"; };
+		0E7B35D61636816C00926343 /* stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stack.c; sourceTree = "<group>"; };
+		0E7B35D71636816C00926343 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		0E7B35DC1636823500926343 /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewViewController.h; sourceTree = "<group>"; };
+		0E7B35DD1636823500926343 /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewViewController.m; sourceTree = "<group>"; };
+		0E7B35E016368B4500926343 /* houdini.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = houdini.h; sourceTree = "<group>"; };
+		0E7B35E116368B4500926343 /* houdini_href_e.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = houdini_href_e.c; sourceTree = "<group>"; };
+		0E7B35E216368B4500926343 /* houdini_html_e.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = houdini_html_e.c; sourceTree = "<group>"; };
+		0E7B35E316368B4500926343 /* html.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = html.c; sourceTree = "<group>"; };
+		0E7B35E416368B4500926343 /* html.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = html.h; sourceTree = "<group>"; };
+		0E7B35E516368B4500926343 /* html_smartypants.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = html_smartypants.c; sourceTree = "<group>"; };
+		0E7B362D1636978500926343 /* sample.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +111,13 @@
 		0E7B35B01636772700926343 /* TestSundown */ = {
 			isa = PBXGroup;
 			children = (
+				0E7B35CD1636816C00926343 /* Libs */,
+				0E7B35C7163678EB00926343 /* Classes */,
 				0E7B35B91636772700926343 /* AppDelegate.h */,
 				0E7B35BA1636772700926343 /* AppDelegate.m */,
+				0E7B35EE163693E900926343 /* Resources */,
 				0E7B35B11636772700926343 /* Supporting Files */,
+				0E7B35C81636794100926343 /* MainStoryboard.storyboard */,
 			);
 			path = TestSundown;
 			sourceTree = "<group>";
@@ -97,6 +134,63 @@
 				0E7B35C01636772800926343 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0E7B35C7163678EB00926343 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0E7B35CA1636799900926343 /* EditorViewController.h */,
+				0E7B35CB1636799900926343 /* EditorViewController.m */,
+				0E7B35DC1636823500926343 /* PreviewViewController.h */,
+				0E7B35DD1636823500926343 /* PreviewViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0E7B35CD1636816C00926343 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				0E7B35CE1636816C00926343 /* Sundown */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		0E7B35CE1636816C00926343 /* Sundown */ = {
+			isa = PBXGroup;
+			children = (
+				0E7B35DF16368B4500926343 /* html */,
+				0E7B35CF1636816C00926343 /* autolink.c */,
+				0E7B35D01636816C00926343 /* autolink.h */,
+				0E7B35D11636816C00926343 /* buffer.c */,
+				0E7B35D21636816C00926343 /* buffer.h */,
+				0E7B35D31636816C00926343 /* html_blocks.h */,
+				0E7B35D41636816C00926343 /* markdown.c */,
+				0E7B35D51636816C00926343 /* markdown.h */,
+				0E7B35D61636816C00926343 /* stack.c */,
+				0E7B35D71636816C00926343 /* stack.h */,
+			);
+			path = Sundown;
+			sourceTree = "<group>";
+		};
+		0E7B35DF16368B4500926343 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				0E7B35E016368B4500926343 /* houdini.h */,
+				0E7B35E116368B4500926343 /* houdini_href_e.c */,
+				0E7B35E216368B4500926343 /* houdini_html_e.c */,
+				0E7B35E316368B4500926343 /* html.c */,
+				0E7B35E416368B4500926343 /* html.h */,
+				0E7B35E516368B4500926343 /* html_smartypants.c */,
+			);
+			path = html;
+			sourceTree = "<group>";
+		};
+		0E7B35EE163693E900926343 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0E7B362D1636978500926343 /* sample.md */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +248,8 @@
 				0E7B35BD1636772700926343 /* Default.png in Resources */,
 				0E7B35BF1636772800926343 /* Default@2x.png in Resources */,
 				0E7B35C11636772800926343 /* Default-568h@2x.png in Resources */,
+				0E7B35C91636794100926343 /* MainStoryboard.storyboard in Resources */,
+				0E7B362E1636978500926343 /* sample.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +262,16 @@
 			files = (
 				0E7B35B71636772700926343 /* main.m in Sources */,
 				0E7B35BB1636772700926343 /* AppDelegate.m in Sources */,
+				0E7B35CC1636799900926343 /* EditorViewController.m in Sources */,
+				0E7B35D81636816C00926343 /* autolink.c in Sources */,
+				0E7B35D91636816C00926343 /* buffer.c in Sources */,
+				0E7B35DA1636816C00926343 /* markdown.c in Sources */,
+				0E7B35DB1636816C00926343 /* stack.c in Sources */,
+				0E7B35DE1636823500926343 /* PreviewViewController.m in Sources */,
+				0E7B35E616368B4500926343 /* houdini_href_e.c in Sources */,
+				0E7B35E716368B4500926343 /* houdini_html_e.c in Sources */,
+				0E7B35E816368B4500926343 /* html.c in Sources */,
+				0E7B35E916368B4500926343 /* html_smartypants.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +382,7 @@
 				0E7B35C61636772800926343 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
