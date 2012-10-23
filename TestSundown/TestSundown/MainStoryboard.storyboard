@@ -32,7 +32,7 @@
                     <navigationItem key="navigationItem" title="Editor" id="B0L-cA-H4c">
                         <barButtonItem key="rightBarButtonItem" title="preview" id="pVE-gl-BuW">
                             <connections>
-                                <segue destination="hGw-oN-AlM" kind="push" identifier="previewSegue" id="DZo-GP-v4C"/>
+                                <segue destination="ep9-wg-yZQ" kind="modal" identifier="previewSegue" id="D9N-bM-jc2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -64,14 +64,20 @@
                             <constraint firstItem="DIm-SK-BrB" firstAttribute="trailing" secondItem="yMT-o9-Sba" secondAttribute="trailing" type="default" id="fuM-Q4-DMi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Preview" id="R7I-cB-o5t"/>
+                    <navigationItem key="navigationItem" title="Preview" id="R7I-cB-o5t">
+                        <barButtonItem key="rightBarButtonItem" title="close" id="3Po-Rl-CDN">
+                            <connections>
+                                <action selector="closePreivew:" destination="hGw-oN-AlM" id="bgu-Jz-a6L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="DIm-SK-BrB" id="idZ-7D-hjk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eH7-uz-gEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="159"/>
+            <point key="canvasLocation" x="1869" y="159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nUp-UV-nAg">
@@ -91,6 +97,24 @@
             </objects>
             <point key="canvasLocation" x="388" y="154"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Iy-QK-g6l">
+            <objects>
+                <navigationController id="ep9-wg-yZQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bfk-P1-aMw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hGw-oN-AlM" kind="relationship" relationship="rootViewController" id="gIp-WJ-ZOP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zfb-yI-zDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1343" y="159"/>
+        </scene>
     </scenes>
     <classes>
         <class className="EditorViewController" superclassName="UIViewController">
@@ -105,6 +129,7 @@
         <class className="PreviewViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PreviewViewController.h"/>
             <relationships>
+                <relationship kind="action" name="closePreivew:"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>

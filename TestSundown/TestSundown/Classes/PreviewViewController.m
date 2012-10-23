@@ -40,39 +40,38 @@
 
 /*
  http://stackoverflow.com/questions/1435288/what-is-the-simplest-implementation-of-markdown-for-a-cocoa-application/7862315#7862315
+ http://cartera.me/2011/10/16/made-on-a-mac/
  */
 - (void)parseMarkdown
 {
-    if (![self.text length]) {
-        return;
-    }
-    const char * prose = [self.text UTF8String];
-    struct buf *ib, *ob;
+    if (![self.text length]) return;
 
-    int length = [self.text lengthOfBytesUsingEncoding:NSUTF8StringEncoding] + 1;
-
-    ib = bufnew(length);
-    bufgrow(ib, length);
-    memcpy(ib->data, prose, length);
-    ib->size = length;
-
-    ob = bufnew(64);
+    // Create and fill a buffer for with the raw markdown data.
+    const char *rawMarkdown = [self.text cStringUsingEncoding:NSUTF8StringEncoding];
+    struct buf *inputBuffer = bufnew(strlen(rawMarkdown));
+    bufputs(inputBuffer, rawMarkdown);
 
     struct sd_callbacks callbacks;
     struct html_renderopt options;
     struct sd_markdown *markdown;
 
+    // Parse the markdown into a new buffer using Sundown.
     sdhtml_renderer(&callbacks, &options, 0);
     markdown = sd_markdown_new(0, 16, &callbacks, &options);
 
-    sd_markdown_render(ob, ib->data, ib->size, markdown);
+    struct buf *outputBuffer = bufnew(64);
+    sd_markdown_render(outputBuffer, inputBuffer->data, inputBuffer->size, markdown);
     sd_markdown_free(markdown);
 
-    NSString *shinyNewHTML = [NSString stringWithUTF8String:ob->data];
+    NSString *shinyNewHTML = [NSString stringWithCString:bufcstr(outputBuffer) encoding:NSUTF8StringEncoding];
     [self.webView loadHTMLString:shinyNewHTML baseURL:[[NSURL alloc] initWithString:@""]];
 
-    bufrelease(ib);
-    bufrelease(ob);
+    bufrelease(inputBuffer);
+    bufrelease(outputBuffer);
+}
+
+- (IBAction)closePreivew:(id)sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

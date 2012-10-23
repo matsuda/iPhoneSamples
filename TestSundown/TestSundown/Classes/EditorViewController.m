@@ -47,7 +47,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"previewSegue"]) {
-        PreviewViewController *controller = segue.destinationViewController;
+        // PreviewViewController *controller = segue.destinationViewController;
+        UINavigationController *naviController = segue.destinationViewController;
+        PreviewViewController *controller = [naviController.viewControllers lastObject];
         controller.text = self.textView.text;
     }
 }
