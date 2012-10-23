@@ -49,7 +49,7 @@
     if ([[segue identifier] isEqualToString:@"previewSegue"]) {
         // PreviewViewController *controller = segue.destinationViewController;
         UINavigationController *naviController = segue.destinationViewController;
-        PreviewViewController *controller = [naviController.viewControllers lastObject];
+        PreviewViewController *controller = (PreviewViewController *)naviController.visibleViewController;
         controller.text = self.textView.text;
     }
 }
