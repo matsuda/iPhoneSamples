@@ -18,8 +18,8 @@
 		0EFB46F31642467300ABD873 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EFB46F21642467300ABD873 /* Default-568h@2x.png */; };
 		0EFB46F61642467300ABD873 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EFB46F41642467300ABD873 /* MainStoryboard.storyboard */; };
 		0EFB46F91642467300ABD873 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFB46F81642467300ABD873 /* ViewController.m */; };
-		0EFB4701164246DA00ABD873 /* CircleChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFB4700164246DA00ABD873 /* CircleChart.m */; };
-		0EFB470516427C0400ABD873 /* LineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFB470416427C0300ABD873 /* LineChart.m */; };
+		0EFB4701164246DA00ABD873 /* CircleGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFB4700164246DA00ABD873 /* CircleGraph.m */; };
+		0EFB470516427C0400ABD873 /* LineGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFB470416427C0300ABD873 /* LineGraph.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +39,10 @@
 		0EFB46F51642467300ABD873 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0EFB46F71642467300ABD873 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0EFB46F81642467300ABD873 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0EFB46FF164246DA00ABD873 /* CircleChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleChart.h; sourceTree = "<group>"; };
-		0EFB4700164246DA00ABD873 /* CircleChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleChart.m; sourceTree = "<group>"; };
-		0EFB470316427C0300ABD873 /* LineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChart.h; sourceTree = "<group>"; };
-		0EFB470416427C0300ABD873 /* LineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChart.m; sourceTree = "<group>"; };
+		0EFB46FF164246DA00ABD873 /* CircleGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleGraph.h; sourceTree = "<group>"; };
+		0EFB4700164246DA00ABD873 /* CircleGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleGraph.m; sourceTree = "<group>"; };
+		0EFB470316427C0300ABD873 /* LineGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineGraph.h; sourceTree = "<group>"; };
+		0EFB470416427C0300ABD873 /* LineGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineGraph.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +95,10 @@
 				0EFB46F71642467300ABD873 /* ViewController.h */,
 				0EFB46F81642467300ABD873 /* ViewController.m */,
 				0EFB46E31642467300ABD873 /* Supporting Files */,
-				0EFB46FF164246DA00ABD873 /* CircleChart.h */,
-				0EFB4700164246DA00ABD873 /* CircleChart.m */,
-				0EFB470316427C0300ABD873 /* LineChart.h */,
-				0EFB470416427C0300ABD873 /* LineChart.m */,
+				0EFB46FF164246DA00ABD873 /* CircleGraph.h */,
+				0EFB4700164246DA00ABD873 /* CircleGraph.m */,
+				0EFB470316427C0300ABD873 /* LineGraph.h */,
+				0EFB470416427C0300ABD873 /* LineGraph.m */,
 			);
 			path = TestChart;
 			sourceTree = "<group>";
@@ -186,8 +186,8 @@
 				0EFB46E91642467300ABD873 /* main.m in Sources */,
 				0EFB46ED1642467300ABD873 /* AppDelegate.m in Sources */,
 				0EFB46F91642467300ABD873 /* ViewController.m in Sources */,
-				0EFB4701164246DA00ABD873 /* CircleChart.m in Sources */,
-				0EFB470516427C0400ABD873 /* LineChart.m in Sources */,
+				0EFB4701164246DA00ABD873 /* CircleGraph.m in Sources */,
+				0EFB470516427C0400ABD873 /* LineGraph.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +306,7 @@
 				0EFB46FE1642467300ABD873 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

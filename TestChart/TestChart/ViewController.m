@@ -7,13 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "CircleChart.h"
-#import "LineChart.h"
+#import "CircleGraph.h"
+#import "LineGraph.h"
 
 
 @interface ViewController ()
-@property (weak, nonatomic) CircleChart *circleChart;
-@property (weak, nonatomic) LineChart *lineChart;
+@property (weak, nonatomic) CircleGraph *circleGraph;
+@property (weak, nonatomic) LineGraph *lineGraph;
 @end
 
 @implementation ViewController
@@ -24,8 +24,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor grayColor];
 
-    [self addCircleChart];
-    [self addLineChart];
+    [self addCircleGraph];
+    [self addLineGraph];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,22 +44,22 @@
 //    return UIInterfaceOrientationMaskLandscape;
 //}
 
-- (void)addCircleChart
+- (void)addCircleGraph
 {
     CGPoint point = CGPointMake(42, 50);
     CGSize size = CGSizeMake(200, 200);
-    CircleChart *chart = [[CircleChart alloc] initWithFrame:CGRectMake(point.x, point.y, size.width, size.height)];
-    [self.view addSubview:chart];
-    self.circleChart = chart;
+    CircleGraph *graph = [[CircleGraph alloc] initWithFrame:CGRectMake(point.x, point.y, size.width, size.height)];
+    [self.view addSubview:graph];
+    self.circleGraph = graph;
 }
 
-- (void)addLineChart
+- (void)addLineGraph
 {
     CGPoint point = CGPointMake(284, 50);
     CGSize size = CGSizeMake(200, 200);
-    LineChart *chart = [[LineChart alloc] initWithFrame:CGRectMake(point.x, point.y, size.width, size.height)];
-    [self.view addSubview:chart];
-    self.lineChart = chart;
+    LineGraph *graph = [[LineGraph alloc] initWithFrame:CGRectMake(point.x, point.y, size.width, size.height)];
+    [self.view addSubview:graph];
+    self.lineGraph = graph;
 }
 
 @end

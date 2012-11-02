@@ -1,5 +1,5 @@
 //
-//  LineChart.h
+//  CircleGraph.h
 //  TestChart
 //
 //  Created by Kosuke Matsuda on 2012/11/01.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LineChart : UIView
+@interface CircleGraph : UIView
 
 @end

@@ -1,16 +1,16 @@
 //
-//  CircleChart.m
+//  CircleGraph.m
 //  TestChart
 //
 //  Created by Kosuke Matsuda on 2012/11/01.
 //  Copyright (c) 2012年 matsuda. All rights reserved.
 //
 
-#import "CircleChart.h"
+#import "CircleGraph.h"
 
 static inline float radians(double degrees) { return degrees * M_PI / 180.0; }
 
-@implementation CircleChart
+@implementation CircleGraph
 
 - (id)initWithFrame:(CGRect)frame
 {

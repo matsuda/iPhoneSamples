@@ -1,14 +1,14 @@
 //
-//  LineChart.m
+//  LineGraph.m
 //  TestChart
 //
 //  Created by Kosuke Matsuda on 2012/11/01.
 //  Copyright (c) 2012年 matsuda. All rights reserved.
 //
 
-#import "LineChart.h"
+#import "LineGraph.h"
 
-@implementation LineChart
+@implementation LineGraph
 
 - (id)initWithFrame:(CGRect)frame
 {
