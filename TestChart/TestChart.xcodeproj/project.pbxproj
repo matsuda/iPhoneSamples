@@ -18,6 +18,8 @@
 		0EFB46F31642467300ABD873 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EFB46F21642467300ABD873 /* Default-568h@2x.png */; };
 		0EFB46F61642467300ABD873 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EFB46F41642467300ABD873 /* MainStoryboard.storyboard */; };
 		0EFB46F91642467300ABD873 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFB46F81642467300ABD873 /* ViewController.m */; };
+		0EFB4701164246DA00ABD873 /* CircleChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFB4700164246DA00ABD873 /* CircleChart.m */; };
+		0EFB470516427C0400ABD873 /* LineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFB470416427C0300ABD873 /* LineChart.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		0EFB46F51642467300ABD873 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0EFB46F71642467300ABD873 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0EFB46F81642467300ABD873 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0EFB46FF164246DA00ABD873 /* CircleChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleChart.h; sourceTree = "<group>"; };
+		0EFB4700164246DA00ABD873 /* CircleChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleChart.m; sourceTree = "<group>"; };
+		0EFB470316427C0300ABD873 /* LineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineChart.h; sourceTree = "<group>"; };
+		0EFB470416427C0300ABD873 /* LineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineChart.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,10 @@
 				0EFB46F71642467300ABD873 /* ViewController.h */,
 				0EFB46F81642467300ABD873 /* ViewController.m */,
 				0EFB46E31642467300ABD873 /* Supporting Files */,
+				0EFB46FF164246DA00ABD873 /* CircleChart.h */,
+				0EFB4700164246DA00ABD873 /* CircleChart.m */,
+				0EFB470316427C0300ABD873 /* LineChart.h */,
+				0EFB470416427C0300ABD873 /* LineChart.m */,
 			);
 			path = TestChart;
 			sourceTree = "<group>";
@@ -176,6 +186,8 @@
 				0EFB46E91642467300ABD873 /* main.m in Sources */,
 				0EFB46ED1642467300ABD873 /* AppDelegate.m in Sources */,
 				0EFB46F91642467300ABD873 /* ViewController.m in Sources */,
+				0EFB4701164246DA00ABD873 /* CircleChart.m in Sources */,
+				0EFB470516427C0400ABD873 /* LineChart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +235,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -245,7 +257,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
