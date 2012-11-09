@@ -291,6 +291,7 @@
 				0EE73C0016441F96000EF67D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,11 +14,9 @@
 #define APPLog NSLog(@"%s(%p) : %d", __PRETTY_FUNCTION__, self, __LINE__)
 
 @interface ViewController () <UIGestureRecognizerDelegate>
-//@property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak ,nonatomic) UIView *keyboard;
-@property (assign, nonatomic) CGRect keyboardFrame;
-@property (assign, nonatomic) CGFloat keyboardFrameInViewOriginY;
+@property (assign, nonatomic) CGRect keyboardOriginalFrame;
 @end
 
 @implementation ViewController {
@@ -30,6 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self setupAccessoryView];
+    // [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -44,8 +43,8 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-    [nc removeObserver:self];
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,41 +56,33 @@
 - (void)keyboardWillShow:(NSNotification *)notification
 {
     APPLog;
+    self.keyboard.hidden = NO;
     // determine what portion of the view will be hidden by the keyboard
     CGRect keyboardEndFrameInScreenCoordinates;
     [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] getValue:&keyboardEndFrameInScreenCoordinates];
     NSLog(@"keyboardEndFrameInScreenCoordinates >>> %@", NSStringFromCGRect(keyboardEndFrameInScreenCoordinates));
-
     CGRect keyboardEndFrameInWindowCoordinates = [self.view.window convertRect:keyboardEndFrameInScreenCoordinates fromWindow:nil];
     NSLog(@"keyboardEndFrameInWindowCoordinates >>> %@", NSStringFromCGRect(keyboardEndFrameInWindowCoordinates));
-
     CGRect keyboardEndFrameInViewCoordinates = [self.view convertRect:keyboardEndFrameInWindowCoordinates fromView:nil];
     NSLog(@"keyboardEndFrameInViewCoordinates >>> %@", NSStringFromCGRect(keyboardEndFrameInViewCoordinates));
-
     CGRect windowFrameInViewCoords = [self.view convertRect:self.view.window.frame fromView:nil];
     NSLog(@"windowFrameInViewCoords >>> %@", NSStringFromCGRect(windowFrameInViewCoords));
 
-    NSLog(@"view >>> %@", self.view);
-    CGFloat heightBelowViewInWindow = windowFrameInViewCoords.origin.y + windowFrameInViewCoords.size.height - (self.view.frame.origin.y + self.view.frame.size.height);
-    NSLog(@"heightBelowViewInWindow >>> %f", heightBelowViewInWindow);
-
-    CGFloat heightCoveredByKeyboard = keyboardEndFrameInViewCoordinates.size.height - heightBelowViewInWindow;
-    NSLog(@"heightCoveredByKeyboard >>> %f", heightCoveredByKeyboard);
-    
     // build an inset to add padding to the content view equal to the height of the portion of the view hidden by the keyboard
-    UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, heightCoveredByKeyboard, 0);
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, CGRectGetHeight(keyboardEndFrameInViewCoordinates), 0);
+
+    // CGFloat heightBelowViewInWindow = windowFrameInViewCoords.origin.y + windowFrameInViewCoords.size.height - (self.view.frame.origin.y + self.view.frame.size.height);
+    // NSLog(@"heightBelowViewInWindow >>> %f", heightBelowViewInWindow);
+    // CGFloat heightCoveredByKeyboard = keyboardEndFrameInViewCoordinates.size.height - heightBelowViewInWindow;
+    // NSLog(@"heightCoveredByKeyboard >>> %f", heightCoveredByKeyboard);
+    // build an inset to add padding to the content view equal to the height of the portion of the view hidden by the keyboard
+    // UIEdgeInsets insets = UIEdgeInsetsMake(0, 0, heightCoveredByKeyboard, 0);
     [self setInsets:insets givenUserInfo:notification.userInfo];
 }
 
 - (void)keyboardDidShow:(NSNotification *)notification
 {
     APPLog;
-//    UIView *accessory = self.textField.inputAccessoryView;
-    UIView *accessory = self.textView.inputAccessoryView;
-    self.keyboard = accessory.superview;
-    self.keyboardFrame = accessory.superview.frame;
-    NSLog(@"keyboard >>>> %@", self.keyboard);
-    NSLog(@"keyboardFrame >>>> %@", NSStringFromCGRect(self.keyboardFrame));
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)notification
@@ -114,13 +105,11 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
-    APPLog;
     return YES;
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
-    APPLog;
     if ([touch.view isEqual:self.textView]) {
         return YES;
     }
@@ -129,53 +118,36 @@
 
 - (void)handlePanGesture:(UIPanGestureRecognizer *)recognizer
 {
-    NSLog(@"recognizer.view >>>>>>>>>>>> %@", recognizer.view);
-
     CGPoint location = [recognizer locationInView:self.view];
     NSLog(@"location >>>>> %@", NSStringFromCGPoint(location));
-
-    CGPoint locationInWindow = [self.view.window convertPoint:location fromView:self.view];
-    NSLog(@"locationInWindow >>>>>>> %@", NSStringFromCGPoint(locationInWindow));
-
-    CGPoint locationViewInWindow = [self.view convertPoint:locationInWindow toView:self.view.window];
-    NSLog(@"locationViewInWindow >>>>>>> %@", NSStringFromCGPoint(locationViewInWindow));
-
-    CGRect windowFrameInViewCoords = [self.view convertRect:self.view.window.frame fromView:nil];
-    NSLog(@"windowFrameInViewCoords >>> %@", NSStringFromCGRect(windowFrameInViewCoords));
-
     CGPoint translation = [recognizer translationInView:self.view];
     NSLog(@"translation >>>>> %@", NSStringFromCGPoint(translation));
-
     CGPoint velocity = [recognizer velocityInView:self.view];
     NSLog(@"velocity >>>>> %@", NSStringFromCGPoint(velocity));
 
     if (recognizer.state == UIGestureRecognizerStateBegan) {
+        UIView *accessory = self.textView.inputAccessoryView;
+        self.keyboard = accessory.superview;
+        self.keyboardOriginalFrame = accessory.superview.frame;
     }
 
-//    UIView *keyboard = self.textField.inputAccessoryView.superview;
-    UIView *keyboard = self.textView.inputAccessoryView.superview;
-    CGRect aFrame = keyboard.frame;
-//    CGFloat y = aFrame.origin.y + translation.y;
-    CGFloat y = locationInWindow.y;
     if (recognizer.state == UIGestureRecognizerStateChanged) {
-        NSLog(@"aFrame.origin.y >>>>>>>>>>>>>>>>>>>>>>>>>>> %f", aFrame.origin.y);
-        NSLog(@"translation.y >>>>>>>>>>>>>>>>>>>>>>>>>>> %f", translation.y);
-        NSLog(@"Y >>>>>>>>>>>>>>>>>>>>>>>>>>> %f", y);
-        NSLog(@"keyboardFrame minY >>>>> %f", CGRectGetMinY(self.keyboardFrame));
-        NSLog(@"keyboardFrame maxY >>>>> %f", CGRectGetMaxY(self.keyboardFrame));
-        if ( locationInWindow.y > aFrame.origin.y || aFrame.origin.y != self.keyboardFrame.origin.y ) {
-            NSLog(@"before >>>>>>>>> %@", NSStringFromCGRect(aFrame));
+        CGRect windowFrameInViewCoords = [self.view convertRect:self.view.window.frame fromView:nil];
+        NSLog(@"windowFrameInViewCoords >>> %@", NSStringFromCGRect(windowFrameInViewCoords));
+        CGRect aFrame = self.keyboard.frame;
+        if ( location.y - CGRectGetMinY(windowFrameInViewCoords) > CGRectGetMinY(aFrame) || CGRectGetMinY(aFrame) != CGRectGetMinY(self.keyboardOriginalFrame) ) {
             _isPanning = YES;
-            y = MAX(y, CGRectGetMinY(self.keyboardFrame));
-            y = MIN(y, CGRectGetMaxY(self.keyboardFrame));
+            CGFloat y = aFrame.origin.y + translation.y;
+            y = MAX(y, CGRectGetMinY(self.keyboardOriginalFrame));
+            y = MIN(y, CGRectGetMaxY(self.keyboardOriginalFrame));
             aFrame.origin.y = y;
-            NSLog(@"after  >>>>>>>>> %@", NSStringFromCGRect(aFrame));
-            keyboard.frame = aFrame;
+            self.keyboard.frame = aFrame;
         }
     }
+
     if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled) {
         if (_isPanning) {
-            if (velocity.y > 0) {
+            if (velocity.y >= 0) {
                 [self animateKeyboardOffscreen];
             } else {
                 [self animateKeyboardReturnToOriginalPosition];
@@ -183,6 +155,7 @@
         }
         _isPanning = NO;
     }
+
     [recognizer setTranslation:CGPointZero inView:self.view];
 }
 
@@ -192,12 +165,11 @@
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
                          CGRect newFrame = self.keyboard.frame;
-                         newFrame.origin.y = self.keyboard.window.frame.size.height;
-                         [self.keyboard setFrame: newFrame];
+                         newFrame.origin.y = CGRectGetMaxY(self.keyboardOriginalFrame);
+                         self.keyboard.frame = newFrame;
                      }
                      completion:^(BOOL finished){
                          self.keyboard.hidden = YES;
-//                         [self.textField resignFirstResponder];
                          [self.textView resignFirstResponder];
                      }];
 }
@@ -208,16 +180,11 @@
                         options:UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          CGRect newFrame = self.keyboard.frame;
-                         newFrame.origin.y = self.keyboardFrame.origin.y;
-                         [self.keyboard setFrame: newFrame];
+                         newFrame.origin.y = CGRectGetMinY(self.keyboardOriginalFrame);
+                         self.keyboard.frame = newFrame;
                      }
                      completion:^(BOOL finished){
                      }];
-    [UIView beginAnimations:nil context:NULL];
-    CGRect newFrame = self.keyboard.frame;
-    newFrame.origin.y = self.keyboardFrame.origin.y;
-    [self.keyboard setFrame: newFrame];
-    [UIView commitAnimations];
 }
 
 - (void)setInsets:(UIEdgeInsets)insets givenUserInfo:(NSDictionary *)userInfo
@@ -236,7 +203,6 @@
 
 - (IBAction)closeKeyboard:(id)sender
 {
-//    [self.textField resignFirstResponder];
     [self.textView resignFirstResponder];
 }
 
@@ -249,13 +215,12 @@
     [button setTitle:@"close" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(closeKeyboard:) forControlEvents:UIControlEventTouchUpInside];
     [view addSubview:button];
-//    self.textField.inputAccessoryView = view;
+    // UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
     self.textView.inputAccessoryView = view;
 
     UIPanGestureRecognizer *gesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
     gesture.delegate = self;
-//    [view addGestureRecognizer:gesture];
-//    [self.view addGestureRecognizer:gesture];
+    // [self.view addGestureRecognizer:gesture];
     [self.textView addGestureRecognizer:gesture];
 }
 
