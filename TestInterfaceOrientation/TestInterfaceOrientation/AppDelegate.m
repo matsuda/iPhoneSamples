@@ -13,6 +13,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSLog(@"%s", __func__);
+    UIViewController *controller = self.window.rootViewController;
+    NSLog(@"frame >>>>>>>>>>> %@", NSStringFromCGRect(controller.view.frame));
+    NSLog(@"bounds >>>>>>>>>>> %@", NSStringFromCGRect(controller.view.bounds));
     return YES;
 }
 							
@@ -31,6 +35,10 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    NSLog(@"%s", __func__);
+    UIViewController *controller = self.window.rootViewController;
+    NSLog(@"frame >>>>>>>>>>> %@", NSStringFromCGRect(controller.view.frame));
+    NSLog(@"bounds >>>>>>>>>>> %@", NSStringFromCGRect(controller.view.bounds));
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
