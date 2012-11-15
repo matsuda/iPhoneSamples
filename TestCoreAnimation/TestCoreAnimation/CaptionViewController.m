@@ -11,11 +11,16 @@
 
 #define APPLog NSLog(@"%s", __func__)
 
+#define zCaption @"1234567890abcdefghijklmn"
+
 @interface CaptionViewController () {
     BOOL _isShowCaption;
     BOOL _isAnimation;
+    NSUInteger _captionIndex;
 }
 @property (strong, nonatomic) CALayer *layer;
+@property (strong, nonatomic) UILabel *label;
+@property (assign, nonatomic) NSTimer *labelTimer;
 @end
 
 @implementation CaptionViewController
@@ -51,6 +56,54 @@
     self.layer = layer;
     NSLog(@"layer.position >>>>>>>>>>>> %@", NSStringFromCGPoint(layer.position));
     _isShowCaption = NO;
+}
+
+- (void)resetTimer
+{
+    if ([self.labelTimer isValid]) {
+        [self.labelTimer invalidate];
+    }
+}
+
+- (void)clearLabel
+{
+    self.label.text = @"";
+    _captionIndex = 0;
+}
+
+- (void)showLabel
+{
+    APPLog;
+    if (!self.label) {
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(70, 160, 180, 20)];
+        label.backgroundColor = [UIColor clearColor];
+        [self.view addSubview:label];
+        self.label = label;
+    }
+    [self clearLabel];
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(addCaptionToLabel:) userInfo:nil repeats:YES];
+    self.labelTimer = timer;
+}
+
+- (void)hideLabel
+{
+    APPLog;
+    [self resetTimer];
+    [self clearLabel];
+}
+
+- (void)addCaptionToLabel:(NSTimer *)timer
+{
+    APPLog;
+    if (![zCaption length] || ([zCaption length] > 0 && _captionIndex >= [zCaption length])) {
+        [self resetTimer];
+        return;
+    }
+    NSRange range = NSMakeRange(_captionIndex, 1);
+    NSString *str = [zCaption substringWithRange:range];
+    NSString *text = self.label.text;
+    self.label.text = [text stringByAppendingString:str];
+    _captionIndex += 1;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -97,6 +150,8 @@
 
 - (void)hideCaption
 {
+    [self hideLabel];
+
     CABasicAnimation *anim2 = [CABasicAnimation animationWithKeyPath:@"transform.scale.y"];
     anim2.delegate = self;
     anim2.toValue = [NSNumber numberWithFloat:1];
@@ -141,6 +196,7 @@
         [self.layer removeAnimationForKey:@"hideCaptionAnimations"];
     } else {
         _isShowCaption = YES;
+        [self showLabel];
     }
     NSLog(@"layer frame >>>>> %@", NSStringFromCGRect(self.layer.frame));
     NSLog(@"layer position >>>>> %@", NSStringFromCGPoint(self.layer.position));
