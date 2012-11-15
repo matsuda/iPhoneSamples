@@ -9,11 +9,13 @@
 #import "ViewController.h"
 #import "CircleGraph.h"
 #import "LineGraph.h"
+#import "Chart.h"
 
 
 @interface ViewController ()
 @property (weak, nonatomic) CircleGraph *circleGraph;
 @property (weak, nonatomic) LineGraph *lineGraph;
+@property (weak, nonatomic) Chart *chart;
 @end
 
 @implementation ViewController

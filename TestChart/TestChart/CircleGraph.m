@@ -52,7 +52,7 @@ static inline float radians(double degrees) { return degrees * M_PI / 180.0; }
     float delta = 0;
 
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetRGBFillColor(context, 255, 255, 255, 1.0);
+    CGContextSetRGBFillColor(context, 1, 1, 1, 1.0);
     CGContextFillRect(context, rect);
 
     for (int i = 0; i < count; i++) {

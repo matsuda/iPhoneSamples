@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EB4D0371643669200C917C9 /* Chart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB4D0361643669200C917C9 /* Chart.m */; };
+		0EB4D05F1643B97D00C917C9 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB4D05E1643B97D00C917C9 /* ChartViewController.m */; };
+		0EB4D0611643C03D00C917C9 /* GlyphTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EB4D0601643C03D00C917C9 /* GlyphTable.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0EFB46DD1642467300ABD873 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFB46DC1642467300ABD873 /* UIKit.framework */; };
 		0EFB46DF1642467300ABD873 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFB46DE1642467300ABD873 /* Foundation.framework */; };
 		0EFB46E11642467300ABD873 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFB46E01642467300ABD873 /* CoreGraphics.framework */; };
@@ -23,6 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EB4D0351643669200C917C9 /* Chart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chart.h; sourceTree = "<group>"; };
+		0EB4D0361643669200C917C9 /* Chart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chart.m; sourceTree = "<group>"; };
+		0EB4D05D1643B97D00C917C9 /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
+		0EB4D05E1643B97D00C917C9 /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
+		0EB4D0601643C03D00C917C9 /* GlyphTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlyphTable.m; sourceTree = "<group>"; };
 		0EFB46D81642467300ABD873 /* TestChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFB46DC1642467300ABD873 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0EFB46DE1642467300ABD873 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +97,7 @@
 		0EFB46E21642467300ABD873 /* TestChart */ = {
 			isa = PBXGroup;
 			children = (
+				0EB4D0601643C03D00C917C9 /* GlyphTable.m */,
 				0EFB46EB1642467300ABD873 /* AppDelegate.h */,
 				0EFB46EC1642467300ABD873 /* AppDelegate.m */,
 				0EFB46F41642467300ABD873 /* MainStoryboard.storyboard */,
@@ -99,6 +108,10 @@
 				0EFB4700164246DA00ABD873 /* CircleGraph.m */,
 				0EFB470316427C0300ABD873 /* LineGraph.h */,
 				0EFB470416427C0300ABD873 /* LineGraph.m */,
+				0EB4D0351643669200C917C9 /* Chart.h */,
+				0EB4D0361643669200C917C9 /* Chart.m */,
+				0EB4D05D1643B97D00C917C9 /* ChartViewController.h */,
+				0EB4D05E1643B97D00C917C9 /* ChartViewController.m */,
 			);
 			path = TestChart;
 			sourceTree = "<group>";
@@ -188,6 +201,9 @@
 				0EFB46F91642467300ABD873 /* ViewController.m in Sources */,
 				0EFB4701164246DA00ABD873 /* CircleGraph.m in Sources */,
 				0EFB470516427C0400ABD873 /* LineGraph.m in Sources */,
+				0EB4D0371643669200C917C9 /* Chart.m in Sources */,
+				0EB4D05F1643B97D00C917C9 /* ChartViewController.m in Sources */,
+				0EB4D0611643C03D00C917C9 /* GlyphTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

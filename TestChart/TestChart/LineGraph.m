@@ -35,16 +35,14 @@
         x = limit / count * i + margin;
         y = arc4random() % (int)limit + margin;
         points[i] = CGPointMake(x, y);
-        NSLog(@"%@", NSStringFromCGPoint(points[i]));
     }
 
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetRGBFillColor(context, 255, 255, 255, 1.0);
-    // CGContextSetFillColor(context, CGColorGetComponents([[UIColor colorWithRed:255 green:255 blue:255 alpha:1.0] CGColor]));
+    CGContextSetRGBFillColor(context, 1, 1, 1, 1.0);
     CGContextFillRect(context, rect);
 
     CGContextSaveGState(context);
-    CGContextSetRGBStrokeColor(context, 255, 0, 0, 1.0);
+    CGContextSetRGBStrokeColor(context, 1, 0, 0, 1.0);
     CGContextSetLineWidth(context, 1.f);
     CGContextAddLines(context, points, count);
     CGContextStrokePath(context);
