@@ -64,11 +64,14 @@
 
 - (void)translationPositive
 {
-    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"position"];
+    CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     anim.delegate = self;
-    anim.toValue = [NSValue valueWithCGPoint:CGPointMake(160, 200.5)];
-    anim.duration = 0.2;
-    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    anim.values = @[
+        [NSValue valueWithCATransform3D:CATransform3DIdentity],
+        [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(280, 1, 1)],
+        [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(260, 1, 1)]
+    ];
+    anim.keyTimes = @[[NSNumber numberWithFloat:0.f], [NSNumber numberWithFloat:0.34f], [NSNumber numberWithFloat:1.f]];
     anim.removedOnCompletion = NO;
     anim.fillMode = kCAFillModeForwards;
     [self.layer addAnimation:anim forKey:@"translationPositive"];
@@ -76,11 +79,14 @@
 
 - (void)translationNegative
 {
-    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"position"];
+    CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     anim.delegate = self;
-    anim.toValue = [NSValue valueWithCGPoint:CGPointMake(-100, 200.5)];
-    anim.duration = 0.2;
-    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    anim.values = @[
+        [NSValue valueWithCATransform3D:CATransform3DIdentity],
+        [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(20, 1, 1)],
+        [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(-200, 1, 1)]
+    ];
+    anim.keyTimes = @[[NSNumber numberWithFloat:0.f], [NSNumber numberWithFloat:0.5f], [NSNumber numberWithFloat:1.f]];
     anim.removedOnCompletion = NO;
     anim.fillMode = kCAFillModeForwards;
     [self.layer addAnimation:anim forKey:@"translationNegative"];
@@ -88,11 +94,14 @@
 
 - (void)scalePositive
 {
-    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"transform.scale.y"];
+    CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     anim.delegate = self;
-    anim.toValue = [NSNumber numberWithFloat:100];
-    anim.duration = 0.2;
-    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    anim.values = @[
+        [NSValue valueWithCATransform3D:CATransform3DIdentity],
+        [NSValue valueWithCATransform3D:CATransform3DMakeScale(1, 120, 1)],
+        [NSValue valueWithCATransform3D:CATransform3DMakeScale(1, 100, 1)]
+    ];
+    anim.keyTimes = @[[NSNumber numberWithFloat:0.f], [NSNumber numberWithFloat:0.5f], [NSNumber numberWithFloat:1.f]];
     anim.removedOnCompletion = NO;
     anim.fillMode = kCAFillModeForwards;
     [self.layer addAnimation:anim forKey:@"scalePositive"];
@@ -100,15 +109,67 @@
 
 - (void)scaleNegative
 {
-    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"transform.scale.y"];
+    CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     anim.delegate = self;
-    anim.toValue = [NSNumber numberWithFloat:1];
-    anim.duration = 0.2;
-    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    anim.values = @[
+//        [NSValue valueWithCATransform3D:CATransform3DIdentity],
+        [NSValue valueWithCATransform3D:CATransform3DMakeScale(1, 100, 1)],
+        [NSValue valueWithCATransform3D:CATransform3DMakeScale(1, 120, 1)],
+        [NSValue valueWithCATransform3D:CATransform3DMakeScale(1, 1, 1)]
+    ];
+    anim.keyTimes = @[[NSNumber numberWithFloat:0.f], [NSNumber numberWithFloat:0.5f], [NSNumber numberWithFloat:1.f]];
     anim.removedOnCompletion = NO;
     anim.fillMode = kCAFillModeForwards;
     [self.layer addAnimation:anim forKey:@"scaleNegative"];
 }
+
+//- (void)translationPositive
+//{
+//    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"position"];
+//    anim.delegate = self;
+//    anim.toValue = [NSValue valueWithCGPoint:CGPointMake(160, 200.5)];
+//    anim.duration = 0.2;
+//    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+//    anim.removedOnCompletion = NO;
+//    anim.fillMode = kCAFillModeForwards;
+//    [self.layer addAnimation:anim forKey:@"translationPositive"];
+//}
+
+//- (void)translationNegative
+//{
+//    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"position"];
+//    anim.delegate = self;
+//    anim.toValue = [NSValue valueWithCGPoint:CGPointMake(-100, 200.5)];
+//    anim.duration = 0.2;
+//    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+//    anim.removedOnCompletion = NO;
+//    anim.fillMode = kCAFillModeForwards;
+//    [self.layer addAnimation:anim forKey:@"translationNegative"];
+//}
+
+//- (void)scalePositive
+//{
+//    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"transform.scale.y"];
+//    anim.delegate = self;
+//    anim.toValue = [NSNumber numberWithFloat:100];
+//    anim.duration = 0.2;
+//    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+//    anim.removedOnCompletion = NO;
+//    anim.fillMode = kCAFillModeForwards;
+//    [self.layer addAnimation:anim forKey:@"scalePositive"];
+//}
+//
+//- (void)scaleNegative
+//{
+//    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"transform.scale.y"];
+//    anim.delegate = self;
+//    anim.toValue = [NSNumber numberWithFloat:1];
+//    anim.duration = 0.2;
+//    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+//    anim.removedOnCompletion = NO;
+//    anim.fillMode = kCAFillModeForwards;
+//    [self.layer addAnimation:anim forKey:@"scaleNegative"];
+//}
 
 - (void)animationDidStart:(CAAnimation *)anim
 {
@@ -122,7 +183,7 @@
     NSLog(@"before animationKeys >>> %@", self.layer.animationKeys);
     if ([anim isEqual:[self.layer animationForKey:@"translationPositive"]]) {
         [CATransaction begin];
-        [CATransaction setDisableActions:YES];
+        [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
         self.layer.position = CGPointMake(160, 200.5);
         [CATransaction commit];
         [self.layer removeAnimationForKey:@"translationPositive"];
@@ -130,7 +191,11 @@
     }
     if ([anim isEqual:[self.layer animationForKey:@"scalePositive"]]) {
         [CATransaction begin];
-        [CATransaction setDisableActions:YES];
+        [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+//        CGRect f = self.layer.frame;
+//        f.origin.y = 150;
+//        f.size.height = 100;
+//        self.layer.frame = f;
         [self.layer setValue:[NSNumber numberWithFloat:100] forKeyPath:@"transform.scale.y"];
         [CATransaction commit];
         [self.layer removeAnimationForKey:@"scalePositive"];
@@ -138,7 +203,11 @@
     }
     if ([anim isEqual:[self.layer animationForKey:@"scaleNegative"]]) {
         [CATransaction begin];
-        [CATransaction setDisableActions:YES];
+        [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+//        CGRect f = self.layer.frame;
+//        f.origin.y = 200;
+//        f.size.height = 1;
+//        self.layer.frame = f;
         [self.layer setValue:[NSNumber numberWithFloat:1] forKeyPath:@"transform.scale.y"];
         [CATransaction commit];
         [self.layer removeAnimationForKey:@"scaleNegative"];
@@ -146,7 +215,7 @@
     }
     if ([anim isEqual:[self.layer animationForKey:@"translationNegative"]]) {
         [CATransaction begin];
-        [CATransaction setDisableActions:YES];
+        [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
         self.layer.position = CGPointMake(-100, 200.5);
         [CATransaction commit];
         [self.layer removeAnimationForKey:@"translationNegative"];
