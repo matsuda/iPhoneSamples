@@ -9,8 +9,6 @@
 #import "CaptionViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-#define APPLog NSLog(@"%s", __func__)
-
 #define zCaption @"1234567890abcdefghijklmn"
 
 @interface CaptionViewController () {
@@ -124,10 +122,8 @@
     anim.toValue = [NSValue valueWithCGPoint:CGPointMake(160, 200.5)];
     anim.duration = 0.2;
     anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-    // アニメーション後に状態を保持させる方法
     anim.removedOnCompletion = NO;
     anim.fillMode = kCAFillModeForwards;
-    // [self.layer addAnimation:anim forKey:@"moveHorisontal"];
 
     CABasicAnimation *anim2 = [CABasicAnimation animationWithKeyPath:@"transform.scale.y"];
     anim2.delegate = self;
@@ -136,8 +132,6 @@
     anim2.duration = 0.2;
     anim2.removedOnCompletion = NO;
     anim2.fillMode = kCAFillModeForwards;
-    // [self.layer setValue:[NSNumber numberWithFloat:2] forKeyPath:@"transform.scale.y"];
-    // [self.layer addAnimation:anim2 forKey:@"scaleTransform"];
 
     CAAnimationGroup *group = [CAAnimationGroup animation];
     group.delegate = self;
@@ -158,8 +152,6 @@
     anim2.duration = 0.2;
     anim2.removedOnCompletion = NO;
     anim2.fillMode = kCAFillModeForwards;
-    // [self.layer setValue:[NSNumber numberWithFloat:2] forKeyPath:@"transform.scale.y"];
-    // [self.layer addAnimation:anim2 forKey:@"scaleTransform"];
 
     CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"position"];
     anim.delegate = self;
@@ -167,10 +159,8 @@
     anim.beginTime = anim2.beginTime + anim2.duration;
     anim.duration = 0.1;
     anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-    // アニメーション後に状態を保持させる方法
     anim.removedOnCompletion = NO;
     anim.fillMode = kCAFillModeForwards;
-    // [self.layer addAnimation:anim forKey:@"moveHorisontal"];
 
     CAAnimationGroup *group = [CAAnimationGroup animation];
     group.delegate = self;

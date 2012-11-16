@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E8C62BC1655DC8E00E8E265 /* SequentialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C62BB1655DC8E00E8E265 /* SequentialViewController.m */; };
 		0EBF3C88165492E8006536D2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBF3C87165492E8006536D2 /* UIKit.framework */; };
 		0EBF3C8A165492E8006536D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBF3C89165492E8006536D2 /* Foundation.framework */; };
 		0EBF3C8C165492E8006536D2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EBF3C8B165492E8006536D2 /* CoreGraphics.framework */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E8C62BA1655DC8E00E8E265 /* SequentialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequentialViewController.h; sourceTree = "<group>"; };
+		0E8C62BB1655DC8E00E8E265 /* SequentialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SequentialViewController.m; sourceTree = "<group>"; };
 		0EBF3C83165492E8006536D2 /* TestCoreAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestCoreAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBF3C87165492E8006536D2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0EBF3C89165492E8006536D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +101,8 @@
 				0EBF3C8E165492E8006536D2 /* Supporting Files */,
 				0EBF3CAC1654C966006536D2 /* CaptionViewController.h */,
 				0EBF3CAD1654C966006536D2 /* CaptionViewController.m */,
+				0E8C62BA1655DC8E00E8E265 /* SequentialViewController.h */,
+				0E8C62BB1655DC8E00E8E265 /* SequentialViewController.m */,
 			);
 			path = TestCoreAnimation;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				0EBF3C98165492E8006536D2 /* AppDelegate.m in Sources */,
 				0EBF3CA4165492E8006536D2 /* ViewController.m in Sources */,
 				0EBF3CAE1654C966006536D2 /* CaptionViewController.m in Sources */,
+				0E8C62BC1655DC8E00E8E265 /* SequentialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +308,7 @@
 				0EBF3CA9165492E8006536D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
