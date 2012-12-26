@@ -9,6 +9,10 @@
 #import "ViewController.h"
 #import "ShutterView.h"
 
+// fullscreen
+#define FULLSCREEN_TRANSFORM_X 1
+#define FULLSCREEN_TRANSFORM_Y 1.12412
+
 @interface ViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, ShutterViewDelegate>
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -38,9 +42,8 @@
         camera.delegate = self;
         camera.allowsEditing = NO;
         camera.sourceType = UIImagePickerControllerSourceTypeCamera;
-        camera.showsCameraControls = NO;
-//        camera.navigationBarHidden = YES;
         if ([[camera.cameraOverlayView subviews] count] == 0) {
+            camera.showsCameraControls = NO;
             CGRect overlayViewFrame = camera.cameraOverlayView.frame;
 
             NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([ShutterView class]) owner:nil options:nil];
@@ -50,11 +53,16 @@
             shutterView.frame = shutterViewFrame;
             shutterView.delegate = self;
             [shutterView setImage:self.imageView.image];
-            [camera.cameraOverlayView addSubview:shutterView];
-//            camera.cameraOverlayView = shutterView;
+            // [camera.cameraOverlayView addSubview:shutterView];
+            // camera.cameraOverlayView = shutterView;
+            [camera.view addSubview:shutterView];
 
-//            overlayViewFrame.size.height = CGRectGetMinY(shutterViewFrame);
-//            camera.cameraOverlayView.frame = overlayViewFrame;
+            // overlayViewFrame.size.height -= CGRectGetHeight(shutterViewFrame);
+            // camera.cameraOverlayView.frame = overlayViewFrame;
+
+            // camera.cameraViewTransform = CGAffineTransformScale(camera.cameraViewTransform, FULLSCREEN_TRANSFORM_X, FULLSCREEN_TRANSFORM_Y);
+            // CGFloat scallY = CGRectGetHeight(shutterViewFrame) / CGRectGetHeight(overlayViewFrame);
+            // camera.cameraViewTransform = CGAffineTransformScale(camera.cameraViewTransform, 1, (1 - scallY));
         }
         [self presentViewController:camera animated:NO completion:^{}];
         self.imagePickerController = camera;
