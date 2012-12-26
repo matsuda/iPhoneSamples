@@ -18,6 +18,10 @@
 		0E462239168AE17000A098BD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E462238168AE17000A098BD /* Default-568h@2x.png */; };
 		0E46223C168AE17000A098BD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E46223A168AE17000A098BD /* MainStoryboard.storyboard */; };
 		0E46223F168AE17000A098BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E46223E168AE17000A098BD /* ViewController.m */; };
+		0E462246168AE1D100A098BD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E462245168AE1D100A098BD /* AVFoundation.framework */; };
+		0E46224D168AEF3000A098BD /* ShutterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E46224C168AEF3000A098BD /* ShutterView.m */; };
+		0E46224F168AEF4300A098BD /* ShutterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E46224E168AEF4300A098BD /* ShutterView.xib */; };
+		0E462255168B016B00A098BD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E462254168B016B00A098BD /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,11 @@
 		0E46223B168AE17000A098BD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0E46223D168AE17000A098BD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0E46223E168AE17000A098BD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0E462245168AE1D100A098BD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0E46224B168AEF3000A098BD /* ShutterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShutterView.h; sourceTree = "<group>"; };
+		0E46224C168AEF3000A098BD /* ShutterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShutterView.m; sourceTree = "<group>"; };
+		0E46224E168AEF4300A098BD /* ShutterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShutterView.xib; sourceTree = "<group>"; };
+		0E462254168B016B00A098BD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E462255168B016B00A098BD /* QuartzCore.framework in Frameworks */,
+				0E462246168AE1D100A098BD /* AVFoundation.framework in Frameworks */,
 				0E462223168AE17000A098BD /* UIKit.framework in Frameworks */,
 				0E462225168AE17000A098BD /* Foundation.framework in Frameworks */,
 				0E462227168AE17000A098BD /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +84,8 @@
 		0E462221168AE17000A098BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E462254168B016B00A098BD /* QuartzCore.framework */,
+				0E462245168AE1D100A098BD /* AVFoundation.framework */,
 				0E462222168AE17000A098BD /* UIKit.framework */,
 				0E462224168AE17000A098BD /* Foundation.framework */,
 				0E462226168AE17000A098BD /* CoreGraphics.framework */,
@@ -89,6 +102,9 @@
 				0E46223D168AE17000A098BD /* ViewController.h */,
 				0E46223E168AE17000A098BD /* ViewController.m */,
 				0E462229168AE17000A098BD /* Supporting Files */,
+				0E46224B168AEF3000A098BD /* ShutterView.h */,
+				0E46224C168AEF3000A098BD /* ShutterView.m */,
+				0E46224E168AEF4300A098BD /* ShutterView.xib */,
 			);
 			path = TestAV;
 			sourceTree = "<group>";
@@ -163,6 +179,7 @@
 				0E462237168AE17000A098BD /* Default@2x.png in Resources */,
 				0E462239168AE17000A098BD /* Default-568h@2x.png in Resources */,
 				0E46223C168AE17000A098BD /* MainStoryboard.storyboard in Resources */,
+				0E46224F168AEF4300A098BD /* ShutterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +193,7 @@
 				0E46222F168AE17000A098BD /* main.m in Sources */,
 				0E462233168AE17000A098BD /* AppDelegate.m in Sources */,
 				0E46223F168AE17000A098BD /* ViewController.m in Sources */,
+				0E46224D168AEF3000A098BD /* ShutterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
