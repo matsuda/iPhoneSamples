@@ -16,6 +16,10 @@
 		0E3AA91B16B6430B00AAC0E5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E3AA91A16B6430B00AAC0E5 /* Default.png */; };
 		0E3AA91D16B6430B00AAC0E5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E3AA91C16B6430B00AAC0E5 /* Default@2x.png */; };
 		0E3AA91F16B6430B00AAC0E5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E3AA91E16B6430B00AAC0E5 /* Default-568h@2x.png */; };
+		0E3AA92A16B643AF00AAC0E5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E3AA92916B643AF00AAC0E5 /* MainStoryboard.storyboard */; };
+		0E3AA92E16B6442600AAC0E5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3AA92D16B6442600AAC0E5 /* RootViewController.m */; };
+		0E3AA93116B6482F00AAC0E5 /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3AA93016B6482F00AAC0E5 /* SwitchViewController.m */; };
+		0E3AA93716B65C1400AAC0E5 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3AA93616B65C1400AAC0E5 /* ListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,13 @@
 		0E3AA91A16B6430B00AAC0E5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0E3AA91C16B6430B00AAC0E5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0E3AA91E16B6430B00AAC0E5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0E3AA92916B643AF00AAC0E5 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		0E3AA92C16B6442600AAC0E5 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		0E3AA92D16B6442600AAC0E5 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		0E3AA92F16B6482F00AAC0E5 /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchViewController.h; sourceTree = "<group>"; };
+		0E3AA93016B6482F00AAC0E5 /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchViewController.m; sourceTree = "<group>"; };
+		0E3AA93516B65C1300AAC0E5 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		0E3AA93616B65C1400AAC0E5 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +92,13 @@
 				0E3AA91716B6430B00AAC0E5 /* AppDelegate.h */,
 				0E3AA91816B6430B00AAC0E5 /* AppDelegate.m */,
 				0E3AA90F16B6430B00AAC0E5 /* Supporting Files */,
+				0E3AA92916B643AF00AAC0E5 /* MainStoryboard.storyboard */,
+				0E3AA92C16B6442600AAC0E5 /* RootViewController.h */,
+				0E3AA92D16B6442600AAC0E5 /* RootViewController.m */,
+				0E3AA92F16B6482F00AAC0E5 /* SwitchViewController.h */,
+				0E3AA93016B6482F00AAC0E5 /* SwitchViewController.m */,
+				0E3AA93516B65C1300AAC0E5 /* ListViewController.h */,
+				0E3AA93616B65C1400AAC0E5 /* ListViewController.m */,
 			);
 			path = TestContainerController;
 			sourceTree = "<group>";
@@ -154,6 +172,7 @@
 				0E3AA91B16B6430B00AAC0E5 /* Default.png in Resources */,
 				0E3AA91D16B6430B00AAC0E5 /* Default@2x.png in Resources */,
 				0E3AA91F16B6430B00AAC0E5 /* Default-568h@2x.png in Resources */,
+				0E3AA92A16B643AF00AAC0E5 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +185,9 @@
 			files = (
 				0E3AA91516B6430B00AAC0E5 /* main.m in Sources */,
 				0E3AA91916B6430B00AAC0E5 /* AppDelegate.m in Sources */,
+				0E3AA92E16B6442600AAC0E5 /* RootViewController.m in Sources */,
+				0E3AA93116B6482F00AAC0E5 /* SwitchViewController.m in Sources */,
+				0E3AA93716B65C1400AAC0E5 /* ListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +296,7 @@
 				0E3AA92416B6430B00AAC0E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
