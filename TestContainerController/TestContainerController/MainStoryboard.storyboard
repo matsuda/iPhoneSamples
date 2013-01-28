@@ -13,6 +13,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="OBf-PG-DXf" kind="custom" identifier="ContainerSegue1" customClass="ContainerSegue" id="CbT-It-nKC"/>
+                        <segue destination="VmG-wq-EdD" kind="custom" identifier="ContainerSegue2" customClass="ContainerSegue" id="IAp-zH-LeE"/>
+                        <segue destination="dCt-3k-86D" kind="custom" identifier="ContainerSegue3" customClass="ContainerSegue" id="cTq-74-rKm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uej-ym-kbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

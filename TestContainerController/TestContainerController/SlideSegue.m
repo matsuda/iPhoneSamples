@@ -41,8 +41,8 @@
                     }
                     completion:^(BOOL finished){
                         [source.view removeFromSuperview];
-                        if ([_delegate respondsToSelector:@selector(segueDidComplete:)]) {
-                            [_delegate performSelector:@selector(segueDidComplete:) withObject:self];
+                        if ([_delegate respondsToSelector:@selector(didCompleteSlideSegue:)]) {
+                            [_delegate didCompleteSlideSegue:self];
                         }
                     }];
 }

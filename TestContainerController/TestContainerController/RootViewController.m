@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "ContainerSegue.h"
 #import "SlideSegue.h"
 
 #if DEBUG
@@ -15,7 +16,7 @@
 @end
 #endif
 
-@interface RootViewController () {
+@interface RootViewController () <ContainerSegueDelegate, SlideSegueDelegate> {
     UIView *_backView;
     NSInteger _childIndex;
 }
@@ -37,24 +38,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    _childIndex = 0;
+
     _backView = [[UIView alloc] initWithFrame:CGRectMake(60, 60, 200, 300)];
     _backView.backgroundColor = [UIColor orangeColor];
     _backView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self.view addSubview:_backView];
-
-    NSArray *controllers = @[
-        [self.storyboard instantiateViewControllerWithIdentifier:@"0"],
-        [self.storyboard instantiateViewControllerWithIdentifier:@"1"],
-        [self.storyboard instantiateViewControllerWithIdentifier:@"2"]
-    ];
-    for (UIViewController *c in controllers) {
-        c.view.frame = _backView.bounds;
-        [self addChildViewController:c];
-    }
-
-    _childIndex = 0;
-    UIViewController *controller = (UIViewController *)controllers[_childIndex];
-    [_backView addSubview:controller.view];
 
     UISwipeGestureRecognizer *rightGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightSwitch:)];
     rightGesture.direction = UISwipeGestureRecognizerDirectionRight;
@@ -65,6 +54,12 @@
     leftGesture.direction = UISwipeGestureRecognizerDirectionLeft;
     leftGesture.numberOfTouchesRequired = 1;
     [self.view addGestureRecognizer:leftGesture];
+
+    [self performSegueWithIdentifier:@"ContainerSegue1" sender:self];
+    [self performSegueWithIdentifier:@"ContainerSegue2" sender:self];
+    [self performSegueWithIdentifier:@"ContainerSegue3" sender:self];
+    // NSLog(@"childViewControllers >>> %@", self.childViewControllers);
+    // NSLog(@"%@", [self.view recursiveDescription]);
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -78,9 +73,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)segueDidComplete:(SlideSegue *)segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // NSLog(@"%@", [self.view recursiveDescription]);
+    if ([segue isKindOfClass:[ContainerSegue class]]) {
+        ContainerSegue *container = (ContainerSegue *)segue;
+        container.delegate = self;
+        container.containerView = _backView;
+    }
+}
+
+- (void)containerSegue:(ContainerSegue *)segue didContainViewController:(UIViewController *)controller
+{
+    if ([[segue identifier] isEqualToString:@"ContainerSegue1"]) {
+        // [_backView addSubview:controller.view];
+        [segue.containerView addSubview:controller.view];
+    }
+}
+
+- (void)didCompleteSlideSegue:(SlideSegue *)segue
+{
 }
 
 - (void)slideSegueToViewIndex:(NSInteger)toIndex toLeft:(BOOL)toLeft
