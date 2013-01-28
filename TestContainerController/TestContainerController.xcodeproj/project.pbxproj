@@ -20,6 +20,7 @@
 		0E3AA92E16B6442600AAC0E5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3AA92D16B6442600AAC0E5 /* RootViewController.m */; };
 		0E3AA93116B6482F00AAC0E5 /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3AA93016B6482F00AAC0E5 /* SwitchViewController.m */; };
 		0E3AA93716B65C1400AAC0E5 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3AA93616B65C1400AAC0E5 /* ListViewController.m */; };
+		0E3AA94216B668C800AAC0E5 /* SlideSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E3AA94116B668C800AAC0E5 /* SlideSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		0E3AA93016B6482F00AAC0E5 /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchViewController.m; sourceTree = "<group>"; };
 		0E3AA93516B65C1300AAC0E5 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		0E3AA93616B65C1400AAC0E5 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		0E3AA94016B668C800AAC0E5 /* SlideSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideSegue.h; sourceTree = "<group>"; };
+		0E3AA94116B668C800AAC0E5 /* SlideSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideSegue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				0E3AA93016B6482F00AAC0E5 /* SwitchViewController.m */,
 				0E3AA93516B65C1300AAC0E5 /* ListViewController.h */,
 				0E3AA93616B65C1400AAC0E5 /* ListViewController.m */,
+				0E3AA94016B668C800AAC0E5 /* SlideSegue.h */,
+				0E3AA94116B668C800AAC0E5 /* SlideSegue.m */,
 			);
 			path = TestContainerController;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				0E3AA92E16B6442600AAC0E5 /* RootViewController.m in Sources */,
 				0E3AA93116B6482F00AAC0E5 /* SwitchViewController.m in Sources */,
 				0E3AA93716B65C1400AAC0E5 /* ListViewController.m in Sources */,
+				0E3AA94216B668C800AAC0E5 /* SlideSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

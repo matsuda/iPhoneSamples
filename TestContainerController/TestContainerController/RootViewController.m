@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "SlideSegue.h"
 
 #if DEBUG
 @interface UIView (Debug)
@@ -42,19 +43,18 @@
     [self.view addSubview:_backView];
 
     NSArray *controllers = @[
-    [self.storyboard instantiateViewControllerWithIdentifier:@"0"],
-    [self.storyboard instantiateViewControllerWithIdentifier:@"1"],
-    [self.storyboard instantiateViewControllerWithIdentifier:@"2"]
+        [self.storyboard instantiateViewControllerWithIdentifier:@"0"],
+        [self.storyboard instantiateViewControllerWithIdentifier:@"1"],
+        [self.storyboard instantiateViewControllerWithIdentifier:@"2"]
     ];
     for (UIViewController *c in controllers) {
         c.view.frame = _backView.bounds;
         [self addChildViewController:c];
     }
 
-    NSInteger index = 0;
-    UIViewController *controller = (UIViewController *)controllers[index];
+    _childIndex = 0;
+    UIViewController *controller = (UIViewController *)controllers[_childIndex];
     [_backView addSubview:controller.view];
-    _childIndex = index;
 
     UISwipeGestureRecognizer *rightGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightSwitch:)];
     rightGesture.direction = UISwipeGestureRecognizerDirectionRight;
@@ -78,6 +78,41 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)segueDidComplete:(SlideSegue *)segue
+{
+    // NSLog(@"%@", [self.view recursiveDescription]);
+}
+
+- (void)slideSegueToViewIndex:(NSInteger)toIndex toLeft:(BOOL)toLeft
+{
+    UIViewController *source = self.childViewControllers[_childIndex];
+    UIViewController *destination = self.childViewControllers[toIndex];
+    SlideSegue *segue = [[SlideSegue alloc] initWithIdentifier:@"SlideSegue" source:source destination:destination];
+    segue.toLeft = toLeft;
+    segue.delegate = self;
+    [segue perform];
+    _childIndex = toIndex;
+}
+
+- (void)rightSwitch:(UISwipeGestureRecognizer *)gesture
+{
+    NSInteger toIndex = _childIndex - 1;
+    if (toIndex < 0) {
+        toIndex = [self.childViewControllers count] - 1;
+    }
+    [self slideSegueToViewIndex:toIndex toLeft:NO];
+}
+
+- (void)leftSwitch:(UISwipeGestureRecognizer *)gesture
+{
+    NSInteger toIndex = _childIndex + 1;
+    if (toIndex >= [self.childViewControllers count]) {
+        toIndex = 0;
+    }
+    [self slideSegueToViewIndex:toIndex toLeft:YES];
+}
+
+/*
 - (void)rightSwitch:(UISwipeGestureRecognizer *)gesture
 {
     NSInteger newIndex = _childIndex - 1;
@@ -147,5 +182,6 @@
                                 }
                             }];
 }
+ */
 
 @end
