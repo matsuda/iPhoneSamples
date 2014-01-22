@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0B67C1188F755C0014CD7A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0B67C0188F755C0014CD7A /* Social.framework */; };
 		0E442A9D158EBF1E00F0885B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E442A9C158EBF1E00F0885B /* UIKit.framework */; };
 		0E442A9F158EBF1E00F0885B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E442A9E158EBF1E00F0885B /* Foundation.framework */; };
 		0E442AA1158EBF1E00F0885B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E442AA0158EBF1E00F0885B /* CoreGraphics.framework */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E0B67C0188F755C0014CD7A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		0E442A98158EBF1E00F0885B /* TestTwitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTwitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E442A9C158EBF1E00F0885B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0E442A9E158EBF1E00F0885B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0B67C1188F755C0014CD7A /* Social.framework in Frameworks */,
 				0E8E3EE3158F02FF002DA94D /* Accounts.framework in Frameworks */,
 				0E8E3EC3158EBF9A002DA94D /* Twitter.framework in Frameworks */,
 				0E442A9D158EBF1E00F0885B /* UIKit.framework in Frameworks */,
@@ -86,6 +89,7 @@
 		0E442A9B158EBF1E00F0885B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E0B67C0188F755C0014CD7A /* Social.framework */,
 				0E442A9C158EBF1E00F0885B /* UIKit.framework */,
 				0E442A9E158EBF1E00F0885B /* Foundation.framework */,
 				0E442AA0158EBF1E00F0885B /* CoreGraphics.framework */,

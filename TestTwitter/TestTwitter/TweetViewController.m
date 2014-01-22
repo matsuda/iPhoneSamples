@@ -34,10 +34,18 @@
 
 - (IBAction)tweet:(id)sender
 {
+    // Twitter.framework
+    /*
     TWTweetComposeViewController *tweetTweetViewController = [[TWTweetComposeViewController alloc] init];
     UIImage *image = [UIImage imageNamed:@"Octocat"];
     [tweetTweetViewController addImage:image];
     [self presentModalViewController:tweetTweetViewController animated:YES];
+     */
+
+    // Social.framework
+    SLComposeViewController *twitterPostVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [twitterPostVC setInitialText:@"iOSのSocialFrameworkから投稿テスト。\nSLComposeViewController簡単。"];
+    [self presentViewController:twitterPostVC animated:YES completion:nil];
 }
 
 @end
